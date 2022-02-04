@@ -1,0 +1,82 @@
+$myfont:  Roboto,Helvetica,Arial,sans-serif;
+
+#fondo{
+  background-color:white;
+  position: relative;
+  margin: auto;
+  height: 85vh;
+  width: 90vw;
+  border-radius: 10px;
+  top: 6.3vh;
+  
+  #nav{
+    p{
+      position: relative;
+      top: 6vh;
+      left: 5vw;
+      display: inline-block;
+      margin-left: 5vw;
+      font-size: 1.2vw;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        color: #787878;
+      }
+    }
+    .rnav{
+      
+      left: 35vw;
+    }
+  }
+  
+  #con{
+    position: relative;
+    top: 4vh;
+    left: 13vw;
+  }
+ 
+  div{
+    font-family: $myfont;
+    position: relative;
+    cursor: default;
+    margin-bottom: 4vh;
+  }
+  #nombre{
+    top: 12vh;
+      margin-left: 10vw;
+      font-weight: bold;
+      font-size: 1.5vw;
+  
+  }
+  #titulo{
+    top: 12vh;
+    margin-left: 10vw;
+    font-size: 1.2vw;
+   
+  }
+
+  button{
+    background-color: #073042;
+    border: none;
+    color: white;
+    position: relative;
+    top: 12vh;
+    margin-left: 10vw;
+    height: 5.5vh;
+    font-size: 0.75rem;
+    outline:none;
+    font-weight: bold;
+    width: 10vw;
+    font-family: $myfont;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: #30b069;
+    }
+  }
+}
+
+body{
+  background-color: #E7E7E7;
+  overflow-x: hidden;
+}
