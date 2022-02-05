@@ -1,0 +1,86 @@
+@mixin skillsq($bcolor){
+    
+    background-color: $bcolor;
+    color: white;
+    height: 13vh;
+    width: 20vw;
+    display: inline-block;
+    margin-left: 3.5vw;
+    top: 10vh;
+    left: 6vw;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: top 1s;
+    }
+
+  @mixin con{
+     top: 4vh;
+     color: white;
+     height: 35vh;
+     width: 20vw;
+     background-color: #333;
+     border-radius: 5px;
+     text-align: left;
+     line-height: 3.2vh;
+    }
+
+#ui{
+ @include skillsq(#8a63d2);
+ 
+ 
+ #uicon{
+     @include con()
+     
+ }
+}
+
+#front{
+    @include skillsq(black);
+    #frontcon{
+        @include con()
+    }
+}
+
+#res{
+    @include skillsq(#3178c6);
+    #rescon{
+        @include con()
+       }
+}
+
+
+@media screen and (max-width:600px) {
+  
+  #ui{
+   display: block;
+   margin-left: 5vw;
+   width: 70vw;
+    #uicon{
+        width: 70vw;
+    }
+   
+  }
+
+  #front{
+    display: block;
+    margin-top: 38vh;
+    margin-left: 5vw;
+    width: 70vw;
+    #frontcon{
+        width: 70vw;
+    }
+  }
+
+  #res{
+    display: block;
+    margin-top: 38vh;
+    margin-left: 5vw;
+    width: 70vw;
+    
+    
+  }
+
+
+}
