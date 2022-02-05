@@ -1,6 +1,9 @@
 import Home from "./home"
 import { useState } from "react"
 import Skills from "./skills"
+import martysi from "./images/martysi.png"
+import "./styless/portfolio.scss"
+import resort from "./images/resort.png"
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
@@ -40,12 +43,30 @@ export default function Portfolio(props){
                 >Portfolio</p>
                 <p className="rnav">About</p>
               </div>
+
+              <div id="imacon">
+               <div id="imlepa">
+                  <div id="imle">
+                    <div>
+                        <img src={martysi}/>
+                        <button>Check it out </button>
+                   </div>
+                    
+                    </div>
+               </div>
+
+               <div id="imrepa"> 
+                <div id="imre">
+                  <div>
+                    <img src={resort}/>
+                    <button>Check it out </button>
+                  </div>
+                </div>
+              </div>
+              </div>
+
             </div>
 
-            <div id="imacon">
-                <p>heyjv</p>
-              <img src="sjc"/>
-            </div>
           </>
       )
 

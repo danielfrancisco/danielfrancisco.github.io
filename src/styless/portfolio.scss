@@ -1,0 +1,82 @@
+
+#imacon{
+    display: inline-block;
+    margin-top: 5vh;
+
+    #imlepa{
+        display: inline-block;
+        position: absolute;
+    }
+
+    #imle{
+        display: inline-block;
+        margin-left: 10vw;
+        top: 7vh;
+        
+        img{
+        
+            height: 30vh;
+            width: 28vw;
+            cursor: pointer;
+           
+           
+            &:hover{
+                height: 32vh;
+                width: 30vw;
+            }
+            
+        }
+
+        button{
+            top: 4vh;
+            background-color: #30b069;
+            &:hover{
+                color: #073042;
+            }
+        }
+
+        
+
+        height: 20vh;
+        width: 17vh;
+    }
+
+   #imrepa{
+       display: inline-block;
+       position: absolute;
+       
+   }
+
+    #imre{
+        display: inline-block;
+        left: 47vw;
+        top: 7vh;
+        img{
+            height: 30vh;
+            width: 28vw;
+            cursor: pointer;
+           
+           
+            &:hover{
+                height: 32vh;
+                width: 30vw;
+            }
+            
+        }
+
+        button{
+            top: 4vh;
+            left: 0vw;
+            background-color: #30b069;
+            &:hover{
+                color: #073042;
+            }
+        }
+        height: 20vh;
+        width: 17vh;
+        
+    }
+
+    
+    
+}

@@ -25,7 +25,7 @@ export default function Home(props) {
             }}>Skills</p>
 
             <p className="rnav" onClick={()=>{
-                 sconte("home")
+                 sconte("portfolio")
                  
                 }}
             >Portfolio</p>
