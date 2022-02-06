@@ -2,13 +2,19 @@ import { useState } from "react";
 import Skills from "./skills";
 import "./styless/home.scss"
 import Portfolio from "./portfolio";
+import Contact from "./contact"
 
 export default function Home(props) {
    const [conte,sconte] = useState("home")
 
    if(conte==="portfolio"){
         
-    return <Portfolio/>
+    return <Portfolio cont={conte}/>
+  }
+
+  if(conte==="contact"){
+        
+    return <Contact cont={conte}/>
   }
 
    if(conte==="home"){
@@ -36,7 +42,9 @@ export default function Home(props) {
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Front end developer</div>
             <div id="titulo">Designer</div>
-            <button>CONTACT</button>
+            <button onClick={()=>{
+              sconte("contact")
+            }}>CONTACT</button>
           </div>
         </div>
       </>

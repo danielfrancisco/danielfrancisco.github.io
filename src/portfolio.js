@@ -10,20 +10,15 @@ export default function Portfolio(props){
 
     if(cont==="home"){
         
-        return <Home/>
-      }
-
-      if(cont==="protfolio"){
-        
-        return <Portfolio/>
+        return <Home cont={cont}/>
       }
 
       if(cont==="skills"){
         
-        return <Skills/>
+        return <Skills cont={cont}/>
       }
 
-      return(
+    return(
           <>
           <div id="fondo">
               <div id="nav">

@@ -12,17 +12,15 @@ export default function Skills(props){
      
      if(cont==="home"){
         
-        return <Home/>
+        return <Home cont={cont}/>
       }
 
       if(cont==="porfolio"){
         
-        return <Portfolio/>
+        return <Portfolio cont={cont}/>
       }
 
-      
-
-    return (
+      return (
           <>
             <div id="fondo">
               <div id="nav">
