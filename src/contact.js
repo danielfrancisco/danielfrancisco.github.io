@@ -37,7 +37,7 @@ export default function Contact(props){
 
             <p className="rnav" onClick={()=>{
                  sconte("portfolio")
-                 
+                 document.getElementById("body").style.backgroundColor= "white";
                 }}
             >Projects</p>
             <p className="rnav">About</p>

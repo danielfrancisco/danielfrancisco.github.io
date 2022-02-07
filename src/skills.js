@@ -35,7 +35,7 @@ export default function Skills(props){
 
                 <p className="rnav" onClick={()=>{
                  scont("porfolio")
-                 
+                 document.getElementById("body").style.backgroundColor= "white";
                 }}
                 >Projects</p>
                 <p className="rnav">About</p>
@@ -54,7 +54,9 @@ export default function Skills(props){
               </div>
 
               <div id="res"><br/>Responsive<br/> Web desing
-                 
+                <div id="rescon"><br/> &nbsp; &nbsp;Your site will look&nbsp;
+                good in all devices<br/> 
+                      </div>
               </div>
 
             </div>

@@ -10,12 +10,12 @@ export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
 
     if(cont==="home"){
-        
+      document.getElementById("body").style.backgroundColor= "#E7E7E7";
         return <Home cont={cont}/>
       }
 
       if(cont==="skills"){
-        
+        document.getElementById("body").style.backgroundColor= "#E7E7E7";
         return <Skills cont={cont}/>
       }
 

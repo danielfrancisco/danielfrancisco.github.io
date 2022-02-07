@@ -13,11 +13,12 @@
 
     #imle{
         display: inline-block;
-        margin-left: 10vw;
+        left: 10vw;
         top: 1.5vh;
+        
         img{
             
-           margin-top: 10vh;
+           margin-top: 11vh;
             height: 30vh;
             width: 28vw;
             cursor: pointer;
@@ -36,6 +37,7 @@
             &:hover{
                 color: #073042;
             }
+            margin-bottom: 17vh;
         }
 
         
@@ -54,8 +56,9 @@
         display: inline-block;
         left: 47vw;
         top: 1.5vh;
+        
         img{
-            margin-top: 10vh;
+            margin-top: 11vh;
             height: 30vh;
             width: 28vw;
             cursor: pointer;

@@ -8,12 +8,13 @@ export default function Home(props) {
    const [conte,sconte] = useState("home")
 
    if(conte==="portfolio"){
-        
+    document.getElementById("body").style.backgroundColor= "white";
     return <Portfolio cont={conte}/>
+    
   }
 
   if(conte==="contact"){
-        
+    document.getElementById("body").style.backgroundColor= "#E7E7E7";
     return <Contact cont={conte}/>
   }
 
@@ -53,6 +54,7 @@ export default function Home(props) {
   }
 
   if(conte==="skills"){
+    document.getElementById("body").style.backgroundColor= "#E7E7E7";
     return <Skills con={conte}/>
     
   }
