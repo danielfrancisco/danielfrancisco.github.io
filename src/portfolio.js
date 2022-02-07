@@ -4,6 +4,7 @@ import Skills from "./skills"
 import martysi from "./images/martysi.png"
 import "./styless/portfolio.scss"
 import resort from "./images/resort.png"
+import franki from "./images/franki.png"
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
@@ -35,32 +36,39 @@ export default function Portfolio(props){
                  scont("porfolio")
                  
                 }}
-                >Portfolio</p>
+                >Projects</p>
                 <p className="rnav">About</p>
-              </div>
 
-              <div id="imacon">
+                <div id="imacon">
                <div id="imlepa">
                   <div id="imle">
                     <div>
                         <img src={martysi}/>
-                        <button>Check it out </button>
+                        <button>view project </button>
                    </div>
                     
-                    </div>
+                   <div>
+                        <img src={franki}/>
+                        <button>view project </button>
+                   </div>
+
+                  </div>
                </div>
 
                <div id="imrepa"> 
                 <div id="imre">
                   <div>
                     <img src={resort}/>
-                    <button>Check it out </button>
+                    <button>view project </button>
                   </div>
                 </div>
               </div>
               </div>
 
             </div>
+              </div>
+
+              
 
           </>
       )

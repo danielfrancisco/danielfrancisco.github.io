@@ -37,7 +37,7 @@ export default function Skills(props){
                  scont("porfolio")
                  
                 }}
-                >Portfolio</p>
+                >Projects</p>
                 <p className="rnav">About</p>
               </div>
 

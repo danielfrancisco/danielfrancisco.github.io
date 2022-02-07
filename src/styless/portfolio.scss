@@ -1,20 +1,23 @@
 
 #imacon{
     display: inline-block;
-    margin-top: 5vh;
+    top: 10vh;
+    left: -33vw;
+    
 
     #imlepa{
         display: inline-block;
         position: absolute;
+        
     }
 
     #imle{
         display: inline-block;
         margin-left: 10vw;
-        top: 7vh;
-        
+        top: 1.5vh;
         img{
-        
+            
+           margin-top: 10vh;
             height: 30vh;
             width: 28vw;
             cursor: pointer;
@@ -50,8 +53,9 @@
     #imre{
         display: inline-block;
         left: 47vw;
-        top: 7vh;
+        top: 1.5vh;
         img{
+            margin-top: 10vh;
             height: 30vh;
             width: 28vw;
             cursor: pointer;

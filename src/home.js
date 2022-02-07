@@ -34,7 +34,7 @@ export default function Home(props) {
                  sconte("portfolio")
                  
                 }}
-            >Portfolio</p>
+            >Projects</p>
             <p className="rnav">About</p>
           </div>
   

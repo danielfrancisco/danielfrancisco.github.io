@@ -39,7 +39,7 @@ export default function Contact(props){
                  sconte("portfolio")
                  
                 }}
-            >Portfolio</p>
+            >Projects</p>
             <p className="rnav">About</p>
           </div>
 
