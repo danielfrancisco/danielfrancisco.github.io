@@ -3,7 +3,7 @@ import { useState } from "react"
 import Skills from "./skills"
 import martysi from "./images/martysi.png"
 import "./styless/portfolio.scss"
-import resort from "./images/resort.png"
+import resorti from "./images/resorti.png"
 import franki from "./images/franki.png"
 
 export default function Portfolio(props){
@@ -43,8 +43,11 @@ export default function Portfolio(props){
                <div id="imlepa">
                   <div id="imle">
                     <div>
-                        <img src={martysi}/>
-                        <button>view project </button>
+                        <a href="" target="_blank"
+                        ><img src={martysi}/>
+                        </a>
+                        <a href="" target="_blank"><button>view project </button></a>
+                        
                    </div>
                     
                    <div>
@@ -58,7 +61,7 @@ export default function Portfolio(props){
                <div id="imrepa"> 
                 <div id="imre">
                   <div>
-                    <img src={resort}/>
+                    <img src={resorti}/>
                     <button>view project </button>
                   </div>
                 </div>

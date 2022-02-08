@@ -24,16 +24,15 @@
             cursor: pointer;
            
            
-            &:hover{
-                height: 32vh;
-                width: 30vw;
-            }
+            
             
         }
 
         button{
             top: 4vh;
+            height: 5.5vh;
             background-color: #30b069;
+            border-radius: 6px;
             &:hover{
                 color: #073042;
             }
@@ -62,19 +61,15 @@
             height: 30vh;
             width: 28vw;
             cursor: pointer;
-           
-           
-            &:hover{
-                height: 32vh;
-                width: 30vw;
-            }
             
         }
 
         button{
             top: 4vh;
             left: 0vw;
+            height: 5.5vh;
             background-color: #30b069;
+            border-radius: 6px;
             &:hover{
                 color: #073042;
             }

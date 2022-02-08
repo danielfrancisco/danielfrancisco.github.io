@@ -45,7 +45,7 @@ export default function Home(props) {
             <div id="titulo">Designer</div>
             <button onClick={()=>{
               sconte("contact")
-            }}>CONTACT</button>
+            }}>Contact</button>
           </div>
         </div>
       </>

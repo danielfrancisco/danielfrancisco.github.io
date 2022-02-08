@@ -2,12 +2,13 @@
     
     background-color: $bcolor;
     color: white;
-    height: 13vh;
+    height: 16vh;
     width: 20vw;
     display: inline-block;
     margin-left: 3.5vw;
-    top: 10vh;
+    top: 8vh;
     left: 6vw;
+    font-size: 25px;
     position: relative;
     text-align: center;
     border-radius: 5px;
@@ -15,14 +16,16 @@
     }
 
   @mixin con{
-     top: 4vh;
+     top: 3vh;
      color: white;
      height: 35vh;
      width: 20vw;
+     font-size: 17px;
      background-color: #333;
      border-radius: 5px;
      text-align: left;
      line-height: 3.2vh;
+     font-weight: lighter
     }
 
 #ui{

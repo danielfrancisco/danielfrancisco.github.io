@@ -1,4 +1,4 @@
-$myfont:  Roboto,Helvetica,Arial,sans-serif;
+$myfont:  Roboto;
 
 #fondo{
   background-color:white;
@@ -45,7 +45,7 @@ $myfont:  Roboto,Helvetica,Arial,sans-serif;
     top: 12vh;
       margin-left: 10vw;
       font-weight: bold;
-      font-size: 1.7vw;
+      font-size: 30px;
   
   }
   #titulo{
@@ -62,13 +62,15 @@ $myfont:  Roboto,Helvetica,Arial,sans-serif;
     position: relative;
     top: 12vh;
     margin-left: 10vw;
-    height: 5.5vh;
-    font-size: 0.85rem;
+    height: 48px;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
     outline:none;
-    font-weight: bold;
-    width: 10vw;
+    font-weight: 500;
+    width: 7.8vw;
     font-family: $myfont;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
     &:hover{
       background-color: #30b069;
@@ -98,5 +100,9 @@ body{
 
 @media screen and (max-width:600px) {
   
-  
+  #nav{
+    p{
+      font-size: 12vw;
+    }
+  }
 }
