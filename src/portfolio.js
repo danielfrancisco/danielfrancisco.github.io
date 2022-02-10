@@ -43,15 +43,21 @@ export default function Portfolio(props){
                <div id="imlepa">
                   <div id="imle">
                     <div>
-                        <a href="" target="_blank"
-                        ><img src={martysi}/>
-                        </a>
+                    <div id="coloroverMa">
+                      <a href="" target="_blank">
+                        <img src={martysi}/>
+                      </a>
+                  </div>
                         <a href="" target="_blank"><button>view project </button></a>
                         
                    </div>
                     
                    <div>
-                        <img src={franki}/>
+                   <div id="coloroverFr">
+                    <a href="" target="_blank">
+                      <img src={franki}/>
+                    </a>
+                  </div>
                         <button>view project </button>
                    </div>
 
@@ -61,8 +67,12 @@ export default function Portfolio(props){
                <div id="imrepa"> 
                 <div id="imre">
                   <div>
-                    <img src={resorti}/>
-                    <button>view project </button>
+                  <div id="coloroverRe">
+                    <a href="" target="_blank">
+                      <img src={resorti}/>
+                    </a>
+                  </div>
+                  <button>view project </button>
                   </div>
                 </div>
               </div>
