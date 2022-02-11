@@ -1,10 +1,6 @@
 import Home from "./home"
 import { useState } from "react";
-import { useEffect } from "react";
 import Portfolio from "./portfolio";
-import "./styless/home.scss"
-import "./styless/skills.scss"
-
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)

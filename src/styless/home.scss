@@ -1,4 +1,5 @@
 $myfont:  Roboto;
+@import "portfolio","contact","skills";
 
 #fondo{
   background-color:white;
@@ -99,10 +100,28 @@ body{
 }
 
 @media screen and (max-width:600px) {
-  
-  #nav{
-    p{
-      font-size: 12vw;
+  #fondo{
+    #nav{
+      p{
+        font-size: 12px;
+      }
     }
+    #titulo{
+      font-size: 12px;
+      margin-left: 0vw;
+    }
+
+    #nombre{
+      position: relative;
+      margin-left: 0vw;
+    }
+
+    button{
+      width: 100px;
+      margin-left: 0vw;
+    }
+
+    
   }
+  
 }

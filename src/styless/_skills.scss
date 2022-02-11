@@ -57,10 +57,11 @@
   
   #ui{
    display: block;
-   margin-left: 5vw;
-   width: 70vw;
+   position: relative;
+   left: -7vw;
+   width: 97vw;
     #uicon{
-        width: 70vw;
+        width: 97vw;
     }
    
   }
@@ -68,23 +69,25 @@
   #front{
     display: block;
     margin-top: 38vh;
-    margin-left: 5vw;
-    width: 70vw;
+    position: relative;
+    left: -7vw;
+    width: 97vw;
     #frontcon{
-        width: 70vw;
+        width: 97vw;
     }
   }
 
   #res{
     display: block;
     margin-top: 38vh;
-    margin-left: 5vw;
-    width: 70vw;
+    margin-right: 4vw;
+    position: relative;
+    left: -7vw;
+    width: 97vw;
     #rescon{
-      width: 70vw;
+      width: 97vw;
       
   }
-    
     
   }
 

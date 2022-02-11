@@ -1,4 +1,3 @@
-import "./styless/contact.scss"
 import Skills from "./skills"
 import Home from "./home"
 import { useState } from "react"

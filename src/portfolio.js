@@ -2,7 +2,6 @@ import Home from "./home"
 import { useState } from "react"
 import Skills from "./skills"
 import martysi from "./images/martysi.png"
-import "./styless/portfolio.scss"
 import resorti from "./images/resorti.png"
 import franki from "./images/franki.png"
 
