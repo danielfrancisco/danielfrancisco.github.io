@@ -12,12 +12,13 @@
     }
 
     #imle{
+        margin-top: 11vh;
         display: inline-block;
         left: 10vw;
         top: 1.5vh;
 
         #coloroverMa{
-            margin-top: 11vh;
+            
             height: 30vh;
             width: 28vw;
             background-color: black;
@@ -105,6 +106,27 @@
         
     }
 
+}
+
+@media screen and (max-width:600px) {
+    #imlepa{
+        
+        display: block;
+        img{
+            
+        }
+    }
+
+    #imrepa{
+        margin-top: 6vh;
+        left: -40vw;
+        top: 125vh;
+        display: block;
+        img{
+            
+            width: 100vw;
+        }
+    }
 }
 
 

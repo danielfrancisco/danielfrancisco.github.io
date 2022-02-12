@@ -8,7 +8,7 @@ export default function Home() {
    const [conte,sconte] = useState("home")
    
    function deskcolor(){
-     if(window.innerWidth>600){
+     if(window.innerWidth>600 && conte==="portfolio"===false){
       document.getElementById("body").style.backgroundColor= "#E7E7E7";
      }
      else{
