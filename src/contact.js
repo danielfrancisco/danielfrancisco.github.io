@@ -1,11 +1,19 @@
 import Skills from "./skills"
 import Home from "./home"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Portfolio from "./portfolio"
 
 export default function Contact(props){
     const [conte,sconte] = useState(props.cont)
-
+    useEffect(()=>{
+      if(window.innerWidth<=600){
+        document.getElementById("body").style.backgroundColor= "white";
+      }
+      else{
+        document.getElementById("body").style.backgroundColor= "#E7E7E7";
+      }
+     },[window.innerWidth])
+  
     if(conte==="portfolio"){
          
      return <Portfolio cont={conte}/>

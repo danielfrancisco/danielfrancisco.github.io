@@ -7,12 +7,12 @@ export default function Skills(props){
     
      
      if(cont==="home"){
-        
+      
         return <Home cont={cont}/>
       }
 
       if(cont==="porfolio"){
-        
+        document.getElementById("body").style.backgroundColor= "white";
         return <Portfolio cont={cont}/>
       }
 
@@ -31,7 +31,7 @@ export default function Skills(props){
 
                 <p className="rnav" onClick={()=>{
                  scont("porfolio")
-                 document.getElementById("body").style.backgroundColor= "white";
+                 
                 }}
                 >Projects</p>
                 <p className="rnav">About</p>

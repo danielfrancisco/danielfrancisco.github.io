@@ -1,20 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Skills from "./skills";
 import "./styless/home.scss"
 import Portfolio from "./portfolio";
 import Contact from "./contact"
 
-export default function Home(props) {
+export default function Home() {
    const [conte,sconte] = useState("home")
+   
+   function deskcolor(){
+     if(window.innerWidth>600){
+      document.getElementById("body").style.backgroundColor= "#E7E7E7";
+     }
+     else{
+      document.getElementById("body").style.backgroundColor= "white";
+     }
+   }
 
+   window.addEventListener("resize",deskcolor)
+   
    if(conte==="portfolio"){
     document.getElementById("body").style.backgroundColor= "white";
     return <Portfolio cont={conte}/>
     
   }
 
+  if(conte==="skills"){
+    if(window.innerWidth<=600){
+      document.getElementById("body").style.backgroundColor= "white";
+      return <Skills con={conte}/>
+    }
+
+    else{
+      document.getElementById("body").style.backgroundColor= "#E7E7E7";
+      return <Skills con={conte}/>
+    }
+    
+    
+  }
+
   if(conte==="contact"){
-    document.getElementById("body").style.backgroundColor= "#E7E7E7";
     return <Contact cont={conte}/>
   }
 
@@ -53,11 +77,7 @@ export default function Home(props) {
 
   }
 
-  if(conte==="skills"){
-    document.getElementById("body").style.backgroundColor= "#E7E7E7";
-    return <Skills con={conte}/>
-    
-  }
+  
   
 }
 

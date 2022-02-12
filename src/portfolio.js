@@ -9,13 +9,27 @@ export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
 
     if(cont==="home"){
-      document.getElementById("body").style.backgroundColor= "#E7E7E7";
-        return <Home cont={cont}/>
+      if(window.innerWidth<=600){
+        document.getElementById("body").style.backgroundColor= "white";
+        return <Skills cont={cont}/>
       }
-
-      if(cont==="skills"){
+      else{
         document.getElementById("body").style.backgroundColor= "#E7E7E7";
         return <Skills cont={cont}/>
+      }
+    }
+    
+      if(cont==="skills"){
+        
+        if(window.innerWidth<=600){
+          document.getElementById("body").style.backgroundColor= "white";
+          return <Skills cont={cont}/>
+        }
+        else{
+          document.getElementById("body").style.backgroundColor= "#E7E7E7";
+          return <Skills cont={cont}/>
+        }
+        
       }
 
     return(
@@ -86,3 +100,4 @@ export default function Portfolio(props){
       )
 
     }
+  
