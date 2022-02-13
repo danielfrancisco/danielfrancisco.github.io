@@ -109,12 +109,30 @@
 }
 
 @media screen and (max-width:600px) {
+
+   #imacon{
+    #imle{
+        img{
+            position: relative;
+            left: -34.2vw;
+            width: 97vw;
+        }
+    }
+
+    #imre{
+        img{
+            position: relative;
+            left: -34.2vw;
+            width: 97vw;
+        }
+    }
+    
+   }
+
     #imlepa{
         
         display: block;
-        img{
-            
-        }
+        
     }
 
     #imrepa{
@@ -122,10 +140,7 @@
         left: -40vw;
         top: 125vh;
         display: block;
-        img{
-            
-            width: 100vw;
-        }
+        
     }
 }
 
