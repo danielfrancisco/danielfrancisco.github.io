@@ -17,11 +17,12 @@
 
   @mixin con{
      top: 3vh;
-     color: white;
+     color: #999;
+     font-family: Roboto;
      height: 35vh;
      width: 20vw;
      font-size: 17px;
-     background-color: #333;
+     background-color: #111;
      border-radius: 5px;
      text-align: left;
      line-height: 3.2vh;

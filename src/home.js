@@ -71,6 +71,10 @@ export default function Home() {
                  
                 }}>About</p>
           </div>
+
+          <div id="mobile">
+            <button id="drop"><i class="fas fa-bars"></i></button>
+          </div>
   
           <div id="con">
             <div id="nombre">Daniel Campoverde</div>

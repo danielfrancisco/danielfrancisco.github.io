@@ -9,7 +9,10 @@ $myfont:  Roboto;
   width: 90vw;
   border-radius: 10px;
   top: 6.3vh;
-  
+  #mobile{
+   display: none;
+  }
+
   #nav{
     p{
       position: relative;
@@ -53,7 +56,8 @@ $myfont:  Roboto;
     top: 12vh;
     margin-left: 10vw;
     font-size: 1.3vw;
-   
+    color: #484848;
+    
   }
 
   button{
@@ -100,13 +104,19 @@ body{
 }
 
 @media screen and (max-width:600px) {
+
   #fondo{
-    #nav{
-      div{
-        display: none;
+
+    #mobile{
+      display: inline-block;
+      #drop{
+        background-color: white;
       }
     }
-    
+
+    #nav{
+      display: none;
+    }
   }
   
 
@@ -122,8 +132,9 @@ body{
       }
     }
     #titulo{
-      font-size: 12px;
+      font-size: 15px;
       margin-left: 0vw;
+      
     }
 
     #nombre{
