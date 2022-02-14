@@ -1,10 +1,15 @@
 import Home from "./home"
 import { useState } from "react";
 import Portfolio from "./portfolio";
+import About from "./about";
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)
-    
+
+    if(cont==="about"){
+      
+      return <About cont={cont}/>
+    }
      
      if(cont==="home"){
       
@@ -34,7 +39,10 @@ export default function Skills(props){
                  
                 }}
                 >Projects</p>
-                <p className="rnav">About</p>
+                <p className="rnav" onClick={()=>{
+                 scont("about")
+                 
+                }}>About</p>
               </div>
 
               <div id="ui"><br/>Ui/Ux<br/>Designing

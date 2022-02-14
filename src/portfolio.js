@@ -1,12 +1,15 @@
 import Home from "./home"
-import { useState } from "react"
-import Skills from "./skills"
-import martysi from "./images/martysi.png"
-import resorti from "./images/resorti.png"
-import franki from "./images/franki.png"
+import { useState } from "react";
+import Skills from "./skills";
+import martysi from "./images/martysi.png";
+import resorti from "./images/resorti.png";
+import franki from "./images/franki.png";
+import About from "./about";
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
+
+    
 
     if(cont==="home"){
       if(window.innerWidth<=600){
@@ -32,6 +35,18 @@ export default function Portfolio(props){
         
       }
 
+      if(cont==="about"){
+        if(window.innerWidth<=600){
+          document.getElementById("body").style.backgroundColor= "white";
+          return <About cont={cont}/>
+        }
+        else{
+          document.getElementById("body").style.backgroundColor= "#E7E7E7";
+          return <About cont={cont}/>
+        
+      }
+    }
+
     return(
           <>
           <div id="fondo">
@@ -50,8 +65,11 @@ export default function Portfolio(props){
                  
                 }}
                 >Projects</p>
-                <p className="rnav">About</p>
-
+                <p className="rnav" onClick={()=>{
+                 scont("about")
+                 
+                }}>About</p>
+                  
                 <div id="imacon">
                <div id="imlepa">
                   <div id="imle">

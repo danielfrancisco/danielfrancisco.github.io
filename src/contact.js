@@ -1,10 +1,12 @@
 import Skills from "./skills"
 import Home from "./home"
 import { useState,useEffect } from "react"
-import Portfolio from "./portfolio"
+import Portfolio from "./portfolio";
+import About from "./about";
 
 export default function Contact(props){
     const [conte,sconte] = useState(props.cont)
+    
     useEffect(()=>{
       if(window.innerWidth<=600){
         document.getElementById("body").style.backgroundColor= "white";
@@ -13,7 +15,11 @@ export default function Contact(props){
         document.getElementById("body").style.backgroundColor= "#E7E7E7";
       }
      },[window.innerWidth])
-  
+
+     if(conte==="about"){
+      
+      return <About cont={conte}/>
+    }
     if(conte==="portfolio"){
          
      return <Portfolio cont={conte}/>
@@ -47,7 +53,9 @@ export default function Contact(props){
                  document.getElementById("body").style.backgroundColor= "white";
                 }}
             >Projects</p>
-            <p className="rnav">About</p>
+            <p className="rnav" onClick={()=>{
+              sconte("about")
+            }}>About</p>
           </div>
 
           <div id="condata">

@@ -3,6 +3,7 @@ import Skills from "./skills";
 import "./styless/home.scss"
 import Portfolio from "./portfolio";
 import Contact from "./contact"
+import About from "./about";
 
 export default function Home() {
    const [conte,sconte] = useState("home")
@@ -21,6 +22,11 @@ export default function Home() {
    if(conte==="portfolio"){
     document.getElementById("body").style.backgroundColor= "white";
     return <Portfolio cont={conte}/>
+    
+  }
+
+  if(conte==="about"){
+    return <About cont={conte}/>
     
   }
 
@@ -60,7 +66,10 @@ export default function Home() {
                  
                 }}
             >Projects</p>
-            <p className="rnav">About</p>
+            <p className="rnav" onClick={()=>{
+                 sconte("about")
+                 
+                }}>About</p>
           </div>
   
           <div id="con">
