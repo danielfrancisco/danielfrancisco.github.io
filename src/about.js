@@ -72,12 +72,20 @@ export default function About(props){
                 sconte("drop")
               }
             }/>
-          </div>
-
-            <p id="aboutme">I'm a front end developer with more than 4 years of experience<br/> 
-            with a lot passion for designing and problem solving to deliver <br/> an
-            immersive and intuitive user experience.
-            </p>
+          </div >
+             
+             <div id="abcon">
+             <p id="aboutmede">
+              I'm a front end developer with more than 4 years of experience<br/>
+              with a lot passion for designing and problem solving to deliver <br/> 
+              an immersive and intuitive user experience.
+              </p>
+              <p id="aboutmemo">
+              I'm a front end developer with more than 4 years of experience
+              with a lot passion for designing and problem solving to deliver  an
+              immersive and intuitive user experience.
+              </p>
+            </div> 
 
         </div>
             
