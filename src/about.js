@@ -3,12 +3,22 @@ import "./styless/about.scss";
 import Portfolio from "./portfolio";
 import Home from "./home"
 import Skills from "./skills";
+import Drop from "./drop";
+import {FaBars} from "react-icons/fa";
+
 
 export default function About(props){
     const [conte,sconte] = useState(props.conte)
+    const[page,spage] = useState("about")
+
     if(conte==="portfolio"){
         document.getElementById("body").style.backgroundColor= "white";
         return <Portfolio cont={conte}/>
+        
+      }
+
+    if(conte==="drop"){
+        return <Drop cont={conte} page={page} pre = "1"/>
         
       }
 
@@ -51,7 +61,15 @@ export default function About(props){
             <p className="rnav">About</p>
           </div>
 
-                
+          <div>
+            <div id="daniel">Daniel</div>
+            <FaBars id="bars" onClick={
+              ()=>{
+                sconte("drop")
+              }
+            }/>
+          </div>
+
             <p id="aboutme">I'm a front end developer with more than 4 years of experience<br/> 
             with a lot passion for designing and problem solving to deliver <br/> an
             immersive and intuitive user experience.

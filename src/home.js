@@ -4,9 +4,12 @@ import "./styless/home.scss"
 import Portfolio from "./portfolio";
 import Contact from "./contact"
 import About from "./about";
+import {FaBars} from "react-icons/fa";
+import Drop from "./drop";
 
 export default function Home() {
    const [conte,sconte] = useState("home")
+   const[page,spage] = useState("home")
    
    function deskcolor(){
      if(window.innerWidth>600 && conte==="portfolio"===false){
@@ -27,6 +30,11 @@ export default function Home() {
 
   if(conte==="about"){
     return <About cont={conte}/>
+    
+  }
+
+  if(conte==="drop"){
+    return <Drop cont={conte} page={page} pre = "1"/>
     
   }
 
@@ -72,8 +80,13 @@ export default function Home() {
                 }}>About</p>
           </div>
 
-          <div id="mobile">
-            <button id="drop"><i class="fas fa-bars"></i></button>
+          <div>
+            <div id="daniel">Daniel</div>
+            <FaBars id="bars" onClick={
+              ()=>{
+                sconte("drop")
+              }
+            }/>
           </div>
   
           <div id="con">
@@ -90,7 +103,6 @@ export default function Home() {
 
   }
 
-  
   
 }
 

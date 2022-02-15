@@ -2,10 +2,13 @@ import Home from "./home"
 import { useState } from "react";
 import Portfolio from "./portfolio";
 import About from "./about";
+import {FaBars} from "react-icons/fa";
+import Drop from "./drop";
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)
-
+    const[page,spage] = useState("skills")
+    
     if(cont==="about"){
       
       return <About cont={cont}/>
@@ -19,6 +22,11 @@ export default function Skills(props){
       if(cont==="porfolio"){
         document.getElementById("body").style.backgroundColor= "white";
         return <Portfolio cont={cont}/>
+      }
+
+      if(cont==="drop"){
+        return <Drop cont={cont} page={page} pre="1"/>
+        
       }
 
       return (
@@ -44,6 +52,21 @@ export default function Skills(props){
                  
                 }}>About</p>
               </div>
+
+            <div>
+            <div id="daniel" onClick={
+              ()=>{
+                scont("home")
+              }
+            }>Daniel</div>
+            <FaBars id="bars" onClick={
+              ()=>{
+                scont("drop")
+
+              }
+            }/>
+          </div>
+           
 
               <div id="ui"><br/>Ui/Ux<br/>Designing
                      <div id="uicon"><br/> &nbsp; &nbsp;Ux and Ui desing combines<br/>

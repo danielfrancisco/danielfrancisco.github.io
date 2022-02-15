@@ -61,7 +61,7 @@ export default function Contact(props){
           <div id="condata">
             <div>
               <p>Call me</p>
-              <p id="number">393493485</p><br/>
+              <p id="number">0986702439</p><br/>
             </div>
 
             <div>
@@ -71,7 +71,7 @@ export default function Contact(props){
 
             <div>
              <p>Location</p>
-             <p  id="loc">Ecuador-Guayaquil</p>
+             <p  id="loc">Guayaquil-Ecuador</p>
             </div>
 
           </div>

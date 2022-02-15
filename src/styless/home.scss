@@ -9,9 +9,18 @@ $myfont:  Roboto;
   width: 90vw;
   border-radius: 10px;
   top: 6.3vh;
-  #mobile{
-   display: none;
+  
+  #daniel{
+    display: none;
+    
+     
   }
+
+  #bars{
+    display: none;
+  }
+
+
 
   #nav{
     p{
@@ -106,12 +115,17 @@ body{
 @media screen and (max-width:600px) {
 
   #fondo{
-
-    #mobile{
+    #daniel{
       display: inline-block;
-      #drop{
-        background-color: white;
-      }
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #bars{
+      display: inline-block;
+      position: relative;
+      left: 68vw;
+      font-size: 22px;
     }
 
     #nav{
@@ -132,7 +146,7 @@ body{
       }
     }
     #titulo{
-      font-size: 15px;
+      font-size: 20px;
       margin-left: 0vw;
       
     }
