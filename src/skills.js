@@ -54,6 +54,7 @@ export default function Skills(props){
               </div>
 
             <div>
+              
             <div id="daniel" onClick={
               ()=>{
                 scont("home")

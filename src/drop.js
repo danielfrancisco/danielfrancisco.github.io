@@ -5,6 +5,7 @@ import Home from "./home";
 import Skills from "./skills";
 import Portfolio from "./portfolio";
 import About from "./about";
+import Contact from "./contact";
 
 export default function Drop(props){
     const [conte,sconte] = useState(props.cont)
@@ -22,6 +23,10 @@ export default function Drop(props){
     if(conte==="skills"){
         return <Skills con={conte}/>
     }
+
+    if(conte==="contact"){
+        return <Contact cont={conte}/>
+      }
 
     if(conte==="home"){
         return <Home con={conte}/>
@@ -56,6 +61,7 @@ export default function Drop(props){
             }}>Skills</p> 
             <p onClick={()=>{
                 sconte("portfolio")
+                
             }}>Projects</p>
             <p onClick={()=>{
                 sconte("about")

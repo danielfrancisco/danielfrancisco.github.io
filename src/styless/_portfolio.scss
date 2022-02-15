@@ -2,7 +2,7 @@
 #imacon{
     display: inline-block;
     top: 10vh;
-    left: -33vw;
+    left: 0vw;
     
 
     #imlepa{
@@ -112,9 +112,14 @@
 
    #imacon{
     #imle{
+        button{
+            margin-bottom: 20vh;
+            left: 67px;
+            margin-left: 20px;
+        }
         img{
             position: relative;
-            left: -34.2vw;
+            left: -30px;
             width: 97vw;
             &:hover{
                 opacity: 1;
@@ -125,11 +130,13 @@
     #imre{
         button{
             margin-bottom: 20vh;
+            left: 67px;
+            margin-left: 20px;
         }
 
         img{
             position: relative;
-            left: -34.2vw;
+            left: -30px;
             width: 97vw;
             &:hover{
                 opacity: 1;

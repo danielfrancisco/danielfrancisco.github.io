@@ -5,11 +5,12 @@ import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
 import franki from "./images/franki.png";
 import About from "./about";
+import {FaBars} from "react-icons/fa";
+import Drop from "./drop";
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
-
-    
+    const[page,spage] = useState("portfolio")
 
     if(cont==="home"){
       if(window.innerWidth<=600){
@@ -32,6 +33,11 @@ export default function Portfolio(props){
           document.getElementById("body").style.backgroundColor= "#E7E7E7";
           return <Skills cont={cont}/>
         }
+        
+      }
+
+      if(cont==="drop"){
+        return <Drop cont={cont} page={page} pre = "1"/>
         
       }
 
@@ -69,6 +75,20 @@ export default function Portfolio(props){
                  scont("about")
                  
                 }}>About</p>
+              </div>
+
+            <div>
+            <div id="daniel" onClick={
+              ()=>{
+                scont("home")
+              }
+            }>Daniel</div>
+            <FaBars id="bars" onClick={
+              ()=>{
+                scont("drop")
+              }
+            }/>
+            </div>
                   
                 <div id="imacon">
                <div id="imlepa">
@@ -110,7 +130,7 @@ export default function Portfolio(props){
               </div>
 
             </div>
-              </div>
+              
 
               
 

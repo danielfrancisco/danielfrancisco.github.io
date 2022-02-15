@@ -62,7 +62,11 @@ export default function About(props){
           </div>
 
           <div>
-            <div id="daniel">Daniel</div>
+            <div id="daniel" onClick={
+              ()=>{
+                sconte("home")
+              }
+            }>Daniel</div>
             <FaBars id="bars" onClick={
               ()=>{
                 sconte("drop")

@@ -3,9 +3,12 @@ import Home from "./home"
 import { useState,useEffect } from "react"
 import Portfolio from "./portfolio";
 import About from "./about";
+import Drop from "./drop";
+import {FaBars} from "react-icons/fa";
 
 export default function Contact(props){
     const [conte,sconte] = useState(props.cont)
+    const[page,spage] = useState("contact")
     
     useEffect(()=>{
       if(window.innerWidth<=600){
@@ -20,6 +23,12 @@ export default function Contact(props){
       
       return <About cont={conte}/>
     }
+
+    if(conte==="drop"){
+      return <Drop cont={conte} page={page} pre="1"/>
+      
+    }
+
     if(conte==="portfolio"){
          
      return <Portfolio cont={conte}/>
@@ -57,6 +66,22 @@ export default function Contact(props){
               sconte("about")
             }}>About</p>
           </div>
+          
+          <div>
+              
+              <div id="daniel" onClick={
+                ()=>{
+                  sconte("home")
+                }
+              }>Daniel</div>
+              <FaBars id="bars" onClick={
+                ()=>{
+                  sconte("drop")
+  
+                }
+              }/>
+            </div>
+          
 
           <div id="condata">
             <div>
