@@ -10,7 +10,11 @@ import Drop from "./drop";
 export default function Home() {
    const [conte,sconte] = useState("home")
    const[page,spage] = useState("home")
-   
+
+   useEffect(()=>{
+    document.getElementById("nav").style.top = "16vh";
+   },[])
+
    function deskcolor(){
      if(window.innerWidth>600 && conte==="portfolio"===false){
       document.getElementById("body").style.backgroundColor= "#E7E7E7";

@@ -2,12 +2,17 @@ import Home from "./home"
 import { useState } from "react";
 import Portfolio from "./portfolio";
 import About from "./about";
+import { useEffect } from "react";
 import {FaBars} from "react-icons/fa";
 import Drop from "./drop";
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)
     const[page,spage] = useState("skills")
+
+    useEffect(()=>{
+      document.getElementById("nav").style.top = "16vh";
+     },[])
     
     if(cont==="about"){
       

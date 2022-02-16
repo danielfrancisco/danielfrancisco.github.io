@@ -5,11 +5,15 @@ import Home from "./home"
 import Skills from "./skills";
 import Drop from "./drop";
 import {FaBars} from "react-icons/fa";
-
+import { useEffect } from "react";
 
 export default function About(props){
     const [conte,sconte] = useState(props.conte)
     const[page,spage] = useState("about")
+
+    useEffect(()=>{
+      document.getElementById("nav").style.top = "16vh";
+     },[])
 
     if(conte==="portfolio"){
         document.getElementById("body").style.backgroundColor= "white";

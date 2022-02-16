@@ -46,6 +46,7 @@ export default function Portfolio(props){
       }
       else{
         document.getElementById("body").style.backgroundColor= "#E7E7E7";
+        document.getElementById("nav").style.top = "-6vh";
         return <Skills cont={cont}/>
       }
     }
@@ -75,6 +76,7 @@ export default function Portfolio(props){
         }
         else{
           document.getElementById("body").style.backgroundColor= "#E7E7E7";
+          
           return <About cont={cont}/>
         
       }
