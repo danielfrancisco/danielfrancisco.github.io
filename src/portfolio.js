@@ -1,5 +1,5 @@
 import Home from "./home"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Skills from "./skills";
 import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
@@ -11,6 +11,12 @@ import Drop from "./drop";
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
     const[page,spage] = useState("portfolio")
+
+   useEffect(()=>{
+    document.getElementById("nav").style.paddingTop = "20vh";
+    document.getElementById("nav").style.paddingTop = "20vh";
+    document.getElementById("nav").style.top = "-6vh";
+   },[])
 
     if(cont==="home"){
       if(window.innerWidth<=600){
@@ -130,10 +136,6 @@ export default function Portfolio(props){
               </div>
 
             </div>
-              
-
-              
-
           </>
       )
 

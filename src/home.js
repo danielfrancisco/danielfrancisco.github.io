@@ -45,6 +45,7 @@ export default function Home() {
     }
 
     else{
+      document.getElementById("nav").style.backgroundColor = "white";
       document.getElementById("body").style.backgroundColor= "#E7E7E7";
       return <Skills con={conte}/>
     }
