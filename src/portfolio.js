@@ -18,6 +18,22 @@ export default function Portfolio(props){
     document.getElementById("nav").style.top = "-6vh";
    },[])
 
+   
+    window.onscroll = function(e) {
+      
+      console.log(this.oldScroll,this.scrollY);
+      if(this.scrollY>this.oldScroll){
+        document.getElementById("nav").style.top = "-60vh";
+      }
+
+      if(this.scrollY<this.oldScroll){
+        document.getElementById("nav").style.top = "-6vh";
+      }
+      this.oldScroll = this.scrollY;
+      
+    }
+   
+
     if(cont==="home"){
       if(window.innerWidth<=600){
         document.getElementById("body").style.backgroundColor= "white";
