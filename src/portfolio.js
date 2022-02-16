@@ -16,8 +16,13 @@ export default function Portfolio(props){
     document.getElementById("nav").style.paddingTop = "20vh";
     document.getElementById("nav").style.paddingTop = "20vh";
     document.getElementById("nav").style.top = "-6vh";
+    document.getElementById("imle").style.left = "10vw";
+    document.getElementById("imre").style.left = "47vw";
    },[])
-
+  
+   
+    
+   
    
     window.onscroll = function(e) {
       

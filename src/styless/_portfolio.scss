@@ -1,7 +1,7 @@
 
 #imacon{
     display: inline-block;
-    top: 10vh;
+    top: 20vh;
     left: 0vw;
     
 
@@ -12,9 +12,10 @@
     }
 
     #imle{
+        transition: left 0.5s;
         margin-top: 11vh;
         display: inline-block;
-        left: 10vw;
+        left: 0vw;
         top: 1.5vh;
 
         #coloroverMa{
@@ -66,8 +67,9 @@
    }
 
     #imre{
+        transition: left 0.5s;
         display: inline-block;
-        left: 47vw;
+        left: 57vw;
         top: 1.5vh;
         
         #coloroverRe{
