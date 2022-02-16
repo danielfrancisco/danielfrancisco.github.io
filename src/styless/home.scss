@@ -21,11 +21,17 @@ $myfont:  Roboto;
   }
 
 
-
   #nav{
+    top: 16vh;
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+    width: 89.99vw;
     p{
+      
+      color: black;
       position: relative;
-      top: 6vh;
+      top: 0vh;
       left: 5vw;
       display: inline-block;
       margin-left: 5vw;
@@ -37,15 +43,16 @@ $myfont:  Roboto;
       }
     }
     .rnav{
-      
+      z-index: 5;
       left: 35vw;
     }
   }
   
   #con{
     position: relative;
-    top: 3vh;
+    top: 15vh;
     left: 13vw;
+    
   }
  
   div{

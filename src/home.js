@@ -60,27 +60,28 @@ export default function Home() {
     return (
       <>
         <div id="fondo">
-          <div id="nav">
-            <p onClick={()=>{
-              sconte("home")
-            }}>Home</p>
+            <div id="nav">
+                <p  onClick={()=>{
+                  sconte("home")
+                }}>Home</p>
 
-            <p className="rnav" onClick={()=>{
-              sconte("skills")
-            }}>Skills</p>
+                <p className="rnav" onClick={()=>{
+                  sconte("skills")
+                }}>Skills</p>
 
-            <p className="rnav" onClick={()=>{
-                 sconte("portfolio")
-                 
-                }}
-            >Projects</p>
-            <p className="rnav" onClick={()=>{
-                 sconte("about")
-                 
-                }}>About</p>
-          </div>
+                <p className="rnav" onClick={()=>{
+                    sconte("portfolio")
+                    
+                    }}
+                >Projects</p>
+                <p className="rnav" onClick={()=>{
+                    sconte("about")
+                    
+                    }}>About</p>
+              </div>
+            <div>
+          
 
-          <div>
             <div id="daniel">Daniel</div>
             <FaBars id="bars" onClick={
               ()=>{
@@ -97,6 +98,7 @@ export default function Home() {
               sconte("contact")
             }}>Contact</button>
           </div>
+          
         </div>
       </>
     );
