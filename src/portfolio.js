@@ -21,6 +21,7 @@ export default function Portfolio(props){
    },[])
   
    
+   
     window.onscroll = function(e) {
       
       console.log(this.oldScroll,this.scrollY);
@@ -35,10 +36,42 @@ export default function Portfolio(props){
       
     }
 
-    
-   
 
-    if(cont==="home"){
+    if(window.innerWidth<=600){
+      window.onscroll = function(e) {
+      
+        console.log(this.oldScroll,this.scrollY);
+        if(this.scrollY>this.oldScroll){
+          document.getElementById("danielpa").style.top = "-60vh";
+        }
+  
+        if(this.scrollY<this.oldScroll){
+          document.getElementById("danielpa").style.top = "-3vh";
+        }
+        this.oldScroll = this.scrollY;
+        
+      }
+
+  }
+
+  else{
+    window.onscroll = function(e) {
+      
+      console.log(this.oldScroll,this.scrollY);
+      if(this.scrollY>this.oldScroll){
+        document.getElementById("nav").style.top = "-60vh";
+      }
+
+      if(this.scrollY<this.oldScroll){
+        document.getElementById("nav").style.top = "-6vh";
+      }
+      this.oldScroll = this.scrollY;
+      
+    }
+  }  
+    
+    
+   if(cont==="home"){
       if(window.innerWidth<=600){
         document.getElementById("body").style.backgroundColor= "white";
         return <Skills cont={cont}/>
