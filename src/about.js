@@ -65,7 +65,8 @@ export default function About(props){
             <p className="rnav">About</p>
           </div>
 
-          <div>
+          <div id="danielpa">
+              
             <div id="daniel" onClick={
               ()=>{
                 sconte("home")
@@ -74,9 +75,11 @@ export default function About(props){
             <FaBars id="bars" onClick={
               ()=>{
                 sconte("drop")
+
               }
             }/>
-          </div >
+          </div>
+           
              
              <div id="abcon">
              <p id="aboutmede">

@@ -11,6 +11,21 @@ export default function Home() {
    const [conte,sconte] = useState("home")
    const[page,spage] = useState("home")
 
+   
+   window.onscroll = function(e) {
+      
+    console.log(this.oldScroll,this.scrollY);
+    if(this.scrollY>this.oldScroll){
+      document.getElementById("danielpa").style.top = "-60vh";
+    }
+
+    if(this.scrollY<this.oldScroll){
+      document.getElementById("danielpa").style.top = "-3vh";
+    }
+    this.oldScroll = this.scrollY;
+    
+  }
+
    useEffect(()=>{
     document.getElementById("nav").style.top = "16vh";
    },[])
@@ -84,16 +99,19 @@ export default function Home() {
                     
                     }}>About</p>
               </div>
-            <div>
+            
           
-
-            <div id="daniel">Daniel</div>
-            <FaBars id="bars" onClick={
-              ()=>{
-                sconte("drop")
-              }
-            }/>
-          </div>
+            <div id="danielpa">
+              <div id="daniel">
+                Daniel
+              </div>
+              <FaBars id="bars" onClick={
+                ()=>{
+                  sconte("drop")
+                }
+              }/>
+            </div>
+          
   
           <div id="con">
             <div id="nombre">Daniel Campoverde</div>

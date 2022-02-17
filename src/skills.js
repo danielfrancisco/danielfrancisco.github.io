@@ -10,6 +10,21 @@ export default function Skills(props){
     const[cont,scont] = useState(props.cont)
     const[page,spage] = useState("skills")
 
+    
+    window.onscroll = function(e) {
+      
+      console.log(this.oldScroll,this.scrollY);
+      if(this.scrollY>this.oldScroll){
+        document.getElementById("danielpa").style.top = "-60vh";
+      }
+
+      if(this.scrollY<this.oldScroll){
+        document.getElementById("danielpa").style.top = "-3vh";
+      }
+      this.oldScroll = this.scrollY;
+      
+    }
+
     useEffect(()=>{
       document.getElementById("nav").style.top = "16vh";
      },[])
@@ -58,7 +73,7 @@ export default function Skills(props){
                 }}>About</p>
               </div>
 
-            <div>
+            <div id="danielpa">
               
             <div id="daniel" onClick={
               ()=>{

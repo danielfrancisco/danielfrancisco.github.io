@@ -67,7 +67,7 @@ export default function Contact(props){
             }}>About</p>
           </div>
           
-          <div>
+          <div id="danielpa">
               
               <div id="daniel" onClick={
                 ()=>{
@@ -81,6 +81,7 @@ export default function Contact(props){
                 }
               }/>
             </div>
+             
           
 
           <div id="condata">

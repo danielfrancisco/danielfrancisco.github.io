@@ -106,18 +106,21 @@ export default function Portfolio(props){
                 }}>About</p>
               </div>
 
-            <div>
-            <div id="daniel" onClick={
-              ()=>{
-                scont("home")
-              }
-            }>Daniel</div>
-            <FaBars id="bars" onClick={
-              ()=>{
-                scont("drop")
-              }
-            }/>
+              <div id="danielpa">
+              
+              <div id="daniel" onClick={
+                ()=>{
+                  scont("home")
+                }
+              }>Daniel</div>
+              <FaBars id="bars" onClick={
+                ()=>{
+                  scont("drop")
+  
+                }
+              }/>
             </div>
+             
                   
                 <div id="imacon">
                <div id="imlepa">

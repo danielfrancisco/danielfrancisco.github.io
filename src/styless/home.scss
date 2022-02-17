@@ -124,18 +124,33 @@ body{
 @media screen and (max-width:600px) {
 
   #fondo{
+    #danielpa{
+     background-color: white;
+     position: fixed;
+     z-index: 5;
+     padding-top: 10vh;
+     padding-left: 50px;
+     top: -3vh;
+     top: -30px;
+     left: -10px;
+     width: 100vw;
+     transition: top 0.5s;
     #daniel{
       display: inline-block;
       font-size: 18px;
       font-weight: bold;
+      
+      z-index: 5;
     }
 
     #bars{
+      position: fixed;
       display: inline-block;
-      position: relative;
-      left: 68vw;
+      z-index: 5;
+      left: 80vw;
       font-size: 22px;
     }
+  }
 
     #nav{
       display: none;
