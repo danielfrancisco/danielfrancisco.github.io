@@ -1,4 +1,7 @@
 #dropcon{
+  height: 60vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
   p{
   font-family: Roboto;   
   font-size: 40px;
@@ -7,8 +10,11 @@
   top: 15vh;
   font-weight: bold;
   margin-bottom: 50px;
+  
   }
 }
+
+
 
 #barspres{
     position: relative;

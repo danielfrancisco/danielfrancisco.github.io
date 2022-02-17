@@ -1,6 +1,6 @@
 import "./styless/drop.scss"
-import {FaBars} from "react-icons/fa";
-import { useState } from "react";
+import {FaBars, FaBorderStyle} from "react-icons/fa";
+import { useState,useEffect } from "react";
 import Home from "./home";
 import Skills from "./skills";
 import Portfolio from "./portfolio";
@@ -11,7 +11,7 @@ export default function Drop(props){
     const [conte,sconte] = useState(props.cont)
     const [press,spress] = useState(parseInt( props.pre))
 
-    function ispress(){
+   function ispress(){
         if(press===0){
             spress(1)
         }

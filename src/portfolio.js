@@ -21,9 +21,6 @@ export default function Portfolio(props){
    },[])
   
    
-    
-   
-   
     window.onscroll = function(e) {
       
       console.log(this.oldScroll,this.scrollY);
@@ -37,6 +34,8 @@ export default function Portfolio(props){
       this.oldScroll = this.scrollY;
       
     }
+
+    
    
 
     if(cont==="home"){
