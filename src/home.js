@@ -10,10 +10,6 @@ import Drop from "./drop";
 export default function Home() {
    const [conte,sconte] = useState("home")
    const[page,spage] = useState("home")
-
-   useEffect(()=>{
-   document.getElementById("fondo").style.overflow = "hidden";
-   },[])
    
    window.onscroll = function(e) {
       

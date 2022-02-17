@@ -11,6 +11,7 @@ export default function About(props){
     const [conte,sconte] = useState(props.conte)
     const[page,spage] = useState("about")
 
+    
     useEffect(()=>{
       document.getElementById("nav").style.top = "16vh";
      },[])

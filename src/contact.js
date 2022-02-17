@@ -9,7 +9,8 @@ import {FaBars} from "react-icons/fa";
 export default function Contact(props){
     const [conte,sconte] = useState(props.cont)
     const[page,spage] = useState("contact")
-    
+
+   
     useEffect(()=>{
       if(window.innerWidth<=600){
         document.getElementById("body").style.backgroundColor= "white";

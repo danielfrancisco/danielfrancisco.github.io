@@ -74,12 +74,12 @@ export default function Portfolio(props){
    if(cont==="home"){
       if(window.innerWidth<=600){
         document.getElementById("body").style.backgroundColor= "white";
-        return <Skills cont={cont}/>
+        return <Home cont={cont}/>
       }
       else{
         document.getElementById("body").style.backgroundColor= "#E7E7E7";
         document.getElementById("nav").style.top = "-6vh";
-        return <Skills cont={cont}/>
+        return <Home cont={cont}/>
       }
     }
     
