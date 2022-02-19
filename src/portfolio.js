@@ -159,35 +159,35 @@ export default function Portfolio(props){
                   <div id="imle">
                     <div>
                     <div id="coloroverMa">
-                      <a href="" target="_blank">
+                      <a href="" target="_blank" href="https://danielfrancisco.github.io/martys/">
                         <img src={martysi}/>
                       </a>
                   </div>
-                        <a href="" target="_blank"><button>view project </button></a>
+                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>view project </button></a>
                         
                    </div>
                     
                    <div>
                    <div id="coloroverFr">
-                    <a href="" target="_blank">
+                    <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                       <img src={franki}/>
                     </a>
                   </div>
-                        <button>view project </button>
+                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank"><button>view project </button></a>
                    </div>
 
                   </div>
                </div>
-
+              
                <div id="imrepa"> 
                 <div id="imre">
                   <div>
                   <div id="coloroverRe">
-                    <a href="" target="_blank">
+                    <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
                       <img src={resorti}/>
                     </a>
                   </div>
-                  <button>view project </button>
+                  <a href="https://danielfrancisco.github.io/Resort/" target="_blank"><button>view project </button></a>
                   </div>
                 </div>
               </div>
