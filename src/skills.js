@@ -5,6 +5,7 @@ import About from "./about";
 import { useEffect } from "react";
 import {FaBars} from "react-icons/fa";
 import Drop from "./drop";
+import { Link } from "react-router-dom";
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)
@@ -53,40 +54,36 @@ export default function Skills(props){
           <>
             <div id="fondo">
               <div id="nav">
-                <p onClick={()=>{
+                <Link to="/"><p onClick={()=>{
                  scont("home")
                  
-                }}>Home</p>
+                }}>Home</p></Link>
 
                 <p className="rnav" onClick={()=>{
                    scont("skills")
                 }}>Skills</p>
 
-                <p className="rnav" onClick={()=>{
+                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
                  scont("porfolio")
-                 
+                 document.getElementById("body").style.backgroundColor= "white";
                 }}
-                >Projects</p>
-                <p className="rnav" onClick={()=>{
+                >Projects</p></Link>
+                <Link to="/about"><p className="rnav" onClick={()=>{
                  scont("about")
                  
-                }}>About</p>
+                }}>About</p></Link>
               </div>
 
-            <div id="danielpa">
-              
-            <div id="daniel" onClick={
-              ()=>{
-                scont("home")
-              }
-            }>Daniel</div>
-            <FaBars id="bars" onClick={
-              ()=>{
-                scont("drop")
-
-              }
-            }/>
-          </div>
+              <div id="danielpa">
+              <Link to={"/"}><div id="daniel">
+                Daniel
+              </div></Link>
+              <FaBars id="bars" onClick={
+                ()=>{
+                  scont("drop")
+                }
+              }/>
+            </div>
            
 
               <div id="ui"><br/>Ui/Ux<br/>Designing

@@ -5,6 +5,7 @@ import Portfolio from "./portfolio";
 import About from "./about";
 import Drop from "./drop";
 import {FaBars} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Contact(props){
     const [conte,sconte] = useState(props.cont)
@@ -48,43 +49,39 @@ export default function Contact(props){
     return(
         
          <>
-         <div id="fondo">
-          <div id="nav">
-            <p onClick={()=>{
-              sconte("home")
-            }}>Home</p>
+          <div id="fondo">
+              <div id="nav">
+                <Link to="/"><p onClick={()=>{
+                 sconte("home")
+                 
+                }}>Home</p></Link>
 
-            <p className="rnav" onClick={()=>{
-              sconte("skills")
-            }}>Skills</p>
+                <Link to={"/skills"}><p className="rnav" onClick={()=>{
+                   sconte("skills")
+                }}>Skills</p></Link>
 
-            <p className="rnav" onClick={()=>{
-                 sconte("portfolio")
+                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
+                 sconte("porfolio")
                  document.getElementById("body").style.backgroundColor= "white";
                 }}
-            >Projects</p>
-            <p className="rnav" onClick={()=>{
-              sconte("about")
-            }}>About</p>
-          </div>
-          
-          <div id="danielpa">
+                >Projects</p></Link>
+                <Link to="/about"><p className="rnav" onClick={()=>{
+                 sconte("about")
+                 
+                }}>About</p></Link>
+              </div>
               
-              <div id="daniel" onClick={
-                ()=>{
-                  sconte("home")
-                }
-              }>Daniel</div>
+              <div id="danielpa">
+              <Link to={"/"}><div id="daniel">
+                Daniel
+              </div></Link>
               <FaBars id="bars" onClick={
                 ()=>{
                   sconte("drop")
-  
                 }
               }/>
             </div>
              
-          
-
           <div id="condata">
             <div>
               <p>Call me</p>

@@ -6,6 +6,7 @@ import Skills from "./skills";
 import Portfolio from "./portfolio";
 import About from "./about";
 import Contact from "./contact";
+import { Link } from "react-router-dom";
 
 export default function Drop(props){
     const [conte,sconte] = useState(props.cont)
@@ -52,20 +53,20 @@ export default function Drop(props){
               }
             }/>
           <div id="dropcon">
-            <p onClick={()=>{
+            <Link id="link" to={"/"}><p onClick={()=>{
                 sconte("home")
-            }}>Daniel</p> 
+            }}>Daniel</p></Link> 
 
-            <p onClick={()=>{
+            <Link id="link" to={"/skills"}><p onClick={()=>{
                 sconte("skills")
-            }}>Skills</p> 
-            <p onClick={()=>{
+            }}>Skills</p> </Link>
+            <Link id="link" to={"/portfolio"}><p onClick={()=>{
                 sconte("portfolio")
                 
-            }}>Projects</p>
-            <p onClick={()=>{
+            }}>Projects</p></Link>
+            <Link id="link" to={"/about"}><p onClick={()=>{
                 sconte("about")
-            }}>About</p>
+            }}>About</p></Link>
           </div>
         </>
     )

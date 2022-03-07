@@ -7,6 +7,7 @@ import franki from "./images/franki.png";
 import About from "./about";
 import {FaBars} from "react-icons/fa";
 import Drop from "./drop";
+import { Link } from "react-router-dom";
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
@@ -116,39 +117,36 @@ export default function Portfolio(props){
 
     return(
           <>
-          <div id="fondo">
+      <div id="fondo">
               <div id="nav">
-                <p onClick={()=>{
+                <Link to="/"><p onClick={()=>{
                  scont("home")
-                 
-                }}>Home</p>
+                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                }}>Home</p></Link>
 
-                <p className="rnav" onClick={()=>{
+                <Link to={"/skills"}><p className="rnav" onClick={()=>{
                    scont("skills")
-                }}>Skills</p>
+                   document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                }}>Skills</p></Link>
 
-                <p className="rnav" onClick={()=>{
+                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
                  scont("porfolio")
                  
                 }}
-                >Projects</p>
-                <p className="rnav" onClick={()=>{
+                >Projects</p></Link>
+                <Link to="/about"><p className="rnav" onClick={()=>{
                  scont("about")
-                 
-                }}>About</p>
+                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                }}>About</p></Link>
               </div>
 
               <div id="danielpa">
-              
-              <div id="daniel" onClick={
-                ()=>{
-                  scont("home")
-                }
-              }>Daniel</div>
+              <Link to={"/"}><div id="daniel">
+                Daniel
+              </div></Link>
               <FaBars id="bars" onClick={
                 ()=>{
                   scont("drop")
-  
                 }
               }/>
             </div>

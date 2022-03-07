@@ -6,6 +6,7 @@ import Contact from "./contact"
 import About from "./about";
 import {FaBars} from "react-icons/fa";
 import Drop from "./drop";
+import { Link } from "react-router-dom";
 
 export default function Home() {
    const [conte,sconte] = useState("home")
@@ -78,32 +79,34 @@ export default function Home() {
    if(conte==="home"){
     return (
       <>
-        <div id="fondo">
-            <div id="nav">
-                <p  onClick={()=>{
-                  sconte("home")
-                }}>Home</p>
+       <div id="fondo">
+              <div id="nav">
+                <Link to="/"><p onClick={()=>{
+                 sconte("home")
+                 
+                }}>Home</p></Link>
 
-                <p className="rnav" onClick={()=>{
-                  sconte("skills")
-                }}>Skills</p>
+                <Link to={"/skills"}><p className="rnav" onClick={()=>{
+                   sconte("skills")
+                }}>Skills</p></Link>
 
-                <p className="rnav" onClick={()=>{
-                    sconte("portfolio")
-                    
-                    }}
-                >Projects</p>
-                <p className="rnav" onClick={()=>{
-                    sconte("about")
-                    
-                    }}>About</p>
+                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
+                 sconte("portfolio")
+                 document.getElementById("body").style.backgroundColor= "white";
+                 
+                 }}
+                >Projects</p></Link>
+                <Link to="/about"><p className="rnav" onClick={()=>{
+                 sconte("about")
+                 
+                }}>About</p></Link>
               </div>
             
           
-            <div id="danielpa">
-              <div id="daniel">
+              <div id="danielpa">
+              <Link to={"/"}><div id="daniel">
                 Daniel
-              </div>
+              </div></Link>
               <FaBars id="bars" onClick={
                 ()=>{
                   sconte("drop")
@@ -116,9 +119,9 @@ export default function Home() {
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Front end developer</div>
             <div id="titulo">Designer</div>
-            <button onClick={()=>{
+            <Link to={"/contact"}><button onClick={()=>{
               sconte("contact")
-            }}>Contact</button>
+            }}>Contact</button></Link>
           </div>
           
         </div>

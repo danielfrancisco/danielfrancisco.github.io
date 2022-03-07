@@ -6,6 +6,7 @@ import Skills from "./skills";
 import Drop from "./drop";
 import {FaBars} from "react-icons/fa";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function About(props){
     const [conte,sconte] = useState(props.conte)
@@ -48,38 +49,38 @@ export default function About(props){
 
     return(
         <>
-         <div id="fondo">
-          <div id="nav">
-            <p onClick={()=>{
-              sconte("home")
-            }}>Home</p>
+          <div id="fondo">
+              <div id="nav">
+                <Link to="/"><p onClick={()=>{
+                 sconte("home")
+                 
+                }}>Home</p></Link>
 
-            <p className="rnav" onClick={()=>{
-              sconte("skills")
-            }}>Skills</p>
+                <Link to={"/skills"}><p className="rnav" onClick={()=>{
+                   sconte("skills")
+                }}>Skills</p></Link>
 
-            <p className="rnav" onClick={()=>{
-                 sconte("portfolio")
+                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
+                 sconte("porfolio")
                  document.getElementById("body").style.backgroundColor= "white";
                 }}
-            >Projects</p>
-            <p className="rnav">About</p>
-          </div>
+                >Projects</p></Link>
+                <Link to="/about"><p className="rnav" onClick={()=>{
+                 sconte("about")
+                 
+                }}>About</p></Link>
+              </div>
 
-          <div id="danielpa">
-              
-            <div id="daniel" onClick={
-              ()=>{
-                sconte("home")
-              }
-            }>Daniel</div>
-            <FaBars id="bars" onClick={
-              ()=>{
-                sconte("drop")
-
-              }
-            }/>
-          </div>
+              <div id="danielpa">
+              <Link to={"/"}><div id="daniel">
+                Daniel
+              </div></Link>
+              <FaBars id="bars" onClick={
+                ()=>{
+                  sconte("drop")
+                }
+              }/>
+            </div>
            
              
              <div id="abcon">
