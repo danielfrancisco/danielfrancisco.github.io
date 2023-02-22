@@ -99,9 +99,9 @@ export default function Skills(props){
               </div>
 
               <div id="res"><br/>Responsive<br/> Web desing
-                <div id="rescon"><br/> &nbsp; &nbsp;Your site will look&nbsp;
-                good in all devices<br/> 
-                      </div>
+                <div id="rescon"><br/> &nbsp; &nbsp;Your site will look
+                good in <br/>  &nbsp;  &nbsp;all devices
+                </div>
               </div>
 
             </div>
