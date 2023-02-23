@@ -72,7 +72,7 @@ export default function Skills(props){
 
               <div id="danielpa">
               <Link to={"/danielc"}><div id="daniel">
-                Daniel
+                Home
               </div></Link>
               <FaBars id="bars" onClick={
                 ()=>{

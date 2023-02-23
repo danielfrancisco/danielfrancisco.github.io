@@ -152,7 +152,7 @@ export default function Portfolio(props){
                
               <div id="danielpa">
               <Link to={"/danielc"}><div id="daniel">
-                Daniel
+                Home
               </div></Link>
               <FaBars id="bars" onClick={
                 ()=>{

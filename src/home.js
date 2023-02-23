@@ -76,6 +76,8 @@ export default function Home() {
     return <Contact cont={conte}/>
   }
 
+  
+
    if(conte==="home"){
     return (
       <>
@@ -103,6 +105,7 @@ export default function Home() {
               <FaBars id="bars" onClick={
                 ()=>{
                   sconte("drop")
+                  
                 }
               }/>
             </div>
