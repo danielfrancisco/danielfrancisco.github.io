@@ -118,28 +118,38 @@ export default function Portfolio(props){
     return(
           <>
       <div id="fondo">
-              <div id="nav">
-                <Link to="/danielc"><p onClick={()=>{
-                 scont("home")
-                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>Home</p></Link>
-
-                <Link to={"/skills"}><p className="rnav" onClick={()=>{
-                   scont("skills")
-                   document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>Skills</p></Link>
-
-                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
-                 scont("porfolio")
+      <div id="nav">
+                <Link to="/danielc" id="home" onClick={()=>{
                  
-                }}
-                >Projects</p></Link>
-                <Link to="/about"><p className="rnav" onClick={()=>{
-                 scont("about")
                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>About</p></Link>
-              </div>
+                }}>
+                 
+                Home</Link>
 
+                <Link to={"/skills"} className="links" onClick={()=>{
+                 
+                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                }}>Skills</Link>
+
+               <Link to={"/portfolio"} className="links" onClick={()=>{
+                 
+                 document.getElementById("body").style.backgroundColor= "white";
+                 
+                 
+                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                 
+                }}> 
+                Projects</Link>
+
+                <Link to="/about" className="links" onClick={()=>{
+                 
+                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                }}>About</Link>
+
+              </div>
+              
+                
+               
               <div id="danielpa">
               <Link to={"/danielc"}><div id="daniel">
                 Daniel

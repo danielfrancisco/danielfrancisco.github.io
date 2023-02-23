@@ -53,25 +53,21 @@ export default function Skills(props){
       return (
           <>
             <div id="fondo">
-              <div id="nav">
-                <Link to="/danielc"><p onClick={()=>{
-                 scont("home")
+            <div id="nav">
+                <Link to="/danielc" id="home">
                  
-                }}>Home</p></Link>
+                Home</Link>
 
-                <p className="rnav" onClick={()=>{
-                   scont("skills")
-                }}>Skills</p>
+                <Link to={"/skills"} className="links">Skills</Link>
 
-                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
-                 scont("porfolio")
+               <Link to={"/portfolio"} className="links" onClick={()=>{
+                 
                  document.getElementById("body").style.backgroundColor= "white";
-                }}
-                >Projects</p></Link>
-                <Link to="/about"><p className="rnav" onClick={()=>{
-                 scont("about")
-                 
-                }}>About</p></Link>
+                }}> 
+                Projects</Link>
+
+                <Link to="/about" className="links">About</Link>
+
               </div>
 
               <div id="danielpa">

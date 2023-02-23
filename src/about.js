@@ -50,25 +50,21 @@ export default function About(props){
     return(
         <>
           <div id="fondo">
-              <div id="nav">
-                <Link to="/danielc"><p onClick={()=>{
-                 sconte("home")
+          <div id="nav">
+                <Link to="/danielc" id="home">
                  
-                }}>Home</p></Link>
+                Home</Link>
 
-                <Link to={"/skills"}><p className="rnav" onClick={()=>{
-                   sconte("skills")
-                }}>Skills</p></Link>
+                <Link to={"/skills"} className="links">Skills</Link>
 
-                <Link to={"/portfolio"}><p className="rnav" onClick={()=>{
-                 sconte("porfolio")
+               <Link to={"/portfolio"} className="links" onClick={()=>{
+                 
                  document.getElementById("body").style.backgroundColor= "white";
-                }}
-                >Projects</p></Link>
-                <Link to="/about"><p className="rnav" onClick={()=>{
-                 sconte("about")
-                 
-                }}>About</p></Link>
+                }}> 
+                Projects</Link>
+
+                <Link to="/about" className="links">About</Link>
+
               </div>
 
               <div id="danielpa">

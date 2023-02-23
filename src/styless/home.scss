@@ -53,11 +53,31 @@ $myfont:  Roboto;
     }
   }
   
-  #projects{
-    background-color: #073042;
-    position: absolute;
-    
-    } 
+  .links{
+    font-family: Roboto;
+    font-weight: bold;
+    margin-left: 6vw;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 35vw;
+    &:hover{
+      color: #787878;
+    }
+  }
+
+  #home{
+    font-family: Roboto;
+    font-weight: bold;
+    margin-left: 6vw;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 15vh;
+    &:hover{
+      color: #787878;
+    }
+  }
 
   #con{
     position: relative;
