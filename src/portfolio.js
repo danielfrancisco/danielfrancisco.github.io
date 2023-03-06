@@ -21,7 +21,11 @@ export default function Portfolio(props){
     document.getElementById("imre").style.left = "47vw";
    },[])
   
-   
+   useEffect(()=>{
+    if(String(window.location.href).includes("portfolio")){
+      document.getElementById("body").style.backgroundColor= "white"; 
+    }
+   },[])
    
     window.onscroll = function(e) {
       
@@ -132,11 +136,13 @@ export default function Portfolio(props){
                 }}>Skills</Link>
 
                <Link to={"/portfolio"} className="links" onClick={()=>{
-                 
-                 document.getElementById("body").style.backgroundColor= "white";
-                 
-                 
+                 if(String(window.location.href).includes("portfolio")){
+                   document.getElementById("body").style.backgroundColor= "white"; 
+                 }
+                 else{
                   document.getElementById("body").style.backgroundColor= "#E7E7E7";
+                 }
+                 
                  
                 }}> 
                 Projects</Link>
