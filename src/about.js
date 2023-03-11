@@ -82,13 +82,13 @@ export default function About(props){
              <div id="abcon">
              <p id="aboutmede">
               I'm a front end developer with more than 4 years of experience<br/>
-              with a lot passion for designing and problem solving to deliver <br/> 
-              an immersive and intuitive user experience.
+              with a lot passion for designing and problem solving. I like to deliver <br/> 
+              immersive and intuitive user experiences.
               </p>
               <p id="aboutmemo">
-              I'm a front end developer with more than 4 years of experience
-              with a lot passion for designing and problem solving to deliver  an
-              immersive and intuitive user experience.
+              I'm a front end developer with more than 4 years of experience<br/>
+              with a lot passion for designing and problem solving. I like to deliver <br/> 
+              immersive and intuitive user experiences.
               </p>
             </div> 
 
