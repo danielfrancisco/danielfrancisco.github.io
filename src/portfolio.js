@@ -123,7 +123,7 @@ export default function Portfolio(props){
           <>
       <div id="fondo">
       <div id="nav">
-                <Link to="/danielc" id="home" onClick={()=>{
+                <Link to="/" id="home" onClick={()=>{
                  
                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
                 }}>
@@ -157,7 +157,7 @@ export default function Portfolio(props){
                 
                
               <div id="danielpa">
-              <Link to={"/danielc"}><div id="daniel">
+              <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
               <FaBars id="bars" onClick={

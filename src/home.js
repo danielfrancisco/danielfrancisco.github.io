@@ -83,7 +83,7 @@ export default function Home() {
       <>
        <div id="fondo">
               <div id="nav">
-                <Link to="/danielc" id="home">
+                <Link to="/" id="home">
                  
                 Home</Link>
 

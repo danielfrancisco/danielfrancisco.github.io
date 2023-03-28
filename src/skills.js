@@ -54,7 +54,7 @@ export default function Skills(props){
           <>
             <div id="fondo">
             <div id="nav">
-                <Link to="/danielc" id="home">
+                <Link to="/" id="home">
                  
                 Home</Link>
 
@@ -71,7 +71,7 @@ export default function Skills(props){
               </div>
 
               <div id="danielpa">
-              <Link to={"/danielc"}><div id="daniel">
+              <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
               <FaBars id="bars" onClick={

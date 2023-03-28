@@ -53,7 +53,7 @@ export default function Drop(props){
               }
             }/>
           <div id="dropcon">
-            <Link id="link" to={"/danielc"}><p onClick={()=>{
+            <Link id="link" to={"/"}><p onClick={()=>{
                 sconte("home")
             }}>Home</p></Link> 
 
