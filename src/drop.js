@@ -1,6 +1,7 @@
 import "./styless/drop.scss"
-import {FaBars, FaBorderStyle} from "react-icons/fa";
-import { useState,useEffect } from "react";
+import {FaBars, FaBorderStyler} from "react-icons/fa";
+import { useState,useEffect} from "react";
+import { GrClose } from "react-icons/gr"
 import Home from "./home";
 import Skills from "./skills";
 import Portfolio from "./portfolio";
@@ -44,7 +45,7 @@ export default function Drop(props){
 
     return(
         <>
-          <FaBars id="barspres" onClick={
+          <GrClose id="barspres" onClick={
               ()=>{
                 ispress()
                 if(press===1){
