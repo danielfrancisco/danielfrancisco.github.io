@@ -113,7 +113,7 @@ export default function Home() {
   
           <div id="con">
             <div id="nombre">Daniel Campoverde</div>
-            <div id="titulo">Front end developer</div>
+            <div id="titulo">Full stack developer</div>
             <div id="titulo">Designer</div>
             <Link to={"/contact"}><button onClick={()=>{
               sconte("contact")

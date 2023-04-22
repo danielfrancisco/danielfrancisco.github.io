@@ -89,9 +89,11 @@ export default function Skills(props){
                      </div>
               </div>
               
-              <div id="front"><br/>Front-end<br/> Development
-                 <div id="frontcon"> <br/>&nbsp; &nbsp;Html<br/> &nbsp; &nbsp;Css and Sass 
-                 <br/> &nbsp; &nbsp;Javascript<br/> &nbsp; &nbsp;React</div>
+              <div id="front"><br/>Front-end  and Back-end Development<br/>
+                 <div id="frontcon"> <br/>&nbsp; &nbsp;Javascript<br/> &nbsp; &nbsp;Css
+                 <br/> &nbsp; &nbsp;Sass <br/> &nbsp; &nbsp;Typescript
+                 <br/> &nbsp; &nbsp;React js<br/> &nbsp; &nbsp;Sql<br/> &nbsp; &nbsp;Express js</div>
+                 
               </div>
 
               <div id="res"><br/>Responsive<br/> Web desing

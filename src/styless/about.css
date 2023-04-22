@@ -1,0 +1,32 @@
+#abcon {
+  position: relative;
+}
+#abcon #aboutmemo {
+  font-family: Roboto;
+  position: relative;
+  top: 20vh;
+  display: none;
+  font-size: 20px;
+  color: dimgray;
+  text-align: justify;
+}
+#abcon #aboutmede {
+  font-family: Roboto;
+  position: relative;
+  top: 34vh;
+  left: 24vw;
+  font-size: 20px;
+  color: dimgray;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  #abcon #aboutmemo {
+    display: block;
+    font-size: 17px;
+    line-height: 1.2em;
+  }
+  #abcon #aboutmede {
+    display: none;
+  }
+}/*# sourceMappingURL=about.css.map */
