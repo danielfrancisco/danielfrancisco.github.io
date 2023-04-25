@@ -24,12 +24,26 @@
     }
 }
 
+#heading{
+    font-family: system-ui,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: black;
+    position: relative;
+    top: 30vh;
+    left: 50vh;
+}
+
 @media screen and (max-width:600px) {
+    #heading{
+        top: 18vh;
+        left: 5vh;
+    }
    #abcon{
        #aboutmemo{
          display: block;
-         font-size: 17px;
-         line-height: 1.2em;
+         font-size: 20px;
+         line-height: 28px;
        }
 
        #aboutmede{

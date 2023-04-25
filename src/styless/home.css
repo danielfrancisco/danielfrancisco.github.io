@@ -163,7 +163,7 @@
   margin-left: 3.5vw;
   top: 17vh;
   left: 6vw;
-  font-size: 25px;
+  font-size: 26px;
   position: relative;
   text-align: center;
   border-radius: 5px;
@@ -172,10 +172,10 @@
 #ui #uicon {
   top: 0.3vh;
   color: #999;
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   height: 35vh;
   width: 20vw;
-  font-size: 17px;
+  font-size: 18px;
   background-color: #111;
   border-radius: 5px;
   text-align: left;
@@ -192,7 +192,7 @@
   margin-left: 3.5vw;
   top: 17vh;
   left: 6vw;
-  font-size: 25px;
+  font-size: 26px;
   position: relative;
   text-align: center;
   border-radius: 5px;
@@ -201,10 +201,10 @@
 #front #frontcon {
   top: 0.3vh;
   color: #999;
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   height: 35vh;
   width: 20vw;
-  font-size: 17px;
+  font-size: 18px;
   background-color: #111;
   border-radius: 5px;
   text-align: left;
@@ -213,7 +213,7 @@
 }
 
 #res {
-  background-color: #3178c6;
+  background-color: #30b069;
   color: white;
   height: 16vh;
   width: 20vw;
@@ -221,7 +221,7 @@
   margin-left: 3.5vw;
   top: 17vh;
   left: 6vw;
-  font-size: 25px;
+  font-size: 26px;
   position: relative;
   text-align: center;
   border-radius: 5px;
@@ -230,10 +230,10 @@
 #res #rescon {
   top: 0.3vh;
   color: #999;
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   height: 35vh;
   width: 20vw;
-  font-size: 17px;
+  font-size: 18px;
   background-color: #111;
   border-radius: 5px;
   text-align: left;
@@ -316,7 +316,7 @@
   left: 35vw;
 }
 #fondo .links {
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   font-weight: bold;
   margin-left: 6vw;
   text-decoration: none;
@@ -328,7 +328,7 @@
   color: #787878;
 }
 #fondo #home {
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   font-weight: bold;
   margin-left: 6vw;
   text-decoration: none;
@@ -345,7 +345,7 @@
   left: 13vw;
 }
 #fondo div {
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   position: relative;
   cursor: default;
   margin-bottom: 4vh;
@@ -376,7 +376,7 @@
   font-size: 0.75rem;
   outline: none;
   width: 7.8vw;
-  font-family: Roboto;
+  font-family: Roboto, Arial;
   border-radius: 100px;
   cursor: pointer;
 }
