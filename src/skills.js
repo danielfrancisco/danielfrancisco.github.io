@@ -14,7 +14,7 @@ export default function Skills(props){
     
     window.onscroll = function(e) {
       
-      console.log(this.oldScroll,this.scrollY);
+      
       if(this.scrollY>this.oldScroll){
         document.getElementById("danielpa").style.top = "-60vh";
       }
@@ -85,7 +85,7 @@ export default function Skills(props){
               <div id="ui"><br/>Ui/Ux<br/>Designing
                      <div id="uicon"><br/> &nbsp; &nbsp;Ux and Ui desing combines<br/>
                      &nbsp; &nbsp;research, product development<br/> &nbsp; &nbsp;and strategy  to create
-                     meanigful<br/> &nbsp; &nbsp;and great experiences to users
+                     great <br/> &nbsp; &nbsp;and meaningful experiences 
                      </div>
               </div>
               

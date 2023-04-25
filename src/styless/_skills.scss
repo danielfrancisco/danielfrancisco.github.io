@@ -8,7 +8,7 @@
     margin-left: 3.5vw;
     top: 17vh;
     left: 6vw;
-    font-size: 25px;
+    font-size: 26px;
     position: relative;
     text-align: center;
     border-radius: 5px;
@@ -16,12 +16,12 @@
     }
 
   @mixin con{
-     top: 1vh;
+     top: 0.3vh;
      color: #999;
-     font-family: Roboto;
+     font-family: Roboto, Arial, ;
      height: 35vh;
      width: 20vw;
-     font-size: 17px;
+     font-size: 18px;
      background-color: #111;
      border-radius: 5px;
      text-align: left;
@@ -47,7 +47,7 @@
 }
 
 #res{
-    @include skillsq(#3178c6);
+    @include skillsq(#30b069);
     #rescon{
         @include con()
        }

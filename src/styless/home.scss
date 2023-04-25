@@ -1,4 +1,4 @@
-$myfont:  Roboto;
+$myfont:  Roboto, Arial;
 @import "portfolio","contact","skills";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -54,7 +54,7 @@ $myfont:  Roboto;
   }
   
   .links{
-    font-family: Roboto;
+    font-family: Roboto, Arial;
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
@@ -67,7 +67,7 @@ $myfont:  Roboto;
   }
 
   #home{
-    font-family: Roboto;
+    font-family: Roboto, Arial;
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
@@ -111,6 +111,7 @@ $myfont:  Roboto;
     background-color: #073042;
     border: none;
     color: white;
+    font-weight: bold;
     position: relative;
     top: 12vh;
     margin-left: 10vw;
@@ -119,7 +120,6 @@ $myfont:  Roboto;
     text-transform: uppercase;
     font-size: 0.75rem;
     outline:none;
-    font-weight: 500;
     width: 7.8vw;
     font-family: $myfont;
     border-radius: 100px;

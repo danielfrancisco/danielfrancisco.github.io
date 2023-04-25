@@ -39,12 +39,13 @@
 #imacon #imle button {
   top: 3.3vh;
   height: 5.5vh;
+  font-weight: bold;
   background-color: #30b069;
   border-radius: 6px;
   margin-bottom: 17vh;
 }
 #imacon #imle button:hover {
-  color: #073042;
+  color: black;
 }
 #imacon #imrepa {
   display: inline-block;
@@ -78,12 +79,13 @@
 #imacon #imre button {
   top: 3.3vh;
   left: 0vw;
+  font-weight: bold;
   height: 5.5vh;
   background-color: #30b069;
   border-radius: 6px;
 }
 #imacon #imre button:hover {
-  color: #073042;
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
@@ -94,6 +96,7 @@
     margin-bottom: 20vh;
     left: 67px;
     margin-left: 20px;
+    font-weight: bold;
   }
   #imacon #imle img {
     position: relative;
@@ -167,7 +170,7 @@
   font-weight: bold;
 }
 #ui #uicon {
-  top: 1vh;
+  top: 0.3vh;
   color: #999;
   font-family: Roboto;
   height: 35vh;
@@ -196,7 +199,7 @@
   font-weight: bold;
 }
 #front #frontcon {
-  top: 1vh;
+  top: 0.3vh;
   color: #999;
   font-family: Roboto;
   height: 35vh;
@@ -225,7 +228,7 @@
   font-weight: bold;
 }
 #res #rescon {
-  top: 1vh;
+  top: 0.3vh;
   color: #999;
   font-family: Roboto;
   height: 35vh;
@@ -363,6 +366,7 @@
   background-color: #073042;
   border: none;
   color: white;
+  font-weight: bold;
   position: relative;
   top: 12vh;
   margin-left: 10vw;
@@ -371,7 +375,6 @@
   text-transform: uppercase;
   font-size: 0.75rem;
   outline: none;
-  font-weight: 500;
   width: 7.8vw;
   font-family: Roboto;
   border-radius: 100px;

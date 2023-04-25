@@ -46,10 +46,11 @@
         button{
             top: 3.3vh;
             height: 5.5vh;
+            font-weight: bold;
             background-color: #30b069;
             border-radius: 6px;
             &:hover{
-                color: #073042;
+                color: black;
             }
             margin-bottom: 17vh;
         }
@@ -95,11 +96,12 @@
         button{
             top: 3.3vh;
             left: 0vw;
+            font-weight: bold;
             height: 5.5vh;
             background-color: #30b069;
             border-radius: 6px;
             &:hover{
-                color: #073042;
+                color: black;
             }
             
         }
@@ -119,6 +121,7 @@
             margin-bottom: 20vh;
             left: 67px;
             margin-left: 20px;
+            font-weight: bold;
         }
         img{
             position: relative;

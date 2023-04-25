@@ -114,7 +114,7 @@ export default function Home() {
           <div id="con">
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Full stack developer</div>
-            <div id="titulo">Designer</div>
+            <div id="titulo">Ux Designer</div>
             <Link to={"/contact"}><button onClick={()=>{
               sconte("contact")
             }}>Contact</button></Link>
