@@ -87,7 +87,7 @@ export default function About(props){
               immersive and intuitive user experiences.
               </p>
               <p id="aboutmemo">
-              I'm a full stack developer with more than 4 years of experience.<br/>
+              I'm a full stack developer with more than 4 years of experience.
               I have a lot passion for designing and problem solving. I like to deliver  
               immersive and intuitive user experiences.
               </p>

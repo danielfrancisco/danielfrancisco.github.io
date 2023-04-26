@@ -29,7 +29,7 @@ export default function Portfolio(props){
    
     window.onscroll = function(e) {
       
-      console.log(this.oldScroll,this.scrollY);
+      
       if(this.scrollY>this.oldScroll){
         document.getElementById("nav").style.top = "-60vh";
       }
@@ -45,7 +45,7 @@ export default function Portfolio(props){
     if(window.innerWidth<=600){
       window.onscroll = function(e) {
       
-        console.log(this.oldScroll,this.scrollY);
+        
         if(this.scrollY>this.oldScroll){
           document.getElementById("danielpa").style.top = "-60vh";
         }
@@ -62,7 +62,7 @@ export default function Portfolio(props){
   else{
     window.onscroll = function(e) {
       
-      console.log(this.oldScroll,this.scrollY);
+      
       if(this.scrollY>this.oldScroll){
         document.getElementById("nav").style.top = "-60vh";
       }

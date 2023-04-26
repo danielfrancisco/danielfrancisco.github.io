@@ -119,13 +119,15 @@
         transition: left 0s;
         button{
             margin-bottom: 20vh;
-            left: 67px;
+            left: 95px;
+            top: 13.3vh;
             margin-left: 20px;
             font-weight: bold;
         }
         img{
             position: relative;
             left: -30px;
+            height: 40vh;
             width: 97vw;
             &:hover{
                 opacity: 1;
@@ -137,12 +139,14 @@
         transition: left 0s;
         button{
             margin-bottom: 20vh;
-            left: 67px;
+            left: 95px;
             margin-left: 20px;
+            top: 13.3vh;
         }
 
         img{
             position: relative;
+            height: 40vh;
             left: -30px;
             width: 97vw;
             &:hover{
@@ -161,8 +165,8 @@
 
     #imrepa{
         margin-top: 6vh;
-        left: -40vw;
-        top: 125vh;
+        left: -37vw;
+        top: 130vh;
         display: block;
         
     }
