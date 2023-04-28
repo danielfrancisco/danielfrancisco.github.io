@@ -64,7 +64,7 @@ export default function Drop(props){
             <Link id="link" to={"/portfolio"}><p onClick={()=>{
                 sconte("portfolio")
                 
-            }}>Projects</p></Link>
+            }}>Work</p></Link>
             <Link id="link" to={"/about"}><p onClick={()=>{
                 sconte("about")
             }}>About</p></Link>

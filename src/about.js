@@ -61,7 +61,7 @@ export default function About(props){
                  
                  document.getElementById("body").style.backgroundColor= "white";
                 }}> 
-                Projects</Link>
+                Work</Link>
 
                 <Link to="/about" className="links">About</Link>
 

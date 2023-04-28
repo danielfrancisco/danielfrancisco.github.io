@@ -18,19 +18,19 @@
   width: 17vh;
 }
 #imacon #imle #coloroverMa {
-  height: 30vh;
-  width: 28vw;
+  height: 35vh;
+  width: 33vw;
   background-color: black;
 }
 #imacon #imle #coloroverFr {
   margin-top: 11vh;
-  height: 30vh;
-  width: 28vw;
+  height: 35vh;
+  width: 33vw;
   background-color: black;
 }
 #imacon #imle img {
-  height: 30vh;
-  width: 28vw;
+  height: 35vh;
+  width: 33vw;
   cursor: pointer;
 }
 #imacon #imle img:hover {
@@ -61,16 +61,16 @@
 }
 #imacon #imre #coloroverRe {
   margin-top: 11vh;
-  height: 30vh;
-  width: 28vw;
+  height: 35vh;
+  width: 33vw;
 }
 #imacon #imre #coloroverRe:hover {
   background-color: black;
 }
 #imacon #imre img {
   margin-top: 0vh;
-  height: 30vh;
-  width: 28vw;
+  height: 35vh;
+  width: 33vw;
   cursor: pointer;
 }
 #imacon #imre img:hover {

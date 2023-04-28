@@ -93,7 +93,7 @@ export default function Home() {
                  sconte("portfolio")
                  document.getElementById("body").style.backgroundColor= "white";
                 }}> 
-                Projects</Link>
+                Work</Link>
 
                 <Link to="/about" className="links">About</Link>
 
