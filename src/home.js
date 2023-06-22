@@ -4,9 +4,10 @@ import "./styless/home.scss"
 import Portfolio from "./portfolio";
 import Contact from "./contact"
 import About from "./about";
-import {FaBars} from "react-icons/fa";
 import Drop from "./drop";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
    const [conte,sconte] = useState("home")
@@ -102,7 +103,7 @@ export default function Home() {
           
               <div id="danielpa">
               
-              <FaBars id="bars" onClick={
+              <FontAwesomeIcon icon={faBars} id="bars" onClick={
                 ()=>{
                   sconte("drop")
                   

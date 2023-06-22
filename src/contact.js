@@ -4,7 +4,8 @@ import { useState,useEffect } from "react"
 import Portfolio from "./portfolio";
 import About from "./about";
 import Drop from "./drop";
-import {FaBars} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 
 export default function Contact(props){
@@ -72,9 +73,10 @@ export default function Contact(props){
               <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
-              <FaBars id="bars" onClick={
+              <FontAwesomeIcon icon={faBars} id="bars" onClick={
                 ()=>{
                   sconte("drop")
+                  
                 }
               }/>
             </div>
@@ -91,8 +93,8 @@ export default function Contact(props){
             </div>
 
             <div>
-             <p>Location</p>
-             <p  id="loc">Guayaquil-Ecuador</p>
+             <p>Github</p>
+             <p  id="loc">https://github.com/danielfrancisco</p>
             </div>
 
           </div>

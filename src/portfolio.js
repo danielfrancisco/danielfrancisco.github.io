@@ -5,15 +5,20 @@ import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
 import franki from "./images/franki.png";
 import About from "./about";
-import {FaBars} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Drop from "./drop";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function Portfolio(props){
     const[cont,scont] = useState(props.cont)
     const[page,spage] = useState("portfolio")
 
-   useEffect(()=>{
+    let homeButton=useRef()
+    let nav = useRef()
+   
+  useEffect(()=>{
     document.getElementById("nav").style.paddingTop = "20vh";
     document.getElementById("nav").style.paddingTop = "20vh";
     document.getElementById("nav").style.top = "-6vh";
@@ -29,13 +34,14 @@ export default function Portfolio(props){
    
     window.onscroll = function(e) {
       
-      
       if(this.scrollY>this.oldScroll){
         document.getElementById("nav").style.top = "-60vh";
+        
       }
 
       if(this.scrollY<this.oldScroll){
         document.getElementById("nav").style.top = "-6vh";
+        
       }
       this.oldScroll = this.scrollY;
       
@@ -43,8 +49,8 @@ export default function Portfolio(props){
 
 
     if(window.innerWidth<=600){
-      window.onscroll = function(e) {
       
+      window.onscroll = function(e) {
         
         if(this.scrollY>this.oldScroll){
           document.getElementById("danielpa").style.top = "-60vh";
@@ -60,11 +66,13 @@ export default function Portfolio(props){
   }
 
   else{
+    
     window.onscroll = function(e) {
-      
       
       if(this.scrollY>this.oldScroll){
         document.getElementById("nav").style.top = "-60vh";
+        document.getElementById("nav").style.nav = "-60vh"
+        
       }
 
       if(this.scrollY<this.oldScroll){
@@ -121,9 +129,9 @@ export default function Portfolio(props){
 
     return(
           <>
-      <div id="fondo">
-      <div id="nav">
-                <Link to="/" id="home" onClick={()=>{
+      <div id="fondo" >
+      <div id="nav" ref={nav} >
+                <Link to="/" id="home"  ref={homeButton} onClick={()=>{
                  
                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
                 }}>
@@ -160,9 +168,10 @@ export default function Portfolio(props){
               <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
-              <FaBars id="bars" onClick={
+              <FontAwesomeIcon icon={faBars} id="bars" onClick={
                 ()=>{
                   scont("drop")
+                  
                 }
               }/>
             </div>
@@ -177,18 +186,25 @@ export default function Portfolio(props){
                         <img src={martysi}/>
                       </a>
                   </div>
-                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>Demo </button></a>
+                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>Get a demo </button></a>
                         
                    </div>
                     
                    <div>
+                   <div id="coloroverRe">
+                    <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
+                      <img src={resorti}/>
+                    </a>
+                  </div>
+                  <a href="https://danielfrancisco.github.io/Resort/" target="_blank"><button>Get a Demo </button></a>
+                   </div>
+
                    <div id="coloroverFr">
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                       <img src={franki}/>
                     </a>
                   </div>
-                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank"><button>Demo </button></a>
-                   </div>
+                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank"><button>Get a Demo </button></a>
 
                   </div>
                </div>
@@ -196,12 +212,7 @@ export default function Portfolio(props){
                <div id="imrepa"> 
                 <div id="imre">
                   <div>
-                  <div id="coloroverRe">
-                    <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
-                      <img src={resorti}/>
-                    </a>
-                  </div>
-                  <a href="https://danielfrancisco.github.io/Resort/" target="_blank"><button>Demo </button></a>
+                  
                   </div>
                 </div>
               </div>

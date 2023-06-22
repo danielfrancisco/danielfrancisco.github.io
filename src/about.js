@@ -4,7 +4,8 @@ import Portfolio from "./portfolio";
 import Home from "./home"
 import Skills from "./skills";
 import Drop from "./drop";
-import {FaBars} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -71,9 +72,10 @@ export default function About(props){
               <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
-              <FaBars id="bars" onClick={
+              <FontAwesomeIcon icon={faBars} id="bars" onClick={
                 ()=>{
                   sconte("drop")
+                  
                 }
               }/>
             </div>

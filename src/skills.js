@@ -3,7 +3,8 @@ import { useState } from "react";
 import Portfolio from "./portfolio";
 import About from "./about";
 import { useEffect } from "react";
-import {FaBars} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Drop from "./drop";
 import { Link } from "react-router-dom";
 
@@ -74,16 +75,17 @@ export default function Skills(props){
               <Link to={"/"}><div id="daniel">
                 Home
               </div></Link>
-              <FaBars id="bars" onClick={
+              <FontAwesomeIcon icon={faBars} id="bars" onClick={
                 ()=>{
                   scont("drop")
+                  
                 }
               }/>
             </div>
            
 
               <div id="ui"><br/>Ui/Ux<br/>Designing
-                     <div id="uicon"><br/> &nbsp; &nbsp;Ux and Ui desing combines<br/>
+                     <div id="uicon"><br/> &nbsp; &nbsp;Ux and Ui design combines<br/>
                      &nbsp; &nbsp;research, product development<br/> &nbsp; &nbsp;and strategy  to create
                      great <br/> &nbsp; &nbsp;and meaningful experiences 
                      </div>
@@ -96,7 +98,7 @@ export default function Skills(props){
                  
               </div>
 
-              <div id="res"><br/>Responsive<br/> Web desing
+              <div id="res"><br/>Responsive<br/> Web design
                 <div id="rescon"><br/> &nbsp; &nbsp;Your site will look
                 good in <br/>  &nbsp;  &nbsp;all devices
                 </div>

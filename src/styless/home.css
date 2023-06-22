@@ -18,19 +18,19 @@
   width: 17vh;
 }
 #imacon #imle #coloroverMa {
-  height: 35vh;
-  width: 33vw;
+  height: 30vh;
+  width: 28vw;
   background-color: black;
 }
 #imacon #imle #coloroverFr {
   margin-top: 11vh;
-  height: 35vh;
-  width: 33vw;
+  height: 30vh;
+  width: 28vw;
   background-color: black;
 }
 #imacon #imle img {
-  height: 35vh;
-  width: 33vw;
+  height: 30vh;
+  width: 28vw;
   cursor: pointer;
 }
 #imacon #imle img:hover {
@@ -61,16 +61,16 @@
 }
 #imacon #imre #coloroverRe {
   margin-top: 11vh;
-  height: 35vh;
-  width: 33vw;
+  height: 30vh;
+  width: 28vw;
 }
 #imacon #imre #coloroverRe:hover {
   background-color: black;
 }
 #imacon #imre img {
   margin-top: 0vh;
-  height: 35vh;
-  width: 33vw;
+  height: 30vh;
+  width: 28vw;
   cursor: pointer;
 }
 #imacon #imre img:hover {
@@ -277,6 +277,20 @@
     width: 97vw;
   }
 }
+::-moz-selection {
+  color: white;
+  background: black;
+}
+::selection {
+  color: white;
+  background: black;
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
 #fondo {
   background-color: white;
   position: relative;
@@ -426,7 +440,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     z-index: 5;
     left: 80vw;
-    font-size: 22px;
+    font-size: 25px;
   }
   #fondo #nav {
     display: none;

@@ -1,21 +1,31 @@
+$fontColor: dimgray;
+$font: Roboto,Arial,system-ui ;
 #condata{
     top: 25vh;
     left: 20vw;
     font-weight: bold;
     font-size: large;
+    font-family: $font;
 }
 
 #email{
  font-weight: normal;
- font-size: medium;
+ font-size: 16.5px;
+ font-family: Arial,system-ui ;
+ color: $fontColor;
+ font-family: $font;
 }
 
 #number{
     font-weight: normal;
-    font-size: medium;
+    font-size: 16.5px;
+    color: $fontColor;
+    font-family: $font;
 }
 
 #loc{
     font-weight: normal;
-    font-size: medium;
+    font-size: 16.5px;
+    color: $fontColor;
+    font-family: $font;
 }

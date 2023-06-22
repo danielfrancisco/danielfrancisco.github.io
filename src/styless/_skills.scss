@@ -1,7 +1,7 @@
-@mixin skillsq($bcolor){
+@mixin skillsq($bcolor, $fcolor){
     
     background-color: $bcolor;
-    color: white;
+    color: $fcolor;
     height: 16vh;
     width: 20vw;
     display: inline-block;
@@ -17,8 +17,8 @@
 
   @mixin con{
      top: 0.3vh;
-     color: #999;
-     font-family: Roboto, Arial, ;
+     color: gray;
+     font-family: Arial,system-ui ;
      height: 35vh;
      width: 20vw;
      font-size: 18px;
@@ -28,9 +28,10 @@
      line-height: 3.2vh;
      font-weight: lighter
     }
+    
 
 #ui{
- @include skillsq(#8a63d2);
+ @include skillsq(#8a63d2,black);
  
  
  #uicon{
@@ -40,14 +41,16 @@
 }
 
 #front{
-    @include skillsq(black);
+    @include skillsq(black,white);
     #frontcon{
         @include con();
     }
 }
 
 #res{
-    @include skillsq(#30b069);
+  
+    @include skillsq(white,black);
+    border: solid gray thin;
     #rescon{
         @include con()
        }

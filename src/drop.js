@@ -1,7 +1,7 @@
 import "./styless/drop.scss"
-import {FaBars, FaBorderStyler} from "react-icons/fa";
-import { useState,useEffect} from "react";
-import { GrClose } from "react-icons/gr"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState} from "react";
+import { faX,} from '@fortawesome/free-solid-svg-icons'
 import Home from "./home";
 import Skills from "./skills";
 import Portfolio from "./portfolio";
@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 export default function Drop(props){
     const [conte,sconte] = useState(props.cont)
     const [press,spress] = useState(parseInt( props.pre))
-
-   function ispress(){
+   
+    function ispress(){
         if(press===0){
             spress(1)
         }
@@ -45,14 +45,17 @@ export default function Drop(props){
 
     return(
         <>
-          <GrClose id="barspres" onClick={
+        
+       <FontAwesomeIcon icon={faX} id="barspres" onClick={
               ()=>{
                 ispress()
+                
                 if(press===1){
                     sconte(props.page)
                 }
               }
             }/>
+          
           <div id="dropcon">
             <Link id="link" to={"/"}><p onClick={()=>{
                 sconte("home")

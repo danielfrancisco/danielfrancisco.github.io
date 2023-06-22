@@ -1,42 +1,54 @@
+$height: 33vw;
+$width: 68.4288vw;
 
 #imacon{
     display: inline-block;
-    top: 16vh;
-    left: 0vw;
+    top: 8vh;
+    left: -3vw;
     
-
     #imlepa{
         display: inline-block;
         position: absolute;
         
+        
     }
 
     #imle{
-        transition: left 0.5s;
+        transition: left 0.7s;
         margin-top: 11vh;
         display: inline-block;
         left: 0vw;
         top: 1.5vh;
 
         #coloroverMa{
-            
-            height: 30vh;
-            width: 28vw;
+            height: $height;
+            width: $width;
             background-color: black;
         }
 
         #coloroverFr{
             margin-top: 11vh;
-            height: 30vh;
-            width: 28vw;
+            height: $height;
+            width: $width;
             background-color: black;
+            margin-top: 20vh;
         }
+
+        #coloroverRe{
+            margin-top: 5vh;
+            height: $height;
+            width: $width;
+            &:hover{
+                background-color: black;
+            }
+        }
+
 
         
         img{
-            height: 30vh;
-            width: 28vw;
-            cursor: pointer;
+            height: $height;
+            width: $width;
+            cursor: default;
             &:hover{
                 opacity: 0.5;
             }
@@ -44,14 +56,19 @@
         }
 
         button{
-            top: 3.3vh;
-            height: 5.5vh;
-            font-weight: bold;
-            background-color: #30b069;
-            border-radius: 6px;
+            top: -15vh;
+            height: 48px;
+            width: 150px;
+            color: black;
+            left: 17vw;
+            
+            background-color: white;
+            border-radius: 100px;
+            
             &:hover{
-                color: black;
-            }
+                background-color: #30b069;
+                border: white;
+            } 
             margin-bottom: 17vh;
         }
 
@@ -63,8 +80,8 @@
 
    #imrepa{
        display: inline-block;
-       position: absolute;
        
+       left: 8vw;
    }
 
     #imre{
@@ -73,20 +90,12 @@
         left: 57vw;
         top: 1.5vh;
         
-        #coloroverRe{
-            margin-top: 11vh;
-            height: 30vh;
-            width: 28vw;
-            &:hover{
-                background-color: black;
-            }
-        }
-
+       
         img{
             margin-top: 0vh;
-            height: 30vh;
-            width: 28vw;
-            cursor: pointer;
+            height: 19.3vw;
+            width: 40vw;
+            cursor: normal;
             &:hover{
                 opacity: 0.5;
             }
@@ -96,10 +105,10 @@
         button{
             top: 3.3vh;
             left: 0vw;
-            font-weight: bold;
-            height: 5.5vh;
+            
+            height: 48px;
             background-color: #30b069;
-            border-radius: 6px;
+            border-radius: 100px;
             &:hover{
                 color: black;
             }
@@ -120,7 +129,7 @@
         button{
             margin-bottom: 20vh;
             left: 95px;
-            top: 13.3vh;
+            top: 7.3vh;
             margin-left: 20px;
             font-weight: bold;
         }
