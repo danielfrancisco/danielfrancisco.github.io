@@ -1,11 +1,13 @@
 $height: 33vw;
 $width: 68.4288vw;
 
+
+
 #imacon{
     display: inline-block;
-    top: 8vh;
-    left: -3vw;
-    
+    top: 2vh;
+    left: 0vw;
+   
     #imlepa{
         display: inline-block;
         position: absolute;
@@ -14,28 +16,29 @@ $width: 68.4288vw;
     }
 
     #imle{
-        transition: left 0.7s;
+        transition: left  0.7s;
         margin-top: 11vh;
         display: inline-block;
         left: 0vw;
         top: 1.5vh;
 
         #coloroverMa{
+            margin-top: -6vh;
             height: $height;
             width: $width;
             background-color: black;
         }
 
         #coloroverFr{
-            margin-top: 11vh;
+            margin-top: -6vh;
             height: $height;
             width: $width;
             background-color: black;
-            margin-top: 20vh;
+            
         }
 
         #coloroverRe{
-            margin-top: 5vh;
+            margin-top: 2vh;
             height: $height;
             width: $width;
             &:hover{
@@ -56,11 +59,11 @@ $width: 68.4288vw;
         }
 
         button{
-            top: -15vh;
+            top: -16vh;
             height: 48px;
             width: 150px;
             color: black;
-            left: 17vw;
+            left: 15vw;
             
             background-color: white;
             border-radius: 100px;
@@ -125,6 +128,7 @@ $width: 68.4288vw;
 
    #imacon{
     #imle{
+        
         transition: left 0s;
         button{
             margin-bottom: 20vh;

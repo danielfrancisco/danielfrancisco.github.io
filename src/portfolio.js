@@ -16,14 +16,26 @@ export default function Portfolio(props){
     const[page,spage] = useState("portfolio")
 
     let homeButton=useRef()
+    let skillsButton=useRef()
+    let workButton=useRef()
     let nav = useRef()
+
+    useEffect(()=>{
+      nav.current.style.backgroundColor="#101010"
+      nav.current.style.width="110vw"
+      nav.current.style.paddingTop = "10vh"; 
+      nav.current.style.paddingTop = "10vh";
+      nav.current.style.left = "0vh";
+      nav.current.style.top = "-6vh";
+      },[nav])
+
+
    
   useEffect(()=>{
-    document.getElementById("nav").style.paddingTop = "20vh";
-    document.getElementById("nav").style.paddingTop = "20vh";
-    document.getElementById("nav").style.top = "-6vh";
+    
     document.getElementById("imle").style.left = "10vw";
     document.getElementById("imre").style.left = "47vw";
+    
    },[])
   
    useEffect(()=>{
@@ -127,23 +139,42 @@ export default function Portfolio(props){
       }
     }
 
-    return(
+  function linkHover(e){
+     document.getElementById(e.target.id).style.color="white"
+   }
+
+   function linkNotHover(e){
+    document.getElementById(e.target.id).style.color="dimgray"
+   }
+   
+   return(
           <>
       <div id="fondo" >
       <div id="nav" ref={nav} >
-                <Link to="/" id="home"  ref={homeButton} onClick={()=>{
+                <Link to="/" id="home"  style={{color:"gray", marginLeft:"20vh"}} 
+                ref={homeButton}   onMouseOver={(e)=>{linkHover(e)}} 
+                onMouseOut={(e)=>{linkNotHover(e)}}
+                onClick={()=>{
                  
                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
                 }}>
                  
                 Home</Link>
 
-                <Link to={"/skills"} className="links" onClick={()=>{
-                 
-                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>Skills</Link>
+                <Link to={"/skills"} id="skills" style={{color:"gray" }} ref={skillsButton}
+                onMouseOver={(e)=>{linkHover(e)}} 
+                onMouseOut={(e)=>{linkNotHover(e)}}
+                
+                className="links" onClick={()=>{
+                 document.getElementById("body").style.backgroundColor= "#E7E7E7";}}>
+                Skills</Link>
 
-               <Link to={"/portfolio"} className="links" onClick={()=>{
+               <Link to={"/portfolio"} id="work" style={{color:"gray"}} 
+               ref={workButton}
+               onMouseOver={(e)=>{linkHover(e)}} 
+              onMouseOut={(e)=>{linkNotHover(e)}}
+
+               className="links" onClick={()=>{
                  if(String(window.location.href).includes("portfolio")){
                    document.getElementById("body").style.backgroundColor= "white"; 
                  }
@@ -155,8 +186,10 @@ export default function Portfolio(props){
                 }}> 
                 Work</Link>
 
-                <Link to="/about" className="links" onClick={()=>{
-                 
+                <Link to="/about" id="about" className="links" 
+                onMouseOver={(e)=>{linkHover(e)}} 
+                onMouseOut={(e)=>{linkNotHover(e)}}
+                style={{color:"gray"}} onClick={()=>{
                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
                 }}>About</Link>
 
@@ -181,22 +214,22 @@ export default function Portfolio(props){
                <div id="imlepa">
                   <div id="imle">
                     <div>
-                    <div id="coloroverMa">
-                      <a href="" target="_blank" href="https://danielfrancisco.github.io/martys/">
-                        <img src={martysi}/>
-                      </a>
-                  </div>
-                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>Get a demo </button></a>
-                        
-                   </div>
-                    
-                   <div>
                    <div id="coloroverRe">
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
                       <img src={resorti}/>
                     </a>
                   </div>
                   <a href="https://danielfrancisco.github.io/Resort/" target="_blank"><button>Get a Demo </button></a>
+                   </div>
+
+                   <div>
+                    <div id="coloroverMa">
+                      <a  target="_blank" href="https://danielfrancisco.github.io/martys/">
+                        <img src={martysi}/>
+                      </a>
+                  </div>
+                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>Get a demo </button></a>
+                        
                    </div>
 
                    <div id="coloroverFr">

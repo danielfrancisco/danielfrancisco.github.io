@@ -2,6 +2,10 @@ $myfont:  Roboto,Arial,system-ui;
 @import "portfolio","contact","skills";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body{
+  margin: 0;
+}   
+
 #fondo{
   background-color:white;
   position: relative;
@@ -229,5 +233,5 @@ body{
 
 ::selection {
   color: black;
-  background: #30b069;
+  background: dimgray;
 }
