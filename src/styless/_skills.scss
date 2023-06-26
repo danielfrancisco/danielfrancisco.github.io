@@ -1,4 +1,4 @@
-@mixin skillsq($bcolor, $fcolor){
+@mixin skillsq($bcolor, $fcolor,){
     
     background-color: $bcolor;
     color: $fcolor;
@@ -13,9 +13,25 @@
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
+    
     }
 
-  @mixin con{
+    @keyframes moveui {
+      from{left: -2vw;}
+      to{left: 6vw;}
+    }
+
+    @keyframes moveres {
+      from{top: 9vh;}
+      to{top: 17vh;}
+    }
+
+    @keyframes movefront {
+      from{top: 34vh;}
+      to{top: 27vh;}
+    }
+
+  @mixin con(){
      top: 0.3vh;
      color: gray;
      font-family: Arial,system-ui ;
@@ -26,13 +42,14 @@
      border-radius: 5px;
      text-align: left;
      line-height: 3.2vh;
-     font-weight: lighter
+     font-weight: lighter;
+     
     }
     
 
 #ui{
- @include skillsq(#8a63d2,black);
- 
+ @include skillsq(#8a63d2,black, );
+ animation: moveui 0.7s forwards;
  
  #uicon{
      @include con();
@@ -42,14 +59,16 @@
 
 #front{
     @include skillsq(black,white);
+    animation: movefront 0.7s forwards;
+    top: 27vh;
     #frontcon{
         @include con();
     }
 }
 
 #res{
-  
     @include skillsq(white,black);
+    animation: moveres 0.7s forwards;
     border: solid gray thin;
     #rescon{
         @include con()

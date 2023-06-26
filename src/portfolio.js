@@ -150,7 +150,7 @@ export default function Portfolio(props){
    return(
           <>
       <div id="fondo" >
-      <div id="nav" ref={nav} >
+      <div id="nav" ref={nav} style={{transition:"top 0.5s"}}>
                 <Link to="/" id="home"  style={{color:"gray", marginLeft:"20vh"}} 
                 ref={homeButton}   onMouseOver={(e)=>{linkHover(e)}} 
                 onMouseOut={(e)=>{linkNotHover(e)}}
