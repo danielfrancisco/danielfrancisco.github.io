@@ -85,17 +85,21 @@
    position: relative;
    left: -7vw;
    width: 97vw;
+   animation: none;
     #uicon{
         width: 97vw;
+        animation: none;
     }
    
   }
 
   #front{
+    animation: none;
     display: block;
-    margin-top: 38vh;
+    top: 40vh;
     position: relative;
     left: -7vw;
+    margin-top: 15vh;
     width: 97vw;
     #frontcon{
         width: 97vw;
@@ -104,7 +108,7 @@
 
   #res{
     display: block;
-    margin-top: 38vh;
+    margin-top: 60vh;
     margin-right: 4vw;
     position: relative;
     left: -7vw;

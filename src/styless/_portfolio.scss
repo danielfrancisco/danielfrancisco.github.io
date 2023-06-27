@@ -133,8 +133,8 @@ $width: 68.4288vw;
 
    #imacon{
     #imle{
-        
-        transition: left 0s;
+        margin-left: 5vw;
+        animation: none;
         button{
             margin-bottom: 20vh;
             left: 95px;
@@ -189,6 +189,8 @@ $width: 68.4288vw;
         
     }
 }
+
+
 
 
 
