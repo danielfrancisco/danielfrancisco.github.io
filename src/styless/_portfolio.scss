@@ -15,11 +15,16 @@ $width: 68.4288vw;
         
     }
 
+    @keyframes moveImage {
+        from{left: -4vw; opacity: 0;}
+        to{left: 10vw; opacity: 1;}
+    }
+
     #imle{
-        transition: left  0.7s;
+        animation: moveImage 0.7s  forwards;
         margin-top: 11vh;
         display: inline-block;
-        left: 0vw;
+        position: relative;
         top: 1.5vh;
 
         #coloroverMa{

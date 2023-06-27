@@ -92,15 +92,16 @@ export default function Skills(props){
               </div>
               
               <div id="front"><br/>Front-end  and Back-end Development<br/>
-                 <div id="frontcon"> <br/>&nbsp; &nbsp;Javascript<br/> &nbsp; &nbsp;Css
-                 <br/> &nbsp; &nbsp;Sass <br/> &nbsp; &nbsp;Typescript
-                 <br/> &nbsp; &nbsp;React js<br/> &nbsp; &nbsp;Sql<br/> &nbsp; &nbsp;Express js</div>
+                 <div id="frontcon"> <br/>&nbsp; &nbsp;By working on both sides of the<br/> &nbsp; &nbsp;stack, you have
+                 a holistic 
+                 <br/> &nbsp; &nbsp;understanding of web  <br/> &nbsp; &nbsp;development, ensuring that
+                 <br/> &nbsp; &nbsp;everything works harmoniously<br/> &nbsp; &nbsp;<br/> &nbsp; &nbsp;</div>
                  
               </div>
 
               <div id="res"><br/>Responsive<br/> Web design
                 <div id="rescon"><br/> &nbsp; &nbsp;Your site will look
-                good in <br/>  &nbsp;  &nbsp;all devices
+                good on <br/>  &nbsp;  &nbsp;any device
                 </div>
               </div>
 

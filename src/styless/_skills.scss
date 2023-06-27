@@ -17,18 +17,18 @@
     }
 
     @keyframes moveui {
-      from{left: -2vw;}
-      to{left: 6vw;}
+      from{left: -8vw; opacity: 0; }
+      to{left: 6vw; opacity: 1;}
     }
 
     @keyframes moveres {
-      from{top: 9vh;}
-      to{top: 17vh;}
+      from{top: 3vh; opacity: 0;}
+      to{top: 17vh; opacity: 1;}
     }
 
     @keyframes movefront {
-      from{top: 34vh;}
-      to{top: 27vh;}
+      from{top: 40vh; opacity: 0;}
+      to{top: 27vh; opacity: 1;}
     }
 
   @mixin con(){
@@ -51,6 +51,7 @@
  @include skillsq(#8a63d2,black, );
  animation: moveui 0.7s forwards;
  
+ 
  #uicon{
      @include con();
      
@@ -60,6 +61,7 @@
 #front{
     @include skillsq(black,white);
     animation: movefront 0.7s forwards;
+    
     top: 27vh;
     #frontcon{
         @include con();
@@ -69,6 +71,7 @@
 #res{
     @include skillsq(white,black);
     animation: moveres 0.7s forwards;
+    
     border: solid gray thin;
     #rescon{
         @include con()

@@ -32,13 +32,6 @@ export default function Portfolio(props){
 
    
   useEffect(()=>{
-    
-    document.getElementById("imle").style.left = "10vw";
-    document.getElementById("imre").style.left = "47vw";
-    
-   },[])
-  
-   useEffect(()=>{
     if(String(window.location.href).includes("portfolio")){
       document.getElementById("body").style.backgroundColor= "white"; 
     }
