@@ -21,7 +21,7 @@ $width: 68.4288vw;
     }
 
     #imle{
-        animation: moveImage 0.7s  forwards;
+        animation: moveImage 0.7s  ease-in forwards;
         margin-top: 11vh;
         display: inline-block;
         position: relative;
