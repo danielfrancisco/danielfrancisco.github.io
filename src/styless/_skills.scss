@@ -49,7 +49,7 @@
 
 #ui{
  @include skillsq(#8a63d2,black, );
- animation: moveui 0.7s ease forwards;
+ animation: moveui 0.7s ease-in forwards;
  
  
  #uicon{
@@ -60,7 +60,7 @@
 
 #front{
     @include skillsq(black,white);
-    animation: movefront 0.7s ease forwards;
+    animation: movefront 0.7s ease-in forwards;
     
     top: 27vh;
     #frontcon{
@@ -70,7 +70,7 @@
 
 #res{
     @include skillsq(white,black);
-    animation: moveres 0.7s ease forwards;
+    animation: moveres 0.7s ease-in  forwards;
     
     border: solid gray thin;
     #rescon{

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Skills from "./skills";
 import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
-import franki from "./images/franki.png";
+import franks from "./images/franks.png";
 import About from "./about";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -227,7 +227,7 @@ export default function Portfolio(props){
 
                    <div id="coloroverFr">
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
-                      <img src={franki}/>
+                      <img src={franks}/>
                     </a>
                   </div>
                   <a href="https://danielfrancisco.github.io/Franks/" target="_blank"><button>Get a Demo </button></a>
