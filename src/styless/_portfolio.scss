@@ -1,6 +1,6 @@
 $height: 33vw;
 $width: 68.4288vw;
-
+$borderRadius: 6px;
 
 
 #imacon{
@@ -32,6 +32,7 @@ $width: 68.4288vw;
             height: $height;
             width: $width;
             background-color: black;
+            border-radius: $borderRadius;
         }
 
         #coloroverFr{
@@ -39,13 +40,14 @@ $width: 68.4288vw;
             height: $height;
             width: $width;
             background-color: black;
-            
+            border-radius: $borderRadius;
         }
 
         #coloroverRe{
             margin-top: 2vh;
             height: $height;
             width: $width;
+            border-radius: $borderRadius;
             &:hover{
                 background-color: black;
             }
@@ -57,6 +59,7 @@ $width: 68.4288vw;
             height: $height;
             width: $width;
             cursor: default;
+            border-radius: $borderRadius;
             &:hover{
                 opacity: 0.5;
             }
@@ -104,6 +107,7 @@ $width: 68.4288vw;
             height: 19.3vw;
             width: 40vw;
             cursor: normal;
+            
             &:hover{
                 opacity: 0.5;
             }
@@ -148,7 +152,7 @@ $width: 68.4288vw;
             height: 40vh;
             width: 97vw;
             &:hover{
-                opacity: 1;
+                opacity: 0.5;
             }
         }
     }
