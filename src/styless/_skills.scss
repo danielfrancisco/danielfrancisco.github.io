@@ -1,3 +1,5 @@
+$animationDuration: 0.6s;
+
 @mixin skillsq($bcolor, $fcolor,){
     
     background-color: $bcolor;
@@ -50,7 +52,7 @@
 
 #ui{
  @include skillsq(#8a63d2,black, );
- animation: moveui 0.7s ease-in forwards;
+ animation: moveui $animationDuration ease-in forwards;
  
  
  #uicon{
@@ -61,7 +63,7 @@
 
 #front{
     @include skillsq(black,white);
-    animation: movefront 0.7s ease-in forwards;
+    animation: movefront $animationDuration ease-in forwards;
     
     top: 27vh;
     #frontcon{
@@ -71,7 +73,7 @@
 
 #res{
     @include skillsq(white,black);
-    animation: moveres 0.7s ease-in  forwards;
+    animation: moveres $animationDuration ease-in  forwards;
     
     border: solid gray thin;
     #rescon{

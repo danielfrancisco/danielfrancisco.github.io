@@ -1,20 +1,13 @@
-import Home from "./home"
 import { useEffect, useState } from "react";
-import Skills from "./skills";
 import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
 import franks from "./images/franks.png";
-import About from "./about";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Mobilenav from "./mobilenav";
 import Drop from "./drop";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 export default function Portfolio(props){
-    const[cont,scont] = useState(props.cont)
-    const[page,spage] = useState("portfolio")
-
     let homeButton=useRef()
     let skillsButton=useRef()
     let workButton=useRef()
@@ -29,15 +22,15 @@ export default function Portfolio(props){
       nav.current.style.top = "-6vh";
       },[nav])
 
+      useEffect(()=>{
+       document.body.style.background="white"
+      },[])
 
-   
-  useEffect(()=>{
-    if(String(window.location.href).includes("portfolio")){
-      document.getElementById("body").style.backgroundColor= "white"; 
-    }
-   },[])
-   
-    window.onscroll = function(e) {
+   function changeBackground(){
+        document.body.style.background="#E7E7E7"
+   }
+
+   window.onscroll = function(e) {
       
       if(this.scrollY>this.oldScroll){
         document.getElementById("nav").style.top = "-60vh";
@@ -88,50 +81,6 @@ export default function Portfolio(props){
     }
   }  
     
-    
-   if(cont==="home"){
-      if(window.innerWidth<=600){
-        document.getElementById("body").style.backgroundColor= "white";
-        return <Home cont={cont}/>
-      }
-      else{
-        document.getElementById("body").style.backgroundColor= "#E7E7E7";
-        document.getElementById("nav").style.top = "-6vh";
-        return <Home cont={cont}/>
-      }
-    }
-    
-      if(cont==="skills"){
-        
-        if(window.innerWidth<=600){
-          document.getElementById("body").style.backgroundColor= "white";
-          return <Skills cont={cont}/>
-        }
-        else{
-          document.getElementById("body").style.backgroundColor= "#E7E7E7";
-          return <Skills cont={cont}/>
-        }
-        
-      }
-
-      if(cont==="drop"){
-        return <Drop cont={cont} page={page} pre = "1"/>
-        
-      }
-
-      if(cont==="about"){
-        if(window.innerWidth<=600){
-          document.getElementById("body").style.backgroundColor= "white";
-          return <About cont={cont}/>
-        }
-        else{
-          document.getElementById("body").style.backgroundColor= "#E7E7E7";
-          
-          return <About cont={cont}/>
-        
-      }
-    }
-
   function linkHover(e){
      document.getElementById(e.target.id).style.color="white"
    }
@@ -145,65 +94,31 @@ export default function Portfolio(props){
       <div id="fondo" >
       <div id="nav" ref={nav} style={{transition:"top 0.5s"}}>
                 <Link to="/" id="home"  style={{color:"gray", marginLeft:"20vh"}} 
-                ref={homeButton}   onMouseOver={(e)=>{linkHover(e)}} 
-                onMouseOut={(e)=>{linkNotHover(e)}}
-                onClick={()=>{
-                 
-                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>
-                 
-                Home</Link>
+                ref={homeButton}   onMouseOver={(e)=>{linkHover(e)}}
+                onMouseOut={(e)=>{linkNotHover(e)}} 
+                onClick={changeBackground}>Home</Link>
 
                 <Link to={"/skills"} id="skills" style={{color:"gray" }} ref={skillsButton}
-                onMouseOver={(e)=>{linkHover(e)}} 
+                onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
                 onMouseOut={(e)=>{linkNotHover(e)}}
-                
-                className="links" onClick={()=>{
-                 document.getElementById("body").style.backgroundColor= "#E7E7E7";}}>
-                Skills</Link>
+                className="links" >Skills</Link>
 
                <Link to={"/portfolio"} id="work" style={{color:"gray"}} 
-               ref={workButton}
+               ref={workButton} onClick={changeBackground}
                onMouseOver={(e)=>{linkHover(e)}} 
-              onMouseOut={(e)=>{linkNotHover(e)}}
-
-               className="links" onClick={()=>{
-                 if(String(window.location.href).includes("portfolio")){
-                   document.getElementById("body").style.backgroundColor= "white"; 
-                 }
-                 else{
-                  document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                 }
-                 
-                 
-                }}> 
-                Work</Link>
+               onMouseOut={(e)=>{linkNotHover(e)}}
+               className="links"> Work</Link>
 
                 <Link to="/about" id="about" className="links" 
-                onMouseOver={(e)=>{linkHover(e)}} 
+                onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
                 onMouseOut={(e)=>{linkNotHover(e)}}
-                style={{color:"gray"}} onClick={()=>{
-                 document.getElementById("body").style.backgroundColor= "#E7E7E7";
-                }}>About</Link>
+                style={{color:"gray"}} >About</Link>
 
               </div>
               
-                
-               
-              <div id="danielpa">
-              <Link to={"/"}><div id="daniel">
-                Home
-              </div></Link>
-              <FontAwesomeIcon icon={faBars} id="bars" onClick={
-                ()=>{
-                  scont("drop")
-                  
-                }
-              }/>
-            </div>
-             
-                  
-                <div id="imacon">
+            <Mobilenav current={"/portfolio"}/> 
+
+             <div id="imacon">
                <div id="imlepa">
                   <div id="imle">
                     <div>

@@ -1,21 +1,14 @@
-import Home from "./home"
 import { useState } from "react";
-import Portfolio from "./portfolio";
-import About from "./about";
-import { useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Drop from "./drop";
 import { Link } from "react-router-dom";
+import Nav from "./nav";
+import Mobilenav from "./mobilenav"
 
 export default function Skills(props){
     const[cont,scont] = useState(props.cont)
     const[page,spage] = useState("skills")
 
-    
     window.onscroll = function(e) {
-      
-      
       if(this.scrollY>this.oldScroll){
         document.getElementById("danielpa").style.top = "-60vh";
       }
@@ -27,64 +20,14 @@ export default function Skills(props){
       
     }
 
-    useEffect(()=>{
-      document.getElementById("nav").style.top = "16vh";
-     },[])
-    
-    if(cont==="about"){
-      
-      return <About cont={cont}/>
-    }
-     
-     if(cont==="home"){
-      
-        return <Home cont={cont}/>
-      }
 
-      if(cont==="porfolio"){
-        document.getElementById("body").style.backgroundColor= "white";
-        return <Portfolio cont={cont}/>
-      }
-
-      if(cont==="drop"){
-        return <Drop cont={cont} page={page} pre="1"/>
-        
-      }
-
-      return (
+  return (
           <>
             <div id="fondo">
-            <div id="nav">
-                <Link to="/" id="home">
-                 
-                Home</Link>
-
-                <Link to={"/skills"} className="links">Skills</Link>
-
-               <Link to={"/portfolio"} className="links" onClick={()=>{
-                 
-                 document.getElementById("body").style.backgroundColor= "white";
-                }}> 
-                Work</Link>
-
-                <Link to="/about" className="links">About</Link>
-
-              </div>
-
-              <div id="danielpa">
-              <Link to={"/"}><div id="daniel">
-                Home
-              </div></Link>
-              <FontAwesomeIcon icon={faBars} id="bars" onClick={
-                ()=>{
-                  scont("drop")
-                  
-                }
-              }/>
-            </div>
-           
-
-              <div id="ui"><br/>Ui/Ux<br/>Designing
+             <Nav/>
+             <Mobilenav current={"/skills"}/>
+             
+             <div id="ui"><br/>Ui/Ux<br/>Designing
                      <div id="uicon"><br/> &nbsp; &nbsp;Ux and Ui design combines<br/>
                      &nbsp; &nbsp;research, product development<br/> &nbsp; &nbsp;and strategy  to create
                      great <br/> &nbsp; &nbsp;and meaningful experiences 

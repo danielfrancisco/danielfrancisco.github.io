@@ -1,6 +1,7 @@
 $height: 33vw;
 $width: 68.4288vw;
-$borderRadius: 10px;
+$borderRadius: 11px;
+
 
 
 #imacon{
@@ -21,7 +22,7 @@ $borderRadius: 10px;
     }
 
     #imle{
-        animation: moveImage 0.7s  ease-in forwards;
+        animation: moveImage 0.6s ease-in forwards;
         margin-top: 11vh;
         display: inline-block;
         position: relative;
@@ -145,6 +146,10 @@ $borderRadius: 10px;
             top: 7.3vh;
             margin-left: 20px;
             font-weight: bold;
+            &:hover{
+                color: black;
+                background-color: white;
+            }
         }
         img{
             position: relative;

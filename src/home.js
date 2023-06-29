@@ -1,19 +1,10 @@
-import { useEffect, useState } from "react";
-import Skills from "./skills";
 import "./styless/home.scss"
-import Portfolio from "./portfolio";
-import Contact from "./contact"
-import About from "./about";
-import Drop from "./drop";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Mobilenav from "./mobilenav";
+import Nav from "./nav";
 
 export default function Home() {
-   const [conte,sconte] = useState("home")
-   const[page,spage] = useState("home")
-   
-   window.onscroll = function(e) {
+  window.onscroll = function() {
       
     console.log(this.oldScroll,this.scrollY);
     if(this.scrollY>this.oldScroll){
@@ -27,99 +18,19 @@ export default function Home() {
     
   }
 
-   useEffect(()=>{
-    document.getElementById("nav").style.top = "16vh";
-   },[])
-
-   function deskcolor(){
-     if(window.innerWidth>600 && conte==="portfolio"===false){
-      document.getElementById("body").style.backgroundColor= "#E7E7E7";
-     }
-     else{
-      document.getElementById("body").style.backgroundColor= "white";
-     }
-   }
-
-   window.addEventListener("resize",deskcolor)
-   
-   if(conte==="portfolio"){
-    document.getElementById("body").style.backgroundColor= "white";
-    return <Portfolio cont={conte}/>
-    
-  }
-
-  if(conte==="about"){
-    return <About cont={conte}/>
-    
-  }
-
-  if(conte==="drop"){
-    return <Drop cont={conte} page={page} pre = "1"/>
-    
-  }
-
-  if(conte==="skills"){
-    if(window.innerWidth<=600){
-      document.getElementById("body").style.backgroundColor= "white";
-      return <Skills con={conte}/>
-    }
-
-    else{
-      document.getElementById("nav").style.backgroundColor = "white";
-      document.getElementById("body").style.backgroundColor= "#E7E7E7";
-      return <Skills con={conte}/>
-    }
-    
-    
-  }
-
-  if(conte==="contact"){
-    return <Contact cont={conte}/>
-  }
-
-  
-
-   if(conte==="home"){
-    return (
+   return (
       <>
+      
        <div id="fondo">
-              <div id="nav">
-                <Link to="/" id="home">
-                 
-                Home</Link>
-
-                <Link to={"/skills"} className="links">Skills</Link>
-
-               <Link to={"/portfolio"} className="links" onClick={()=>{
-                 sconte("portfolio")
-                 document.getElementById("body").style.backgroundColor= "white";
-                }}> 
-                Work</Link>
-
-                <Link to="/about" className="links">About</Link>
-
-              </div>
-            
+          <Nav/>
+          <Mobilenav current="/"/>  
           
-              <div id="danielpa">
-              
-              <FontAwesomeIcon icon={faBars} id="bars" onClick={
-                ()=>{
-                  sconte("drop")
-                  
-                }
-              }/>
-            </div>
-          
-  
-          <div id="con">
+            <div id="con">
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Full stack developer</div>
             <div id="titulo">Ux Designer</div>
-            <Link to={"/contact"}><button onClick={()=>{
-              sconte("contact")
-            }}>Contact</button></Link>
-          </div>
+            <Link to={"/contact"}><button>Contact</button></Link>
+        </div>
           
         </div>
       </>
@@ -128,5 +39,5 @@ export default function Home() {
   }
 
   
-}
+
 
