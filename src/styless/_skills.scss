@@ -1,7 +1,6 @@
-$animationDuration: 0.6s;
+$animationDuration: 0.5s;
 
 @mixin skillsq($bcolor, $fcolor,){
-    
     background-color: $bcolor;
     color: $fcolor;
     height: 16vh;
@@ -15,8 +14,6 @@ $animationDuration: 0.6s;
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
-    
-    
     }
 
     @keyframes moveui {
@@ -26,7 +23,7 @@ $animationDuration: 0.6s;
 
     @keyframes moveres {
       from{top: 3vh; opacity: 0;}
-      to{top: 17vh; opacity: 1;}
+      to{top: 13.7vh; opacity: 1;}
     }
 
     @keyframes movefront {
@@ -44,6 +41,7 @@ $animationDuration: 0.6s;
      background-color: #111;
      border-radius: 5px;
      text-align: left;
+     
      line-height: 3.2vh;
      font-weight: lighter;
      

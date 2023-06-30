@@ -3,7 +3,6 @@ import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
 import franks from "./images/franks.png";
 import Mobilenav from "./mobilenav";
-import Drop from "./drop";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
@@ -104,7 +103,7 @@ export default function Portfolio(props){
                 className="links" >Skills</Link>
 
                <Link to={"/portfolio"} id="work" style={{color:"gray"}} 
-               ref={workButton} onClick={changeBackground}
+               ref={workButton} 
                onMouseOver={(e)=>{linkHover(e)}} 
                onMouseOut={(e)=>{linkNotHover(e)}}
                className="links"> Work</Link>

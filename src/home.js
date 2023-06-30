@@ -4,21 +4,8 @@ import Mobilenav from "./mobilenav";
 import Nav from "./nav";
 
 export default function Home() {
-  window.onscroll = function() {
-      
-    console.log(this.oldScroll,this.scrollY);
-    if(this.scrollY>this.oldScroll){
-      document.getElementById("danielpa").style.top = "-60vh";
-    }
-
-    if(this.scrollY<this.oldScroll){
-      document.getElementById("danielpa").style.top = "-3vh";
-    }
-    this.oldScroll = this.scrollY;
-    
-  }
-
-   return (
+  
+  return (
       <>
       
        <div id="fondo">
