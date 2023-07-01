@@ -3,7 +3,7 @@ $animationDuration: 0.5s;
 @mixin skillsq($bcolor, $fcolor,){
     background-color: $bcolor;
     color: $fcolor;
-    height: 16vh;
+    height: 46vh;
     width: 20vw;
     display: inline-block;
     margin-left: 3.5vw;
@@ -12,7 +12,7 @@ $animationDuration: 0.5s;
     font-size: 26px;
     position: relative;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     }
 
@@ -22,7 +22,7 @@ $animationDuration: 0.5s;
     }
 
     @keyframes moveres {
-      from{top: 3vh; opacity: 0;}
+      from{top: 0vh; opacity: 0;}
       to{top: 13.7vh; opacity: 1;}
     }
 
@@ -31,14 +31,14 @@ $animationDuration: 0.5s;
       to{top: 27vh; opacity: 1;}
     }
 
-  @mixin con(){
+  @mixin con($fontColor){
      top: 0.3vh;
-     color: gray;
+     color: $fontColor;
      font-family: Arial,system-ui ;
      height: 35vh;
      width: 20vw;
      font-size: 18px;
-     background-color: #111;
+     background-color: transparent;
      border-radius: 5px;
      text-align: left;
      
@@ -49,12 +49,13 @@ $animationDuration: 0.5s;
     
 
 #ui{
- @include skillsq(#8a63d2,black, );
+ @include skillsq(#8a63d2, white );
+ 
  animation: moveui $animationDuration ease-in forwards;
  
  
  #uicon{
-     @include con();
+     @include con(white);
      
  }
 }
@@ -65,7 +66,7 @@ $animationDuration: 0.5s;
     
     top: 27vh;
     #frontcon{
-        @include con();
+        @include con(gray);
     }
 }
 
@@ -75,7 +76,7 @@ $animationDuration: 0.5s;
     
     border: solid gray thin;
     #rescon{
-        @include con()
+        @include con(black)
        }
 }
 

@@ -2,7 +2,7 @@
   position: relative;
 }
 #abcon #aboutmemo {
-  font-family: Roboto, Arial;
+  font-family: Arial, system-ui;
   position: relative;
   top: 20vh;
   display: none;
@@ -11,7 +11,7 @@
   text-align: justify;
 }
 #abcon #aboutmede {
-  font-family: Roboto, Arial;
+  font-family: Arial, system-ui;
   position: relative;
   top: 34vh;
   left: 24vw;
@@ -21,7 +21,7 @@
 }
 
 #heading {
-  font-family: system-ui, Arial, sans-serif;
+  font-family: Roboto, system-ui, Arial;
   font-weight: bold;
   font-size: 32px;
   color: black;

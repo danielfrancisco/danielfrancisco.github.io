@@ -1,55 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 #imacon {
   display: inline-block;
-  top: 16vh;
+  top: 2vh;
   left: 0vw;
 }
 #imacon #imlepa {
   display: inline-block;
   position: absolute;
 }
+@keyframes moveImage {
+  from {
+    left: -4vw;
+    opacity: 0;
+  }
+  to {
+    left: 10vw;
+    opacity: 1;
+  }
+}
 #imacon #imle {
-  transition: left 0.5s;
+  animation: moveImage 0.6s ease-in forwards;
   margin-top: 11vh;
   display: inline-block;
-  left: 0vw;
+  position: relative;
   top: 1.5vh;
   height: 20vh;
   width: 17vh;
 }
 #imacon #imle #coloroverMa {
-  height: 30vh;
-  width: 28vw;
+  margin-top: -6vh;
+  height: 33vw;
+  width: 68.4288vw;
   background-color: black;
+  border-radius: 11px;
 }
 #imacon #imle #coloroverFr {
-  margin-top: 11vh;
-  height: 30vh;
-  width: 28vw;
+  margin-top: -6vh;
+  height: 33vw;
+  width: 68.4288vw;
+  background-color: black;
+  border-radius: 11px;
+}
+#imacon #imle #coloroverRe {
+  margin-top: 2vh;
+  height: 33vw;
+  width: 68.4288vw;
+  border-radius: 11px;
+}
+#imacon #imle #coloroverRe:hover {
   background-color: black;
 }
 #imacon #imle img {
-  height: 30vh;
-  width: 28vw;
-  cursor: pointer;
+  height: 33vw;
+  width: 68.4288vw;
+  cursor: default;
+  border-radius: 11px;
 }
 #imacon #imle img:hover {
   opacity: 0.5;
 }
 #imacon #imle button {
-  top: 3.3vh;
-  height: 5.5vh;
-  font-weight: bold;
-  background-color: #30b069;
-  border-radius: 6px;
+  top: -16vh;
+  height: 48px;
+  width: 150px;
+  color: black;
+  left: 15vw;
+  background-color: white;
+  border-radius: 100px;
   margin-bottom: 17vh;
 }
 #imacon #imle button:hover {
-  color: black;
+  background-color: #30b069;
+  border: white;
 }
 #imacon #imrepa {
   display: inline-block;
-  position: absolute;
+  left: 8vw;
 }
 #imacon #imre {
   transition: left 0.5s;
@@ -59,19 +85,11 @@
   height: 20vh;
   width: 17vh;
 }
-#imacon #imre #coloroverRe {
-  margin-top: 11vh;
-  height: 30vh;
-  width: 28vw;
-}
-#imacon #imre #coloroverRe:hover {
-  background-color: black;
-}
 #imacon #imre img {
   margin-top: 0vh;
-  height: 30vh;
-  width: 28vw;
-  cursor: pointer;
+  height: 19.3vw;
+  width: 40vw;
+  cursor: normal;
 }
 #imacon #imre img:hover {
   opacity: 0.5;
@@ -79,10 +97,9 @@
 #imacon #imre button {
   top: 3.3vh;
   left: 0vw;
-  font-weight: bold;
-  height: 5.5vh;
+  height: 48px;
   background-color: #30b069;
-  border-radius: 6px;
+  border-radius: 100px;
 }
 #imacon #imre button:hover {
   color: black;
@@ -90,14 +107,19 @@
 
 @media screen and (max-width: 600px) {
   #imacon #imle {
-    transition: left 0s;
+    margin-left: 5vw;
+    animation: none;
   }
   #imacon #imle button {
     margin-bottom: 20vh;
     left: 95px;
-    top: 13.3vh;
+    top: 7.3vh;
     margin-left: 20px;
     font-weight: bold;
+  }
+  #imacon #imle button:hover {
+    color: black;
+    background-color: white;
   }
   #imacon #imle img {
     position: relative;
@@ -141,27 +163,65 @@
   left: 20vw;
   font-weight: bold;
   font-size: large;
+  font-family: Roboto, Arial, system-ui;
 }
 
 #email {
   font-weight: normal;
-  font-size: medium;
+  font-size: 16.5px;
+  font-family: Arial, system-ui;
+  color: dimgray;
+  font-family: Roboto, Arial, system-ui;
 }
 
 #number {
   font-weight: normal;
-  font-size: medium;
+  font-size: 16.5px;
+  color: dimgray;
+  font-family: Roboto, Arial, system-ui;
 }
 
 #loc {
   font-weight: normal;
-  font-size: medium;
+  font-size: 16.5px;
+  color: dimgray;
+  font-family: Roboto, Arial, system-ui;
 }
 
+@keyframes moveui {
+  from {
+    left: -8vw;
+    opacity: 0;
+  }
+  to {
+    left: 6vw;
+    opacity: 1;
+  }
+}
+@keyframes moveres {
+  from {
+    top: 0vh;
+    opacity: 0;
+  }
+  to {
+    top: 13.7vh;
+    opacity: 1;
+  }
+}
+@keyframes movefront {
+  from {
+    top: 40vh;
+    opacity: 0;
+  }
+  to {
+    top: 27vh;
+    opacity: 1;
+  }
+}
 #ui {
   background-color: #8a63d2;
   color: white;
-  height: 16vh;
+  height: 46vh;
   width: 20vw;
   display: inline-block;
   margin-left: 3.5vw;
@@ -170,17 +230,18 @@
   font-size: 26px;
   position: relative;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  animation: moveui 0.5s ease-in forwards;
 }
 #ui #uicon {
   top: 0.3vh;
-  color: #999;
-  font-family: Roboto, Arial;
+  color: white;
+  font-family: Arial, system-ui;
   height: 35vh;
   width: 20vw;
   font-size: 18px;
-  background-color: #111;
+  background-color: transparent;
   border-radius: 5px;
   text-align: left;
   line-height: 3.2vh;
@@ -190,7 +251,7 @@
 #front {
   background-color: black;
   color: white;
-  height: 16vh;
+  height: 46vh;
   width: 20vw;
   display: inline-block;
   margin-left: 3.5vw;
@@ -199,17 +260,19 @@
   font-size: 26px;
   position: relative;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  animation: movefront 0.5s ease-in forwards;
+  top: 27vh;
 }
 #front #frontcon {
   top: 0.3vh;
-  color: #999;
-  font-family: Roboto, Arial;
+  color: gray;
+  font-family: Arial, system-ui;
   height: 35vh;
   width: 20vw;
   font-size: 18px;
-  background-color: #111;
+  background-color: transparent;
   border-radius: 5px;
   text-align: left;
   line-height: 3.2vh;
@@ -217,9 +280,9 @@
 }
 
 #res {
-  background-color: #30b069;
-  color: white;
-  height: 16vh;
+  background-color: white;
+  color: black;
+  height: 46vh;
   width: 20vw;
   display: inline-block;
   margin-left: 3.5vw;
@@ -228,17 +291,19 @@
   font-size: 26px;
   position: relative;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  animation: moveres 0.5s ease-in forwards;
+  border: solid gray thin;
 }
 #res #rescon {
   top: 0.3vh;
-  color: #999;
-  font-family: Roboto, Arial;
+  color: black;
+  font-family: Arial, system-ui;
   height: 35vh;
   width: 20vw;
   font-size: 18px;
-  background-color: #111;
+  background-color: transparent;
   border-radius: 5px;
   text-align: left;
   line-height: 3.2vh;
@@ -251,15 +316,19 @@
     position: relative;
     left: -7vw;
     width: 97vw;
+    animation: none;
   }
   #ui #uicon {
     width: 97vw;
+    animation: none;
   }
   #front {
+    animation: none;
     display: block;
-    margin-top: 38vh;
+    top: 40vh;
     position: relative;
     left: -7vw;
+    margin-top: 15vh;
     width: 97vw;
   }
   #front #frontcon {
@@ -267,7 +336,7 @@
   }
   #res {
     display: block;
-    margin-top: 38vh;
+    margin-top: 60vh;
     margin-right: 4vw;
     position: relative;
     left: -7vw;
@@ -277,18 +346,8 @@
     width: 97vw;
   }
 }
-::-moz-selection {
-  color: white;
-  background: black;
-}
-::selection {
-  color: white;
-  background: black;
-}
-
-::-moz-selection {
-  color: white;
-  background: black;
+body {
+  margin: 0;
 }
 
 #fondo {
@@ -313,7 +372,6 @@
   background-color: white;
   width: 89.99vw;
   padding-bottom: 1.7vh;
-  transition: top 0.5s;
 }
 #fondo #nav p {
   color: black;
@@ -334,7 +392,7 @@
   left: 35vw;
 }
 #fondo .links {
-  font-family: Roboto, Arial;
+  font-family: Roboto, Arial, system-ui;
   font-weight: bold;
   margin-left: 6vw;
   text-decoration: none;
@@ -363,7 +421,7 @@
   left: 13vw;
 }
 #fondo div {
-  font-family: Roboto, Arial;
+  font-family: Roboto, Arial, system-ui;
   position: relative;
   cursor: default;
   margin-bottom: 4vh;
@@ -381,7 +439,7 @@
   color: #484848;
 }
 #fondo button {
-  background-color: #073042;
+  background-color: black;
   border: none;
   color: white;
   font-weight: bold;
@@ -390,16 +448,16 @@
   margin-left: 10vw;
   height: 48px;
   letter-spacing: 0.0625rem;
-  text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 16px;
   outline: none;
   width: 7.8vw;
-  font-family: Roboto, Arial;
+  font-family: Roboto, Arial, system-ui;
   border-radius: 100px;
   cursor: pointer;
 }
 #fondo button:hover {
   background-color: #30b069;
+  color: black;
 }
 
 body {
@@ -440,7 +498,8 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     z-index: 5;
     left: 80vw;
-    font-size: 25px;
+    font-size: 23.2px;
+    color: black;
   }
   #fondo #nav {
     display: none;
@@ -462,6 +521,16 @@ body::-webkit-scrollbar-thumb {
   #fondo button {
     width: 100px;
     margin-left: 0vw;
-    background-color: #30b069;
+    background-color: black;
+    color: white;
   }
+}
+::-moz-selection {
+  color: black;
+  background: #30b069;
+}
+
+::selection {
+  color: black;
+  background: dimgray;
 }/*# sourceMappingURL=home.css.map */
