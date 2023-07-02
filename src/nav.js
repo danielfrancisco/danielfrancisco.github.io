@@ -15,11 +15,11 @@ export default function Nav(){
                  
                 Home</Link>
 
-                <Link to={"/skills"} className="links">Skills</Link>
+                <Link to={"/skills"} className="links">Services</Link>
 
-               <Link to={"/portfolio"} className="links">Work</Link>
+               <Link to={"/portfolio"} className="links">Previews</Link>
 
-                <Link to="/about" className="links">About</Link>
+                <Link to="/about" className="links">About me</Link>
 
           </div>
         </>

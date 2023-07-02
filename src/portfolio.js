@@ -100,18 +100,18 @@ export default function Portfolio(props){
                 <Link to={"/skills"} id="skills" style={{color:"gray" }} ref={skillsButton}
                 onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
                 onMouseOut={(e)=>{linkNotHover(e)}}
-                className="links" >Skills</Link>
+                className="links" >Services</Link>
 
                <Link to={"/portfolio"} id="work" style={{color:"gray"}} 
                ref={workButton} 
                onMouseOver={(e)=>{linkHover(e)}} 
                onMouseOut={(e)=>{linkNotHover(e)}}
-               className="links"> Work</Link>
+               className="links">Previews</Link>
 
                 <Link to="/about" id="about" className="links" 
                 onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
                 onMouseOut={(e)=>{linkNotHover(e)}}
-                style={{color:"gray"}} >About</Link>
+                style={{color:"gray"}} >About me</Link>
 
               </div>
               
