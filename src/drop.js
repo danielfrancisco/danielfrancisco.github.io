@@ -18,9 +18,9 @@ return(
           <div id="dropcon">
             <Link id="link" to={{pathname:"/"}} state="/"><p>Home</p></Link> 
 
-            <Link id="link" to={"/skills"}><p>Skills</p> </Link>
+            <Link id="link" to={"/skills"}><p>Services</p> </Link>
 
-            <Link id="link" to={"/portfolio"}><p>Work</p></Link>
+            <Link id="link" to={"/portfolio"}><p>Previews</p></Link>
 
             <Link id="link" to={"/about"}><p >About</p></Link>
           </div>
