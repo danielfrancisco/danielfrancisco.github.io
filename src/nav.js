@@ -19,7 +19,7 @@ export default function Nav(){
 
                <Link to={"/portfolio"} className="links">Previews</Link>
 
-                <Link to="/about" className="links">About me</Link>
+                <Link to="/about" className="links">About</Link>
 
           </div>
         </>

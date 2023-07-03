@@ -111,7 +111,7 @@ export default function Portfolio(props){
                 <Link to="/about" id="about" className="links" 
                 onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
                 onMouseOut={(e)=>{linkNotHover(e)}}
-                style={{color:"gray"}} >About me</Link>
+                style={{color:"gray"}} >About</Link>
 
               </div>
               
