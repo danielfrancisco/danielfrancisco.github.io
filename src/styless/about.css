@@ -14,10 +14,9 @@
   font-family: Arial, system-ui;
   position: relative;
   top: 34vh;
-  left: 24vw;
   font-size: 20px;
   color: dimgray;
-  text-align: justify;
+  text-align: center;
 }
 
 #heading {
@@ -27,7 +26,8 @@
   color: black;
   position: relative;
   top: 30vh;
-  left: 50vh;
+  margin: auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 1100px) {

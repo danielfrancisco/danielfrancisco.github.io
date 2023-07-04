@@ -1,6 +1,7 @@
 #abcon{
     position: relative;
     
+    
     #aboutmemo{
         font-family: Arial,system-ui;
         position: relative;
@@ -8,30 +9,38 @@
         display: none;
         font-size: 20px;
         color: dimgray;
-        text-align: justify;
         
+
     }
 
     #aboutmede{
         font-family: Arial,system-ui;
         position: relative;
-        top: 34vh;
-        left: 24vw;
+        top: 38vh;
         font-size: 20px;
         color: dimgray;
-        text-align: justify;
-        
+        margin: 0;
+        display: block;
+        margin: auto;
+        width: 54vw;
+        left: 6vw;
+        text-align: left;
     }
 }
 
 #heading{
+    width: 36vw;
+    display: block;
     font-family: Roboto,system-ui,Arial;
     font-weight: bold;
     font-size: 32px;
     color: black;
     position: relative;
     top: 30vh;
-    left: 50vh;
+    left: 6vw;
+    margin: auto;
+    text-align: left;
+    width: 54vw;
 }
 
 @media screen and (max-width: 1100px) {
