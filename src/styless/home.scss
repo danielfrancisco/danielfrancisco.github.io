@@ -122,16 +122,31 @@ body{
     margin-left: 10vw;
     height: 48px;
     letter-spacing: 0.0625rem;
-    
     font-size: 16px;
     outline:none;
     width: 7.8vw;
     font-family: $myfont;
+    overflow: hidden;
     border-radius: 100px;
+    z-index: 1;
     cursor: pointer;
-    &:hover{
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
       background-color: #30b069;
+      transition: all 0.3s;
+      border-radius: 100px;
+      z-index: -1;
+    }
+    &:hover{
       color: black;
+      &::before{
+        width: 100%;
+      }
     }
   }
 }
