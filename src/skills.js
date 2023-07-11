@@ -33,7 +33,7 @@ return (
               <div id="front"><br/>Front-end  and Back-end Development<br/>
                  <div id="frontcon"> <br/>
                  <div style={{marginLeft:"1vw", marginRight: "1vw"}}>
-                 By working on both sides of the stack, you have
+                 Working on both sides of the stack, allows for
                  a holistic understanding of web development, ensuring that
                  everything works harmoniously<br/> &nbsp; &nbsp;<br/> &nbsp; &nbsp;
                  </div>
