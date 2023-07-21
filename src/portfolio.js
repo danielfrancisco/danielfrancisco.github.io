@@ -131,11 +131,11 @@ export default function Portfolio(props){
 
                    <div>
                     <div id="coloroverMa">
-                      <a  target="_blank" href="https://danielfrancisco.github.io/martys/">
+                      <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
                         <img src={martysi} />
                       </a>
                   </div>
-                        <a href="https://danielfrancisco.github.io/martys/" target="_blank"><button>Get a demo </button></a>
+                        <a href="https://danielfrancisco.github.io/martyswebapp/#/" target="_blank"><button>Get a demo </button></a>
                         
                    </div>
 
