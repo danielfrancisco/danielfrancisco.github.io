@@ -6,11 +6,17 @@ import Mobilenav from "./mobilenav";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
-export default function Portfolio(props){
+export default function Portfolio(){
     let homeButton=useRef()
     let skillsButton=useRef()
     let workButton=useRef()
     let nav = useRef()
+    let resortIma = useRef()
+    let shadere = useRef()
+    let shadema = useRef()
+    let martysIma = useRef()
+    let shadefr = useRef()
+    let frankIma = useRef()
 
     useEffect(()=>{
       nav.current.style.backgroundColor="#101010"
@@ -87,7 +93,17 @@ export default function Portfolio(props){
    function linkNotHover(e){
     document.getElementById(e.target.id).style.color="dimgray"
    }
-   
+  
+   function buttonHover(opacity, shade){
+    opacity.current.style.opacity="0.5"
+    shade.current.style.background="black"
+   }
+
+   function buttonNotHover(opacity, shade){
+    opacity.current.style.opacity="1"
+    shade.current.style.backgroundColor="transparent"
+   }
+
    return(
           <>
       <div id="fondo" >
@@ -120,31 +136,45 @@ export default function Portfolio(props){
              <div id="imacon">
                <div id="imlepa">
                   <div id="imle">
-                    <div>
-                   <div id="coloroverRe">
+                   <div>
+                   <div id="coloroverRe" ref={shadere}>
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
-                      <img src={resorti}/>
+                      <img ref={resortIma} src={resorti} onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
+                       onMouseOut={()=>{buttonNotHover(resortIma, shadere)}}/>
                     </a>
-                  </div>
-                  <a href="https://danielfrancisco.github.io/Resort/" target="_blank"><button>Get a Demo </button></a>
-                   </div>
+                    </div>
+                    <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
+                      <button onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
+                       onMouseOut={()=>{buttonNotHover(resortIma, shadere)}}>
+                        Get a Demo </button>
+                    </a>
+              </div>
 
                    <div>
-                    <div id="coloroverMa">
+                    <div id="coloroverMa" ref={shadema}>
                       <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
-                        <img src={martysi} />
+                        <img src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
+                       onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}/>
                       </a>
                   </div>
-                        <a href="https://danielfrancisco.github.io/martyswebapp/#/" target="_blank"><button>Get a demo </button></a>
+                        <a href="https://danielfrancisco.github.io/martyswebapp/#/" target="_blank">
+                          <button onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
+                       onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}>
+                        Get a demo </button></a>
                         
                    </div>
 
-                   <div id="coloroverFr">
+                   <div id="coloroverFr" ref={shadefr}>
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
-                      <img src={franks}/>
+                      <img src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
+                       onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}/>
                     </a>
                   </div>
-                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank"><button>Get a Demo </button></a>
+                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
+                    <button onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
+                       onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}>
+                      Get a Demo 
+                      </button></a>
 
                   </div>
                </div>

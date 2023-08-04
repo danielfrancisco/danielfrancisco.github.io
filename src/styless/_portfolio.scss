@@ -49,9 +49,7 @@ $borderRadius: 11px;
             height: $height;
             width: $width;
             border-radius: $borderRadius;
-            &:hover{
-                background-color: black;
-            }
+            
         }
 
 
@@ -62,7 +60,6 @@ $borderRadius: 11px;
             cursor: default;
             border-radius: $borderRadius;
             &:hover{
-                opacity: 0.5;
                 cursor: pointer;
             }
            
