@@ -7,9 +7,13 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 export default function Portfolio(){
-    let homeButton=useRef()
-    let skillsButton=useRef()
-    let workButton=useRef()
+    const [navLinkStyle, setNavLinkStyle] = useState(
+      {homeLinkColor:"gray",
+      servicesLinkColor:"gray",
+      previewLinkColor:"gray",
+      aboutLinkColor:"gray",
+    })
+    
     let nav = useRef()
     let resortIma = useRef()
     let shadere = useRef()
@@ -86,13 +90,17 @@ export default function Portfolio(){
     }
   }  
     
-  function linkHover(e){
-     document.getElementById(e.target.id).style.color="white"
+  function linkHover(link){
+    let updatedNavLinkStyle = {...navLinkStyle}
+    updatedNavLinkStyle[link] = "white"
+    setNavLinkStyle(updatedNavLinkStyle)
    }
-
-   function linkNotHover(e){
-    document.getElementById(e.target.id).style.color="dimgray"
-   }
+   
+   function linkNotHover(link){
+    let updatedNavLinkStyle = {...navLinkStyle}
+    updatedNavLinkStyle[link] = "gray"
+    setNavLinkStyle(updatedNavLinkStyle)
+    }
   
    function buttonHover(opacity, shade){
     opacity.current.style.opacity="0.5"
@@ -108,26 +116,27 @@ export default function Portfolio(){
           <>
       <div id="fondo" >
       <div id="nav" ref={nav} style={{transition:"top 0.5s"}}>
-                <Link to="/" id="home"  style={{color:"gray", marginLeft:"20vh"}} 
-                ref={homeButton}   onMouseOver={(e)=>{linkHover(e)}}
-                onMouseOut={(e)=>{linkNotHover(e)}} 
+                <Link to="/" id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
+                onMouseOver={()=>{linkHover("homeLinkColor")}}
+                onMouseOut={()=>{linkNotHover("homeLinkColor")}}
                 onClick={changeBackground}>Home</Link>
 
-                <Link to={"/skills"} id="skills" style={{color:"gray" }} ref={skillsButton}
-                onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
-                onMouseOut={(e)=>{linkNotHover(e)}}
+                <Link to={"/skills"} id="skills" style={{color:navLinkStyle.servicesLinkColor }} 
+                onMouseOver={()=>{linkHover("servicesLinkColor")}}
+                onClick={changeBackground}
+                onMouseOut={()=>{linkNotHover("servicesLinkColor")}}
                 className="links" >Services</Link>
 
-               <Link to={"/portfolio"} id="work" style={{color:"gray"}} 
-               ref={workButton} 
-               onMouseOver={(e)=>{linkHover(e)}} 
-               onMouseOut={(e)=>{linkNotHover(e)}}
+               <Link to={"/portfolio"} id="work" style={{color:navLinkStyle.previewLinkColor}} 
+               
+               onMouseOver={()=>{linkHover("previewLinkColor")}} 
+              onMouseOut={()=>{linkNotHover("previewLinkColor")}}
                className="links">Previews</Link>
 
                 <Link to="/about" id="about" className="links" 
-                onMouseOver={(e)=>{linkHover(e)}} onClick={changeBackground}
-                onMouseOut={(e)=>{linkNotHover(e)}}
-                style={{color:"gray"}} >About</Link>
+                onMouseOver={()=>{linkHover("aboutLinkColor")}} onClick={changeBackground}
+                onMouseOut={()=>{linkNotHover("aboutLinkColor")}}
+                style={{color:navLinkStyle.aboutLinkColor}} >About</Link>
 
               </div>
               
