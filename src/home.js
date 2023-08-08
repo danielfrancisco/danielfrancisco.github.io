@@ -6,30 +6,23 @@ import { useEffect, useState} from "react";
 import axios from "axios";
 
 export default function Home() {
-  const [viewCounter, setViewCounter] = useState(1)
-  const [dataCounter, setDataCounter] = useState(0)
+  const [viewCounter, setViewCounter] = useState(0)
+  
    
   useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
     .then(res=>{
-      setDataCounter(res.data.counter)
+      setViewCounter(res.data.counter+1)
     })
   },[])
 
   useEffect(()=>{
-     if(dataCounter!==0){
-         setViewCounter(viewCounter+dataCounter)
-     }
-     
-  },[dataCounter])
-
-  useEffect(()=>{
-    if(viewCounter!=1){
-      axios.post("https://counterapi-ywst.onrender.com/",{
-      viewCounter
-      })
-    }
-    
+      if(viewCounter!==0){
+        axios.post("https://counterapi-ywst.onrender.com/",{
+          viewCounter
+        })
+      }
+      
   },[viewCounter])
 
  return (
