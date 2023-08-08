@@ -2,9 +2,25 @@ import "./styless/home.scss"
 import { Link } from "react-router-dom";
 import Mobilenav from "./mobilenav";
 import Nav from "./nav";
+import { useEffect, useState} from "react";
+import axios from "axios";
 
 export default function Home() {
-  
+  const [viewCounter, setViewCounter] = useState(1)
+   
+  useEffect(()=>{
+    axios.get("https://counterapi-ywst.onrender.com/")
+    .then(res=>{
+      setViewCounter(viewCounter+res.data.counter)
+    })
+  },[])
+
+  useEffect(()=>{
+    axios.post("https://counterapi-ywst.onrender.com/",{
+      viewCounter
+    })
+  },[viewCounter])
+
   return (
       <>
       
