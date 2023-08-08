@@ -7,21 +7,32 @@ import axios from "axios";
 
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(1)
+  const [dataCounter, setDataCounter] = useState(0)
    
   useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
     .then(res=>{
-      setViewCounter(viewCounter+res.data.counter)
+      setDataCounter(res.data.counter)
     })
   },[])
 
   useEffect(()=>{
-    axios.post("https://counterapi-ywst.onrender.com/",{
+     if(dataCounter!==0){
+         setViewCounter(viewCounter+dataCounter)
+     }
+     
+  },[dataCounter])
+
+  useEffect(()=>{
+    if(viewCounter!=1){
+      axios.post("https://counterapi-ywst.onrender.com/",{
       viewCounter
-    })
+      })
+    }
+    
   },[viewCounter])
 
-  return (
+ return (
       <>
       
        <div id="fondo">
