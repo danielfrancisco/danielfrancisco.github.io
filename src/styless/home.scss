@@ -22,6 +22,7 @@ body{
      
   }
 
+
   #bars{
     display: none;
   }
@@ -43,7 +44,7 @@ body{
       left: 5vw;
       display: inline-block;
       margin-left: 5vw;
-      font-size: 1.2vw;
+      font-size: 16.188px;
       font-weight: bold;
       cursor: pointer;
       &:hover{
@@ -107,7 +108,7 @@ body{
   #titulo{
     top: 12vh;
     margin-left: 10vw;
-    font-size: 1.3vw;
+    font-size: 18px;
     color: #484848;
     
   }
@@ -124,7 +125,7 @@ body{
     letter-spacing: 0.0625rem;
     font-size: 16px;
     outline:none;
-    width: 7.8vw;
+    width: 105.22px;
     font-family: $myfont;
     overflow: hidden;
     border-radius: 100px;
@@ -150,6 +151,8 @@ body{
     }
   }
 }
+
+
 
 body{
   background-color: #E7E7E7;

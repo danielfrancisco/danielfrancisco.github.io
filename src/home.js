@@ -2,6 +2,7 @@ import "./styless/home.scss"
 import { Link } from "react-router-dom";
 import Mobilenav from "./mobilenav";
 import Nav from "./nav";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState} from "react";
 import axios from "axios";
 
@@ -9,7 +10,7 @@ export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
   
    
-  useEffect(()=>{
+  /*useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
     .then(res=>{
       setViewCounter(res.data.counter+1)
@@ -23,7 +24,7 @@ export default function Home() {
         })
       }
       
-  },[viewCounter])
+  },[viewCounter])*/
 
  return (
       <>
@@ -33,6 +34,7 @@ export default function Home() {
           <Mobilenav current="/"/>  
           
             <div id="con">
+            <FontAwesomeIcon icon="fa-solid fa-sun-bright" />              
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Full stack developer</div>
             <div id="titulo">Ux Designer</div>

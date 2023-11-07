@@ -30,7 +30,7 @@ return (
                 </div>
               </div>
               
-              <div id="front"><br/>Front-end  and Back-end Development<br/>
+              <div id="front"><br/>Full stack <br/> development<br/>
                  <div id="frontcon"> <br/>
                  <div style={{marginLeft:"1vw", marginRight: "1vw"}}>
                  Working on both sides of the stack, allows for
@@ -44,8 +44,7 @@ return (
               <div id="res"><br/>Responsive<br/> Web design
                 <div id="rescon"><br/>
                  <div style={{marginLeft:"1vw", marginRight: "1vw"}}> 
-                 Your site will look
-                 good on any device
+                 Your website adapts  intelligently  to every device
                  </div>
                 </div>
               </div>
