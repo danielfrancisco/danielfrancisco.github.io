@@ -5,7 +5,7 @@
   
 
   #link{
-    color: black;
+    color: var(--linksColor);
     text-decoration: none;
     font-family: Roboto;   
     font-size: 40px;
@@ -19,7 +19,7 @@
 }
 
 #daniel{
-  color: black;
+  color: var(--linksColor);
 }
 
 #barspres{
@@ -28,7 +28,7 @@
     top: 6vh;
     font-weight: bold;
     font-size: 22px;
-    color: black;
+    color: var(--linksColor);
 }
 
 

@@ -1,13 +1,12 @@
 import "./styless/home.scss"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FiSun,  FiMoon } from "react-icons/fi";
 import Cookies from 'universal-cookie';
 
 const cookies = new Cookies()
-let themeCookie = ''
 export default function Nav(){
-  const [dark, setDark] = useState({isActive: true, styles:{
+  const [dark, setDark] = useState({isActive: null, styles:{
       light:{fondoColor: 'white', 
         navColor: 'white',
         linksColor: 'black',
@@ -40,31 +39,38 @@ export default function Nav(){
                 resFontColor: 'white',
               },
       }})
-
+     
+      
      useEffect(()=>{
       if(cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off'){
         if(window.matchMedia("(prefers-color-scheme: dark)").matches){
-          for(let i in dark.styles.light){
+          cookies.set('darktheme', 'on', { path: '/',expires: new Date(Date.now() + 3600000)});
+          for(let i in dark.styles.dark){
             document.body.style.setProperty(`--${i}`, dark.styles.dark[i])    
             
           }
           setDark({...dark,isActive:true})
         }else{
-          for(let j in dark.styles.dark){
+          cookies.set('darktheme', 'off', { path: '/',expires: new Date(Date.now() + 3600000)});
+          for(let j in dark.styles.light){
             document.body.style.setProperty(`--${j}`, String(dark.styles.light[j]))
-          
+            
           }
           setDark({...dark,isActive:false})
         }
 
       }else{
+
       if(cookies.get('darktheme')==='on'){
+        
         for(let j in dark.styles.dark){
           document.body.style.setProperty(`--${j}`, String(dark.styles.dark[j]))
         
         }
+        
         setDark({...dark,isActive:true})
       }else{
+        
         for(let i in dark.styles.light){
           document.body.style.setProperty(`--${i}`, dark.styles.light[i])    
           
@@ -74,7 +80,7 @@ export default function Nav(){
       }
       
      },[])
-    
+
      function setDarkTheme(){
         
         if(dark.isActive===false){
@@ -116,12 +122,19 @@ export default function Nav(){
                 <Link to="/about" className="links">About</Link>
 
                 <div id='icon' onClick={setDarkTheme}>
-                {dark.isActive ?< FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>     }  
+
+                {cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off' ?
+                <>
+                {dark.isActive? < FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>}  
+                </>:
+                <>
+                { cookies.get('darktheme')==='on'? < FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>}  
+                </>
+                }  
+                
                 </div>
                 
           </div>
-          
-          
         </>
     )
 }

@@ -5,7 +5,10 @@ import franks from "./images/franks.png";
 import Mobilenav from "./mobilenav";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import Cookies from 'universal-cookie';
 
+
+const cookies = new Cookies()
 export default function Portfolio(){
     const [navLinkStyle, setNavLinkStyle] = useState(
       {homeLinkColor:"gray",
@@ -32,12 +35,22 @@ export default function Portfolio(){
       },[nav])
 
       useEffect(()=>{
-       document.body.style.background="#1A202C"
+        
+        if(cookies.get('darktheme')==='on'){
+            
+          document.body.style.setProperty('--bodyColor' ,"#0f131a")
+          document.body.style.setProperty('--fondoColor' ,"#0f131a")
+          
+        }else{
+          
+          document.body.style.setProperty('--bodyColor' ,"white")
+          document.body.style.setProperty('--fondoColor' ,"white")
+        }
+       
+
       },[])
 
-   function changeBackground(){
-        document.body.style.background="#0f131a"
-   }
+   
 
    window.onscroll = function(e) {
       
@@ -119,11 +132,11 @@ export default function Portfolio(){
                 <Link to="/" id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
-                onClick={changeBackground}>Home</Link>
+                >Home</Link>
 
                 <Link to={"/skills"} id="skills" style={{color:navLinkStyle.servicesLinkColor }} 
                 onMouseOver={()=>{linkHover("servicesLinkColor")}}
-                onClick={changeBackground}
+                
                 onMouseOut={()=>{linkNotHover("servicesLinkColor")}}
                 className="links" >Services</Link>
 
@@ -134,7 +147,7 @@ export default function Portfolio(){
                className="links">Previews</Link>
 
                 <Link to="/about" id="about" className="links" 
-                onMouseOver={()=>{linkHover("aboutLinkColor")}} onClick={changeBackground}
+                onMouseOver={()=>{linkHover("aboutLinkColor")}} 
                 onMouseOut={()=>{linkNotHover("aboutLinkColor")}}
                 style={{color:navLinkStyle.aboutLinkColor}} >About</Link>
 
