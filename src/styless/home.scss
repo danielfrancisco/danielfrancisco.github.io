@@ -5,16 +5,23 @@ $myfont:  Roboto,Arial,system-ui;
 body{
   margin: 0;
   
-}   
+}  
+
+
+:root{
+  --color: #1A202C;
+  --navColor: #1A202C;
+}
 
 #fondo{
-  background-color:white;
+  background-color: var(--color);
   position: relative;
   margin: auto;
   height: 85vh;
   width: 90vw;
   border-radius: 10px;
   top: 3.3vh;
+  
   
   #daniel{
     display: none;
@@ -32,13 +39,13 @@ body{
     top: 16vh;
     position: fixed;
     z-index: 5;
-    background-color: white;
+    background-color:  var(--navColor);
     width: 89.99vw;
     padding-bottom: 1.7vh;
 
     p{
       
-      color: black;
+      color:  white;
       position: relative;
       top: 0vh;
       left: 5vw;
@@ -48,7 +55,7 @@ body{
       font-weight: bold;
       cursor: pointer;
       &:hover{
-        color: #787878;
+        color: gray;
       }
       
     }
@@ -64,11 +71,22 @@ body{
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
-    color: black;
+    color: white;
     position: relative;
     left: 35vw;
     &:hover{
-      color: #787878;
+      color: gray;
+    }
+  }
+
+  #icon{
+    left: 33vw;
+    margin-left: 6vw;
+    display: inline;
+    position: relative;
+    top: 5px;
+    &:hover{
+      cursor: pointer;
     }
   }
 
@@ -77,11 +95,11 @@ body{
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
-    color: black;
+    color: white;
     position: relative;
     left: 15vh;
     &:hover{
-      color: #787878;
+      color: gray;
     }
   }
 
@@ -103,20 +121,20 @@ body{
       margin-left: 10vw;
       font-weight: bold;
       font-size: 30px;
-  
+      color: white;
   }
   #titulo{
     top: 12vh;
     margin-left: 10vw;
     font-size: 18px;
-    color: #484848;
+    color: gray;
     
   }
 
   button{
-    background-color: black;
+    background-color: #81E6D9;
     border: none;
-    color: white;
+    color: black;
     font-weight: bold;
     position: relative;
     top: 12vh;
@@ -131,6 +149,8 @@ body{
     border-radius: 100px;
     z-index: 1;
     cursor: pointer;
+    border: none;
+    
     &:before {
       content: '';
       position: absolute;
@@ -138,13 +158,13 @@ body{
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: #30b069;
+      background-color: black;
       transition: all 0.3s;
-      border-radius: 100px;
       z-index: -1;
-    }
+      }
+      
     &:hover{
-      color: black;
+      color: white;
       &::before{
         width: 100%;
       }
@@ -155,7 +175,7 @@ body{
 
 
 body{
-  background-color: #E7E7E7;
+  background-color: #0f131a ;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     background-color: white;

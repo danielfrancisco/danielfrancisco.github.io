@@ -16,7 +16,7 @@
   font-size: 18px;
   color: dimgray;
   text-align: center;
-  left: -3vw;
+  left: -1vw;
 }
 
 #heading {
@@ -24,8 +24,8 @@
   font-weight: bold;
   margin-bottom: 30px;
   font-size: 32px;
-  left: -3vw;
-  color: black;
+  left: -1vw;
+  color: white;
   position: relative;
   top: 30vh;
   text-align: center;

@@ -32,11 +32,11 @@ export default function Portfolio(){
       },[nav])
 
       useEffect(()=>{
-       document.body.style.background="white"
+       document.body.style.background="#1A202C"
       },[])
 
    function changeBackground(){
-        document.body.style.background="#E7E7E7"
+        document.body.style.background="#0f131a"
    }
 
    window.onscroll = function(e) {

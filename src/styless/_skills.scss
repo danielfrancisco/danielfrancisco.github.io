@@ -76,12 +76,12 @@ $con-height: 229.95px;
 }
 
 #res{
-    @include skillsq(white,black);
+    @include skillsq(#1A202C,black);
     animation: moveres $animationDuration ease-in  forwards;
-    
+    color: white;
     border: solid gray thin;
     #rescon{
-        @include con(black)
+        @include con(gray)
        }
 }
 
