@@ -9,18 +9,21 @@ body{
 
 
 :root{
-  --fondoColor: #1A202C;
-  --navColor: #1A202C;
-  --linksColor: white;
-  --homeColor: white;
-  --nombreColor: white;
-  --bodyColor: #0f131a;
-  --tituloColor: gray;
-  --ContactButtonColor: #81E6D9;
-  --ContactButtonFontColor: black;
-  --ContactButtonHoverColor: black;
-  --ContactButtonHoverFontColor: white;
-  --linkHoverColor: gray;
+  --fondoColor: '';
+  --navColor: '';
+  --linksColor: '';
+  --homeColor: '';
+  --nombreColor: '';
+  --bodyColor: '';
+  --tituloColor:''; 
+  --ContactButtonColor:'';
+  --ContactButtonFontColor: '';
+  --ContactButtonHoverColor:'';
+  --ContactButtonHoverFontColor:'';
+  --linkHoverColor: '';
+  --Color: '';
+  --resFontColor: '';
+
 }
 
 #fondo{
@@ -94,7 +97,6 @@ body{
     margin-left: 6vw;
     display: inline;
     position: relative;
-    top: 5px;
     &:hover{
       cursor: pointer;
     }

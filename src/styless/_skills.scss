@@ -5,6 +5,8 @@ $width: 20vw;
 $skill-height: 302.22px;
 $con-height: 229.95px;
 
+
+
 @mixin skillsq($bcolor, $fcolor,){
     background-color: $bcolor;
     color: $fcolor;
@@ -76,9 +78,9 @@ $con-height: 229.95px;
 }
 
 #res{
-    @include skillsq(#1A202C,black);
+    @include skillsq(var(--resColor), black);
     animation: moveres $animationDuration ease-in  forwards;
-    color: white;
+    color: var(--resFontColor);
     border: solid gray thin;
     #rescon{
         @include con(gray)
