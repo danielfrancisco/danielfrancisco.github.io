@@ -9,12 +9,21 @@ body{
 
 
 :root{
-  --color: #1A202C;
+  --fondoColor: #1A202C;
   --navColor: #1A202C;
+  --linksColor: white;
+  --homeColor: white;
+  --nombreColor: white;
+  --bodyColor: #0f131a;
+  --tituloColor: gray;
+  --ContactButtonColor: #81E6D9;
+  --ContactButtonFontColor: black;
+  --ContactButtonHoverColor: black;
+  --ContactButtonHoverFontColor: white;
 }
 
 #fondo{
-  background-color: var(--color);
+  background-color: var(--fondoColor);
   position: relative;
   margin: auto;
   height: 85vh;
@@ -71,7 +80,7 @@ body{
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
-    color: white;
+    color:  var(--linksColor);
     position: relative;
     left: 35vw;
     &:hover{
@@ -95,7 +104,7 @@ body{
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
-    color: white;
+    color: var(--homeColor);
     position: relative;
     left: 15vh;
     &:hover{
@@ -121,20 +130,20 @@ body{
       margin-left: 10vw;
       font-weight: bold;
       font-size: 30px;
-      color: white;
+      color: var(--nombreColor);
   }
   #titulo{
     top: 12vh;
     margin-left: 10vw;
     font-size: 18px;
-    color: gray;
+    color: var(--tituloColor);
     
   }
 
   button{
-    background-color: #81E6D9;
+    background-color: var(--ContactButtonColor);
     border: none;
-    color: black;
+    color: var(--ContactButtonFontColor);
     font-weight: bold;
     position: relative;
     top: 12vh;
@@ -158,13 +167,13 @@ body{
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: black;
+      background-color: var(--ContactButtonHoverColor);
       transition: all 0.3s;
       z-index: -1;
       }
       
     &:hover{
-      color: white;
+      color: var(--ContactButtonHoverFontColor);
       &::before{
         width: 100%;
       }
@@ -175,7 +184,7 @@ body{
 
 
 body{
-  background-color: #0f131a ;
+  background-color: var(--bodyColor) ;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     background-color: white;

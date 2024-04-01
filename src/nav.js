@@ -5,23 +5,49 @@ import { FiSun,  FiMoon } from "react-icons/fi";
 
 export default function Nav(){
     const [dark, setDark] = useState({isActive: true, styles:{
-        light:{color: 'navy', navColor:'navy'},
-        dark: {color: 'black', navColor:'black'},
-        
+      light:{fondoColor: 'white', 
+        navColor: 'white',
+        linksColor: 'black',
+        nombreColor: 'black',
+        homeColor: 'black',
+        bodyColor: '#E7E7E7',
+        tituloColor:  '#484848',
+        ContactButtonColor: 'black',
+        ContactButtonFontColor: 'white',
+        ContactButtonHoverColor: '#30b069',
+        ContactButtonHoverFontColor: 'black',
+      },
+       
+      dark: { fondoColor: '#1A202C', 
+               navColor: '#1A202C',
+               linksColor: 'white',
+               nombreColor: 'white',
+               homeColor: 'white',
+               bodyColor: '#0f131a',
+               tituloColor:  'gray',
+               ContactButtonColor: '#81E6D9',
+              ContactButtonFontColor: 'black',
+              ContactButtonHoverColor: 'black',
+              ContactButtonHoverFontColor: 'white',
+              },
+      
+      
      }})
+
      function setDarkTheme(){
         
         if(dark.isActive===false){
-          /*for(let i in dark.styles.light){
-              
-             document.body.style.setProperty(`--${i}`, String(dark.styles.light[i]))
-          }*/
+          for(let i in dark.styles.light){
+            document.body.style.setProperty(`--${i}`, dark.styles.dark[i])    
+             
+          }
           setDark({...dark,isActive:true})
         }else{
-          /*for(let j in dark.styles.dark){
-            
-          document.body.style.setProperty(`--${j}`, dark.styles.dark[j])
-          }*/
+          
+          for(let j in dark.styles.dark){
+            document.body.style.setProperty(`--${j}`, String(dark.styles.light[j]))
+          
+          }
           setDark({...dark,isActive:false})
         }
         
@@ -46,7 +72,7 @@ export default function Nav(){
                 <Link to="/about" className="links">About</Link>
 
                 <div id='icon' onClick={setDarkTheme}>
-                {dark.isActive ? < FiSun color="white" size='20px'/>: < FiMoon color="white" size='20px'/>     }  
+                {dark.isActive ?< FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>     }  
                 </div>
 
           </div>
