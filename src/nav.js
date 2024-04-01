@@ -16,6 +16,7 @@ export default function Nav(){
         ContactButtonFontColor: 'white',
         ContactButtonHoverColor: '#30b069',
         ContactButtonHoverFontColor: 'black',
+        linkHoverColor: '#787878',
       },
        
       dark: { fondoColor: '#1A202C', 
@@ -29,10 +30,27 @@ export default function Nav(){
               ContactButtonFontColor: 'black',
               ContactButtonHoverColor: 'black',
               ContactButtonHoverFontColor: 'white',
+              linkHoverColor: 'gray',
               },
       
       
      }})
+
+     useEffect(()=>{
+      if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+        for(let i in dark.styles.light){
+          document.body.style.setProperty(`--${i}`, dark.styles.dark[i])    
+          
+        }
+        setDark({...dark,isActive:true})
+      }else{
+        for(let j in dark.styles.dark){
+          document.body.style.setProperty(`--${j}`, String(dark.styles.light[j]))
+        
+        }
+        setDark({...dark,isActive:false})
+      }
+     },[])
 
      function setDarkTheme(){
         

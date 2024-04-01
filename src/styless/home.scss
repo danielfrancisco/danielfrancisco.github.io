@@ -20,6 +20,7 @@ body{
   --ContactButtonFontColor: black;
   --ContactButtonHoverColor: black;
   --ContactButtonHoverFontColor: white;
+  --linkHoverColor: gray;
 }
 
 #fondo{
@@ -84,7 +85,7 @@ body{
     position: relative;
     left: 35vw;
     &:hover{
-      color: gray;
+      color: var(--linkHoverColor);
     }
   }
 
