@@ -14,17 +14,17 @@ export default function Contact(props){
              
           <div id="condata">
             <div>
-              <p>Phone number</p>
+              <p className="condataName">Phone number</p>
               <p id="number">+593 980615630</p><br/>
             </div>
 
             <div>
-             <p>Email</p>
+             <p className="condataName">Email</p>
              <p  id="email">danielfrancisco99@outlook.com</p><br/>
             </div>
 
             <div>
-             <p>Github</p>
+             <p className="condataName">Github</p>
              <p  id="loc">https://github.com/danielfrancisco</p>
             </div>
 

@@ -8,6 +8,10 @@ $font: Roboto,Arial,system-ui ;
     font-family: $font;
 }
 
+.condataName{
+    color: var(--linksColor);
+}
+
 #email{
  font-weight: normal;
  font-size: 16.5px;

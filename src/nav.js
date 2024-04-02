@@ -21,7 +21,7 @@ export default function Nav(){
                <Link to={"/portfolio"} className="links">Previews</Link>
                
                 <Link to="/about" className="links">About</Link>
-             <DarkModeIcon/>
+             <DarkModeIcon size='22px'/>
                 
           </div>
         </>

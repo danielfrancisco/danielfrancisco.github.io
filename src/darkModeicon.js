@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie';
 import { useEffect,useState} from "react";
 
 const cookies = new Cookies()
-export default function DarkModeIcon(){
+export default function DarkModeIcon({size}){
     const [dark, setDark] = useState({isActive: null, styles:{
         light:{fondoColor: 'white', 
           navColor: 'white',
@@ -108,10 +108,10 @@ export default function DarkModeIcon(){
 
 {cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off' ?
 <>
-{dark.isActive? < FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>}  
+{dark.isActive? < FiMoon color={'white'} size={size}/> :< FiSun color={'black'} size={size}/>}  
 </>:
 <>
-{ cookies.get('darktheme')==='on'? < FiMoon color={'white'} size='20px'/> :< FiSun color={'black'} size='20px'/>}  
+{ cookies.get('darktheme')==='on'? < FiMoon color={'white'} size={size}/> :< FiSun color={'black'} size={size}/>}  
 </>
 }  
 

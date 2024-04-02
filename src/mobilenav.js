@@ -16,7 +16,7 @@ export default function Mobilenav({current}){
                 <FontAwesomeIcon icon={faBars} id="bars" />
               </Link>
 
-              <DarkModeIcon/>
+              <DarkModeIcon size='22px'/>
             </div>
         </>
     )

@@ -95,10 +95,15 @@ body{
   #icon{
     left: 33vw;
     margin-left: 6vw;
-    display: inline;
-    position: relative;
+    display: inline-block;
+    line-height: 41px;
+    height: 33px;
+    text-align: center;
+    width: 33px;
+    border-radius: 4px;
     &:hover{
       cursor: pointer;
+      background-color: var(--bodyColor);
     }
   }
 
@@ -234,7 +239,7 @@ body{
     }
 
     #icon{
-      left: 52vw;
+      left: 43vw;
       top: 0px;
     }
 
@@ -242,7 +247,7 @@ body{
       position: fixed;
       display: inline-block;
       z-index: 5;
-      left: 85vw;
+      left: 87vw;
       font-size: 23.2px;
       color: var(--linksColor);
     }
