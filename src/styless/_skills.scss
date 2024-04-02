@@ -249,6 +249,49 @@ $con-height: 229.95px;
        }
 }
 
+@media screen and (max-width: 1100px) {
+  #fondoSkills{
+    #danielpa{
+      display: block;
+     background-color: var(--fondoColor);
+     position: fixed;
+     z-index: 5;
+     padding-top: 10vh;
+     padding-left: 50px;
+     top: -3vh;
+     top: -30px;
+     left: -10px;
+     width: 100vw;
+     transition: top 0.5s;
+    #daniel{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      
+      z-index: 5;
+    }
+
+    #icon{
+      left: 43vw;
+      top: 0px;
+    }
+
+    #bars{
+      position: fixed;
+      display: inline-block;
+      z-index: 5;
+      left: 87vw;
+      font-size: 23.2px;
+      color: var(--linksColor);
+    }
+  }
+
+    #nav{
+      display: none;
+    }
+  }
+}
+
 
 //big desktop
 @media screen and(min-width: 1700px){
