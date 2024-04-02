@@ -17,7 +17,7 @@ export default function Skills(props){
 
 return (
           <>
-            <div id="fondo">
+            <div id="fondoSkills">
              <Nav/>
              <Mobilenav current={"/skills"}/>
              
