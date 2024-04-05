@@ -1,7 +1,8 @@
-import "./styless/home.scss"
+import "./styless/pages/home.scss"
 import { useEffect} from "react";
 import { Link } from "react-router-dom";
-import DarkModeIcon from "./darkModeicon";
+import DarkModeIcon from "./DarkModeicon";
+import "./styless/components/nav.scss"
 
 export default function Nav(){
   useEffect(()=>{

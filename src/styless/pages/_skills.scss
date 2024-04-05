@@ -1,173 +1,9 @@
-
+@import '../abstracts/variables.scss';
 //average desktop
 $animationDuration: 0.5s;
 $width: 20vw;
 $skill-height: 302.22px;
 $con-height: 229.95px;
-
-#fondoSkills{
-  background-color: var(--fondoColor);
-  position: relative;
-  margin: auto;
-  height: 85vh;
-  width: 90vw;
-  border-radius: 10px;
-  top: 7.1vh;
-  
-  
-  #daniel{
-    display: none;
-    
-     
-  }
-
-
-  #bars{
-    display: none;
-  }
-
-
-  #nav{
-    top: 16vh;
-    position: fixed;
-    z-index: 5;
-    background-color:  var(--navColor);
-    width: 89.99vw;
-    padding-bottom: 1.7vh;
-
-    p{
-      
-      color:  white;
-      position: relative;
-      top: 0vh;
-      left: 5vw;
-      display: inline-block;
-      margin-left: 5vw;
-      font-size: 16.188px;
-      font-weight: bold;
-      cursor: pointer;
-      &:hover{
-        color: gray;
-      }
-      
-    }
-    .rnav{
-      z-index: 5;
-      left: 35vw;
-      
-    }
-  }
-  
-  .links{
-    font-family: Roboto, Arial,system-ui;
-    font-weight: bold;
-    margin-left: 6vw;
-    text-decoration: none;
-    color:  var(--linksColor);
-    position: relative;
-    left: 35vw;
-    &:hover{
-      color: var(--linkHoverColor);
-    }
-  }
-
-  #icon{
-    left: 33vw;
-    margin-left: 6vw;
-    display: inline-block;
-    line-height: 41px;
-    height: 33px;
-    text-align: center;
-    width: 33px;
-    border-radius: 4px;
-    &:hover{
-      cursor: pointer;
-      background-color: var(--bodyColor);
-    }
-  }
-
-  #home{
-    font-family: Roboto, Arial;
-    font-weight: bold;
-    margin-left: 6vw;
-    text-decoration: none;
-    color: var(--homeColor);
-    position: relative;
-    left: 15vh;
-    &:hover{
-      color: gray;
-    }
-  }
-
-  #con{
-    position: relative;
-    top: 15vh;
-    left: 13vw;
-    
-  }
- 
-  div{
-    font-family: $myfont;
-    position: relative;
-    cursor: default;
-    margin-bottom: 4vh;
-  }
-  #nombre{
-    top: 12vh;
-      margin-left: 10vw;
-      font-weight: bold;
-      font-size: 30px;
-      color: var(--nombreColor);
-  }
-  #titulo{
-    top: 12vh;
-    margin-left: 10vw;
-    font-size: 18px;
-    color: var(--tituloColor);
-    
-  }
-
-  button{
-    background-color: var(--ContactButtonColor);
-    border: none;
-    color: var(--ContactButtonFontColor);
-    font-weight: bold;
-    position: relative;
-    top: 12vh;
-    margin-left: 10vw;
-    height: 48px;
-    letter-spacing: 0.0625rem;
-    font-size: 16px;
-    outline:none;
-    width: 105.22px;
-    font-family: $myfont;
-    overflow: hidden;
-    border-radius: 100px;
-    z-index: 1;
-    cursor: pointer;
-    border: none;
-    
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 100%;
-      background-color: var(--ContactButtonHoverColor);
-      transition: all 0.3s;
-      z-index: -1;
-      }
-      
-    &:hover{
-      color: var(--ContactButtonHoverFontColor);
-      &::before{
-        width: 100%;
-      }
-    }
-  }
-}
-
 
 @mixin skillsq($bcolor, $fcolor,){
     background-color: $bcolor;
@@ -203,7 +39,7 @@ $con-height: 229.95px;
   @mixin con($fontColor){
      top: 0.3vh;
      color: $fontColor;
-     font-family: Arial,system-ui ;
+     font-family: $fontFamily;
      height: $con-height;
      width: $width;
      font-size: 18px;
@@ -218,19 +54,19 @@ $con-height: 229.95px;
     
 
 #ui{
- @include skillsq(#8a63d2, white );
+ @include skillsq(#8a63d2, var(--linksColor) );
  
  animation: moveui $animationDuration ease-in forwards;
  
  
  #uicon{
-     @include con(white);
+     @include con(var(--linksColor));
      
  }
 }
 
 #front{
-    @include skillsq(black,white);
+    @include skillsq(black, #E0E0E0);
     animation: movefront $animationDuration ease-in forwards;
     
     top: 27vh;
@@ -351,8 +187,5 @@ $con-height: 229.95px;
       width: 97vw;
       
   }
-    
-  }
-
-
+    }
 }

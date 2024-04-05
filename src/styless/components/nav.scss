@@ -1,0 +1,161 @@
+#daniel{
+    display: none;
+    
+}
+
+#bars{
+    display: none;
+  }
+
+#nav{
+    top: 16vh;
+    position: fixed;
+    z-index: 5;
+    background-color:  var(--navColor);
+    width: 89.99vw;
+    padding-bottom: 1.7vh;
+
+    p{
+      
+      color:  white;
+      position: relative;
+      top: 0vh;
+      left: 5vw;
+      display: inline-block;
+      margin-left: 5vw;
+      font-size: 16.188px;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        color: gray;
+      }
+      
+    }
+    .rnav{
+      z-index: 5;
+      left: 35vw;
+      
+    }
+  }
+  
+  .links{
+    font-family: Roboto, Arial,system-ui;
+    font-weight: bold;
+    margin-left: 6vw;
+    text-decoration: none;
+    color:  var(--linksColor);
+    position: relative;
+    left: 35vw;
+    &:hover{
+      color: var(--linkHoverColor);
+    }
+  }
+
+  #icon{
+    left: 33vw;
+    margin-left: 6vw;
+    display: inline-block;
+    line-height: 41px;
+    height: 33px;
+    text-align: center;
+    width: 33px;
+    border-radius: 4px;
+    &:hover{
+      cursor: pointer;
+      background-color: var(--bodyColor);
+    }
+  }
+
+  #home{
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    margin-left: 6vw;
+    text-decoration: none;
+    color: var(--homeColor);
+    position: relative;
+    left: 15vh;
+    &:hover{
+      color: gray;
+    }
+  }
+
+  #danielpa{
+    display: none;
+  }
+  
+  @media screen and (max-width: 1100px) {
+
+  #danielpa{
+    display: block;
+   background-color: var(--fondoColor);
+   position: fixed;
+   z-index: 5;
+   padding-top: 10vh;
+   padding-left: 50px;
+   top: -3vh;
+   top: -30px;
+   left: -10px;
+   width: 100vw;
+   transition: top 0.5s;
+  #daniel{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    
+    z-index: 5;
+  }
+
+  #icon{
+    left: 43vw;
+    top: 0px;
+  }
+
+  #bars{
+    position: fixed;
+    display: inline-block;
+    z-index: 5;
+    left: 87vw;
+    font-size: 23.2px;
+    color: var(--linksColor);
+  }
+}
+
+  #nav{
+    display: none;
+  }
+
+
+
+body{
+  background-color: var(--fondoColor);
+}
+
+#fondo{
+  
+  #nav{
+    p{
+      font-size: 12px;
+    }
+  }
+  #titulo{
+    font-size: 20px;
+    margin-left: 0vw;
+    
+  }
+
+  #nombre{
+    position: relative;
+    margin-left: 0vw;
+  }
+
+  button{
+    width: 100px;
+    margin-left: 0vw;
+    background-color:  var(--ContactButtonColor);
+    color: var(--ContactButtonFontColor);
+  }
+
+  
+}
+
+  }

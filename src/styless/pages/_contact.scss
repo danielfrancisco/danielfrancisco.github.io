@@ -1,11 +1,13 @@
+@import '../abstracts/variables.scss';
+
 $fontColor: dimgray;
-$font: Roboto,Arial,system-ui ;
+
 #condata{
     top: 25vh;
     left: 20vw;
     font-weight: bold;
     font-size: large;
-    font-family: $font;
+    font-family: $fontFamily;
 }
 
 .condataName{
@@ -17,19 +19,19 @@ $font: Roboto,Arial,system-ui ;
  font-size: 16.5px;
  font-family: Arial,system-ui ;
  color: $fontColor;
- font-family: $font;
+ 
 }
 
 #number{
     font-weight: normal;
     font-size: 16.5px;
     color: $fontColor;
-    font-family: $font;
+    font-family: $fontFamily;
 }
 
 #loc{
     font-weight: normal;
     font-size: 16.5px;
     color: $fontColor;
-    font-family: $font;
+    font-family: $fontFamily;
 }

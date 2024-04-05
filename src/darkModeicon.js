@@ -1,6 +1,7 @@
 import { FiSun,  FiMoon } from "react-icons/fi";
 import Cookies from 'universal-cookie';
 import { useEffect,useState} from "react";
+import "./styless/components/nav.scss"
 
 const cookies = new Cookies()
 export default function DarkModeIcon({size}){
@@ -20,23 +21,25 @@ export default function DarkModeIcon({size}){
           resColor: 'white',
           resFontColor: 'black',
           condataName: 'black',
+          fillbutton : 'fillbuttonLight',
         },
          
         dark: { fondoColor: '#1A202C', 
                  navColor: '#1A202C',
-                 linksColor: 'white',
-                 nombreColor: 'white',
-                 homeColor: 'white',
+                 linksColor: ' #E0E0E0',
+                 nombreColor: ' #E0E0E0',
+                 homeColor: ' #E0E0E0',
                  bodyColor: '#0f131a',
                  tituloColor:  'gray',
                  ContactButtonColor: '#81E6D9',
                   ContactButtonFontColor: 'black',
                   ContactButtonHoverColor: 'black',
-                  ContactButtonHoverFontColor: 'white',
+                  ContactButtonHoverFontColor: ' #E0E0E0',
                   linkHoverColor: 'gray',
                   resColor: '#1A202C',
-                  resFontColor: 'white',
-                  condataName: 'white',
+                  resFontColor: ' #E0E0E0',
+                  condataName: ' #E0E0E0',
+                  fillbutton : 'fillbuttonDark',
                 },
         }})
        
@@ -100,23 +103,20 @@ export default function DarkModeIcon({size}){
             }
             setDark({...dark,isActive:false})
           }
-          
-         }
+        }
+
     return(
-        <>
-          <div id='icon' onClick={setDarkTheme}>
-
-{cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off' ?
-<>
-{dark.isActive? < FiMoon color={'white'} size={size}/> :< FiSun color={'black'} size={size}/>}  
-</>:
-<>
-{ cookies.get('darktheme')==='on'? < FiMoon color={'white'} size={size}/> :< FiSun color={'black'} size={size}/>}  
-</>
-}  
-
-</div>
-
-        </>
-    )
+      <>
+        <div id='icon' onClick={setDarkTheme}>
+            {cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off' ?
+            <>
+            {dark.isActive? < FiMoon color={'#E0E0E0'} size={size}/> :< FiSun color={'black'} size={size}/>}  
+            </>:
+            <>
+            { cookies.get('darktheme')==='on'? < FiMoon color={'#E0E0E0'} size={size}/> :< FiSun color={'black'} size={size}/>}  
+            </>
+            } 
+        </div>
+   </>
+  )
 }

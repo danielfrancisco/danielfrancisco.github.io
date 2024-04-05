@@ -1,7 +1,6 @@
-import Nav from "./nav";
-import Mobilenav from "./mobilenav"
-
-export default function Skills(props){
+import "./styless/pages/_skills.scss"
+import ContentContainer from "./ContentContainer";
+export default function Skills(){
     
    window.onscroll = function(e) {
       if(this.scrollY>this.oldScroll){
@@ -16,12 +15,11 @@ export default function Skills(props){
     }
 
 return (
-          <>
-            <div id="fondoSkills">
-             <Nav/>
-             <Mobilenav current={"/skills"}/>
-             
-             <div id="ui"><br/>Ui/Ux<br/>Designing
+    <>
+          
+          <ContentContainer content={
+        <>
+         <div id="ui"><br/>Ui/Ux<br/>Designing
                 <div id="uicon"><br/> 
                     <div style={{marginLeft:"1vw" , marginRight: "1vw"}}>Ux and Ui design combines
                      research, product development and strategy  to create
@@ -49,8 +47,9 @@ return (
                 </div>
               </div>
 
-            </div>
-          </>
+        </>
+      }/> 
+    </>
         );
     
 }

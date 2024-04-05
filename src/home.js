@@ -1,15 +1,15 @@
-import "./styless/home.scss"
+import "./styless/pages/home.scss"
 import { Link } from "react-router-dom";
-import Mobilenav from "./mobilenav";
-import Nav from "./nav";
+import Mobilenav from "./Mobilenav";
+import Nav from "./Nav";
 import { useState} from "react";
 import axios from "axios";
+import ContentContainer from "./ContentContainer";
 
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
   
-    
- /*useEffect(()=>{
+  /*useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
     .then(res=>{
       setViewCounter(res.data.counter+1)
@@ -27,23 +27,16 @@ export default function Home() {
 
  return (
       <>
-      
-       <div id="fondo">
-          <Nav/>
-          <div id='modeIcon'>
-          
-          </div>
-          <Mobilenav current="/"/>  
-          
-            <div id="con">
+      <ContentContainer content={
+        <>
+        <div id="con">
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Full stack developer</div>
             <div id="titulo">Ux Designer</div>
-            <Link to={"/contact"}><button>Contact</button></Link>
-            
-        </div>
-          
-        </div>
+            <Link to={"/contact"} id='contactLink'><button>Contact</button></Link>
+          </div>
+        </>
+      }/> 
       </>
     );
 

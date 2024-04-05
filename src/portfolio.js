@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import martysi from "./images/martysi.png";
 import resorti from "./images/resorti.png";
 import franks from "./images/franks.png";
-import Mobilenav from "./mobilenav";
+import Mobilenav from "./Mobilenav";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
-
+import "./styless/components/nav.scss";
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -127,7 +127,7 @@ export default function Portfolio(){
 
    return(
           <>
-      <div id="fondo" >
+      
       <div id="nav" ref={nav} style={{transition:"top 0.5s"}}>
                 <Link to="/" id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
@@ -210,7 +210,7 @@ export default function Portfolio(){
               </div>
               </div>
 
-            </div>
+            
           </>
       )
 

@@ -1,18 +1,17 @@
 import { useState} from "react"
-import Mobilenav from "./mobilenav";
-import Nav from "./nav";
+import Mobilenav from "./Mobilenav";
+import Nav from "./Nav";
+import ContentContainer from "./ContentContainer";
+import "./styless/pages/_contact.scss"
 
-export default function Contact(props){
+export default function Contact(){
     
-
-   return(
+  return(
         <>
-          <div id="fondo">
-           <Nav/>
 
-           <Mobilenav current={"/contact"}/>
-             
-          <div id="condata">
+<ContentContainer content={
+        <>
+         <div id="condata">
             <div>
               <p className="condataName">Phone number</p>
               <p id="number">+593 980615630</p><br/>
@@ -29,9 +28,9 @@ export default function Contact(props){
             </div>
 
           </div>
-
-          </div>
-
         </>
+      }/> 
+             
+      </>
         );
 }

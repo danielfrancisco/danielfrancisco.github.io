@@ -1,11 +1,11 @@
 import ReactDOM from "react-dom";
 import { HashRouter,Route,Routes } from "react-router-dom";
-import Home from "./home";
-import Portfolio from "./portfolio";
-import Contact from "./contact"
-import About from "./about";
-import Drop from "./drop";
-import Skills from "./skills";
+import Home from "./Home";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact"
+import About from "./About";
+import Drop from "./Drop";
+import Skills from "./Skills";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

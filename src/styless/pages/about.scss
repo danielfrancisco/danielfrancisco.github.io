@@ -1,9 +1,11 @@
+@import '../abstracts/variables.scss';
+
 #abcon{
     position: relative;
     
     
     #aboutmemo{
-        font-family: Arial,system-ui;
+        font-family: $fontFamily;
         position: relative;
         top: 20vh;
         display: none;
@@ -14,7 +16,7 @@
     }
 
     #aboutmede{
-        font-family: Arial,system-ui;
+        font-family: $fontFamily;
         position: relative;
         top: 30vh;
         font-size: 18px;
@@ -25,7 +27,7 @@
 }
 
 #heading{
-    font-family: Roboto, Arial, system-ui,;
+    font-family: $fontFamily;
     font-weight: bold;
     margin-bottom: 30px;
     font-size: 32px;
