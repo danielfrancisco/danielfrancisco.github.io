@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import martysi from "./images/martysi.png";
-import resorti from "./images/resorti.png";
-import franks from "./images/franks.png";
-import Mobilenav from "./Mobilenav";
+import resorti from "../../images/resorti.png";
+import martysi from "../../images/martysi.png";
+import franks from "../../images/franks.png";
+import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
-import "./styless/components/nav.scss";
+import "../../styless/components/nav.scss"
 
 const cookies = new Cookies()
 export default function Portfolio(){

@@ -1,5 +1,5 @@
-import "./styless/pages/_skills.scss"
-import ContentContainer from "./ContentContainer";
+import "../../styless/pages/_skills.scss"
+import ContentContainer from "../components/ContentContainer";
 export default function Skills(){
     
    window.onscroll = function(e) {

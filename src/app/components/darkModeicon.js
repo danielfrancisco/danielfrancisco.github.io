@@ -1,7 +1,7 @@
 import { FiSun,  FiMoon } from "react-icons/fi";
 import Cookies from 'universal-cookie';
 import { useEffect,useState} from "react";
-import "./styless/components/nav.scss"
+import "../../styless/components/nav.scss"
 
 const cookies = new Cookies()
 export default function DarkModeIcon({size}){
@@ -33,7 +33,7 @@ export default function DarkModeIcon({size}){
                  tituloColor:  'gray',
                  ContactButtonColor: '#81E6D9',
                   ContactButtonFontColor: 'black',
-                  ContactButtonHoverColor: 'black',
+                  ContactButtonHoverColor: '#30b069',
                   ContactButtonHoverFontColor: ' #E0E0E0',
                   linkHoverColor: 'gray',
                   resColor: '#1A202C',

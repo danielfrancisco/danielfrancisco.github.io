@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import DarkModeIcon from "./DarkModeicon";
-import "./styless/components/nav.scss"
+import DarkModeIcon from "./darkModeicon";
+import "../../styless/components/nav.scss"
 
 export default function Mobilenav({current}){
    return(

@@ -1,8 +1,8 @@
 import { useState} from "react"
-import Mobilenav from "./Mobilenav";
-import Nav from "./Nav";
-import ContentContainer from "./ContentContainer";
-import "./styless/pages/_contact.scss"
+import Mobilenav from "../components/mobilenav";
+import Nav from "../components/nav";
+import ContentContainer from "../components/ContentContainer";
+import "../../styless/pages/_contact.scss"
 
 export default function Contact(){
     

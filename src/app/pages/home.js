@@ -1,10 +1,10 @@
-import "./styless/pages/home.scss"
+import "../../styless/pages/home.scss"
 import { Link } from "react-router-dom";
-import Mobilenav from "./Mobilenav";
-import Nav from "./Nav";
+import Mobilenav from "../components/mobilenav";
+import Nav from "../components/nav";
 import { useState} from "react";
 import axios from "axios";
-import ContentContainer from "./ContentContainer";
+import ContentContainer from "../components/ContentContainer";
 
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
