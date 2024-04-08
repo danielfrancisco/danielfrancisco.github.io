@@ -6,7 +6,7 @@ import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
-import "../../styless/components/nav.scss"
+import "../../styless/pages/_portfolio.scss"
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -32,6 +32,7 @@ export default function Portfolio(){
       nav.current.style.paddingTop = "10vh";
       nav.current.style.left = "0vh";
       nav.current.style.top = "-6vh";
+      
       },[nav])
 
       useEffect(()=>{
@@ -55,12 +56,12 @@ export default function Portfolio(){
    window.onscroll = function(e) {
       
       if(this.scrollY>this.oldScroll){
-        document.getElementById("nav").style.top = "-60vh";
+        document.getElementById("previewsNav").style.top = "-60vh";
         
       }
 
       if(this.scrollY<this.oldScroll){
-        document.getElementById("nav").style.top = "-6vh";
+        document.getElementById("previewsNav").style.top = "-6vh";
         
       }
       this.oldScroll = this.scrollY;
@@ -90,13 +91,13 @@ export default function Portfolio(){
     window.onscroll = function(e) {
       
       if(this.scrollY>this.oldScroll){
-        document.getElementById("nav").style.top = "-60vh";
-        document.getElementById("nav").style.nav = "-60vh"
+        document.getElementById("previewsNav").style.top = "-60vh";
+        document.getElementById("previewsNav").style.nav = "-60vh"
         
       }
 
       if(this.scrollY<this.oldScroll){
-        document.getElementById("nav").style.top = "-6vh";
+        document.getElementById("previewsNav").style.top = "-6vh";
       }
       this.oldScroll = this.scrollY;
       
@@ -115,20 +116,19 @@ export default function Portfolio(){
     setNavLinkStyle(updatedNavLinkStyle)
     }
   
-   function buttonHover(opacity, shade){
-    opacity.current.style.opacity="0.5"
+   function buttonHover(image, shade){
+    image.current.style.opacity="0.5"
     shade.current.style.background="black"
    }
 
-   function buttonNotHover(opacity, shade){
-    opacity.current.style.opacity="1"
+   function buttonNotHover(image, shade){
+    image.current.style.opacity="1"
     shade.current.style.backgroundColor="transparent"
    }
 
    return(
           <>
-      
-      <div id="nav" ref={nav} style={{transition:"top 0.5s"}}>
+      <div id="previewsNav" ref={nav} style={{transition:"top 0.5s"}}>
                 <Link to="/" id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
@@ -155,45 +155,43 @@ export default function Portfolio(){
               
             <Mobilenav current={"/portfolio"}/> 
 
-             <div id="imacon">
-               <div id="imlepa">
-                  <div id="imle">
-                   <div>
+             <div id="previewsContent">
+               
+                  
                    <div id="coloroverRe" ref={shadere}>
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
-                      <img ref={resortIma} src={resorti} onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
+                      <img className='previewsImages' ref={resortIma} src={resorti} onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
                        onMouseOut={()=>{buttonNotHover(resortIma, shadere)}}/>
                     </a>
-                    </div>
+                    
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
-                      <button onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
+                      <button className='previewsButton' onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
                        onMouseOut={()=>{buttonNotHover(resortIma, shadere)}}>
                         Get a Demo </button>
                     </a>
-              </div>
+                   </div>
 
-                   <div>
                     <div id="coloroverMa" ref={shadema}>
                       <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
-                        <img src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
+                        <img className='previewsImages' src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}/>
                       </a>
-                  </div>
+                  
                         <a href="https://danielfrancisco.github.io/martyswebapp/#/" target="_blank">
-                          <button onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
+                          <button className='previewsButton' onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}>
                         Get a demo </button></a>
-                        
-                   </div>
+                     </div>
 
                    <div id="coloroverFr" ref={shadefr}>
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
-                      <img src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
+                      <img className='previewsImages' src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}/>
                     </a>
-                  </div>
+                  
+
                   <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
-                    <button onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
+                    <button className='previewsButton' onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}>
                       Get a Demo 
                       </button></a>
@@ -201,17 +199,7 @@ export default function Portfolio(){
                   </div>
                </div>
               
-               <div id="imrepa"> 
-                <div id="imre">
-                  <div>
-                  
-                  </div>
-                </div>
-              </div>
-              </div>
-
-            
-          </>
+            </>
       )
 
     }

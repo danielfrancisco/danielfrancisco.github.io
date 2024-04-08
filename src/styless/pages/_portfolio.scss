@@ -3,324 +3,87 @@ $width: 68.4288vw;
 
 $borderRadius: 11px;
 
+@keyframes moveImage {
+    from{left: -4vw; opacity: 0;}
+    to{left: 15vw; opacity: 1;}
+}
 
-
-#imacon{
-    display: inline-block;
+@mixin images($animation){
     top: 2vh;
-    left: 0vw;
-   
-    #imlepa{
-        display: inline-block;
+    height: $height;
+    width: $width;
+    border-radius: $borderRadius;
+    animation: $animation 0.6s ease-in forwards;
+    margin-bottom: 14vh;
+}
+
+#previewsNav{
+    height: 5vh;
+    
+}
+
+#previewsContent{
+    .previewsImages{
+     @include images(moveImage);
+
+      &:hover{
+        
+      }
+    }
+
+    #coloroverRe{
+        @include images(moveImage);
+    }
+
+    #coloroverMa{
+        @include images(moveImage);
+    }
+
+    #coloroverFr{
+        @include images(moveImage);
+    }
+
+    .previewsButton{
         position: absolute;
-        
-        
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 54vh;
+        width: 140px;
+        background-color: #E0E0E0;
     }
-
-    @keyframes moveImage {
-        from{left: -4vw; opacity: 0;}
-        to{left: 10vw; opacity: 1;}
-    }
-
-    #imle{
-        animation: moveImage 0.6s ease-in forwards;
-        margin-top: 11vh;
-        display: inline-block;
-        position: relative;
-        top: 1.5vh;
-
-        #coloroverMa{
-            margin-top: -6vh;
-            height: $height;
-            width: $width;
-            background-color: black;
-            border-radius: $borderRadius;
-        }
-
-        #coloroverFr{
-            margin-top: -6vh;
-            height: $height;
-            width: $width;
-            background-color: black;
-            border-radius: $borderRadius;
-        }
-
-        #coloroverRe{
-            margin-top: 2vh;
-            height: $height;
-            width: $width;
-            border-radius: $borderRadius;
-            
-        }
-
-
-        img{
-            height: $height;
-            width: $width;
-            cursor: default;
-            border-radius: $borderRadius;
-            &:hover{
-                cursor: pointer;
-            }
-           
-        }
-
-        button{
-            top: -16vh;
-            height: 48px;
-            width: 150px;
-            color: black;
-            left: 15vw;
-            background-color: white;
-            border-radius: 100px;
-            margin-bottom: 17vh;
-            
-
-            &:before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0%;
-                height: 100%;
-                background-color: #30b069;
-                transition: all 0.3s;
-                z-index: -1;
-                }
-                
-              &:hover{
-                
-                &::before{
-                  width: 100%;
-                }
-              }
-        }
-
-        
-
-        height: 20vh;
-        width: 17vh;
-    }
-
-   #imrepa{
-       display: inline-block;
-       
-       left: 8vw;
-   }
-
-    #imre{
-        transition: left 0.5s;
-        display: inline-block;
-        left: 57vw;
-        top: 1.5vh;
-        
-       
-        img{
-            margin-top: 0vh;
-            height: 19.3vw;
-            width: 40vw;
-            cursor: normal;
-            
-            &:hover{
-                opacity: 0.5;
-            }
-            
-        }
-
-        button{
-            top: 3.3vh;
-            left: 0vw;
-            
-            height: 48px;
-            background-color: #30b069;
-            border-radius: 100px;
-            &:hover{
-                color: black;
-            }
-            
-        }
-        height: 20vh;
-        width: 17vh;
-        
-    }
-
 }
 
-$colorverleft: 0px;
-
-
-//tablet  
 @media screen and (max-width: 1100px) {
-    #imacon{
-    
-        left: -15px;
-        #imle{
-            
-            animation: none;
-            button{
-                margin-bottom: 20px;
-                top: -18vh;
-                margin-left: 20px;
-                font-weight: bold;
-                &:hover{
-                    color: black;
-                    background-color: white;
-                }
-            }
-            
-            #coloroverMa{
-                height: 40vh;
-                width: 90vw;
-                left: $colorverleft;
-                
-            }
-    
-            #coloroverFr{
-                height: 40vh;
-                width: 90vw;
-                left: $colorverleft;
-            }
-    
-            #coloroverRe{
-                height: 40vh;
-                width: 90vw;
-                left: $colorverleft;
-            }
-    
-            img{
-                position: relative;
-                height: 40vh;
-                width: 90vw;
-                &:hover{
-                    opacity: 1;
-                }
-            }
-        }
-    
-        #imre{
-            transition: left 0s;
-            button{
-                margin-bottom: 20vh;
-                left: 95px;
-                margin-left: 20px;
-                top: 13.3vh;
-            }
-    
-            img{
-                position: relative;
-                height: 40vh;
-                
-                width: 90vw;
-                &:hover{
-                    opacity: 1;
-                }
-            }
-        }
-        
-       }
-    
-        #imlepa{
-            
-            display: block;
-            
-        }
-    
-        #imrepa{
-            margin-top: 6vh;
-            left: -37vw;
-            top: 130vh;
-            display: block;
-            
-        }
-    }
-    
-    
-
-//mobile
-@media screen and (max-width: 650px) {
-
-   #imacon{
-    
-    left: -15px;
-    #imle{
-        
-        animation: none;
-        button{
-            margin-bottom: 20px;
-            top: -18vh;
-            margin-left: 20px;
-            font-weight: bold;
-            &:hover{
-                color: black;
-                background-color: white;
-            }
-        }
-        
-        #coloroverMa{
-            height: 40vh;
-            width: 97vw;
-            left: $colorverleft;
-            
-        }
-
-        #coloroverFr{
-            height: 40vh;
-            width: 97vw;
-            left: $colorverleft;
-        }
-
-        #coloroverRe{
-            height: 40vh;
-            width: 97vw;
-            left: $colorverleft;
-        }
-
-        img{
-            position: relative;
-            height: 40vh;
-            width: 97vw;
-            &:hover{
-                opacity: 1;
-            }
-        }
+    #previewsNav{
+        display: none;
     }
 
-    #imre{
-        transition: left 0s;
-        button{
-            margin-bottom: 20vh;
-            left: 95px;
-            margin-left: 20px;
-            top: 13.3vh;
-        }
-
-        img{
-            position: relative;
-            height: 40vh;
+    #previewsContent{
+        top: 20vh;
+        .previewsImages{
             
-            width: 97vw;
-            &:hover{
-                opacity: 1;
-            }
-        }
-    }
-    
-   }
+            @include images(none);
+             width: 100vw;  
+             height: 40vh;
+             
+           }
+       
+           #coloroverRe{
+            @include images(none);
+           }
+       
+           #coloroverMa{
+            @include images(none);
+           }
+       
+           #coloroverFr{
+            @include images(none);
+           }
+       
+           
 
-    #imlepa{
-        
-        display: block;
-        
-    }
-
-    #imrepa{
-        margin-top: 6vh;
-        left: -37vw;
-        top: 130vh;
-        display: block;
-        
     }
 }
-
-
 

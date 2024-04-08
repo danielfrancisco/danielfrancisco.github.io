@@ -1,7 +1,5 @@
 import "../../styless/pages/home.scss"
 import { Link } from "react-router-dom";
-import Mobilenav from "../components/mobilenav";
-import Nav from "../components/nav";
 import { useState} from "react";
 import axios from "axios";
 import ContentContainer from "../components/ContentContainer";

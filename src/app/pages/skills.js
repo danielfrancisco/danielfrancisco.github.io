@@ -2,17 +2,7 @@ import "../../styless/pages/_skills.scss"
 import ContentContainer from "../components/ContentContainer";
 export default function Skills(){
     
-   window.onscroll = function(e) {
-      if(this.scrollY>this.oldScroll){
-        document.getElementById("danielpa").style.top = "-60vh";
-      }
-
-      if(this.scrollY<this.oldScroll){
-        document.getElementById("danielpa").style.top = "-3vh";
-      }
-      this.oldScroll = this.scrollY;
-      
-    }
+   
 
 return (
     <>
