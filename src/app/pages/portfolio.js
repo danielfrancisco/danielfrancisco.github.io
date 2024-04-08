@@ -17,7 +17,6 @@ export default function Portfolio(){
       aboutLinkColor:"gray",
     })
     
-    let nav = useRef()
     let resortIma = useRef()
     let shadere = useRef()
     let shadema = useRef()
@@ -26,16 +25,6 @@ export default function Portfolio(){
     let frankIma = useRef()
 
     useEffect(()=>{
-      nav.current.style.backgroundColor="#101010"
-      nav.current.style.width="110vw"
-      nav.current.style.paddingTop = "10vh"; 
-      nav.current.style.paddingTop = "10vh";
-      nav.current.style.left = "0vh";
-      nav.current.style.top = "-6vh";
-      
-      },[nav])
-
-      useEffect(()=>{
         
         if(cookies.get('darktheme')==='on'){
             
@@ -52,58 +41,6 @@ export default function Portfolio(){
       },[])
 
    
-
-   window.onscroll = function(e) {
-      
-      if(this.scrollY>this.oldScroll){
-        document.getElementById("previewsNav").style.top = "-60vh";
-        
-      }
-
-      if(this.scrollY<this.oldScroll){
-        document.getElementById("previewsNav").style.top = "-6vh";
-        
-      }
-      this.oldScroll = this.scrollY;
-      
-    }
-
-
-    if(window.innerWidth<=600){
-      
-      window.onscroll = function(e) {
-        
-        if(this.scrollY>this.oldScroll){
-          document.getElementById("danielpa").style.top = "-60vh";
-        }
-  
-        if(this.scrollY<this.oldScroll){
-          document.getElementById("danielpa").style.top = "-3vh";
-        }
-        this.oldScroll = this.scrollY;
-        
-      }
-
-  }
-
-  else{
-    
-    window.onscroll = function(e) {
-      
-      if(this.scrollY>this.oldScroll){
-        document.getElementById("previewsNav").style.top = "-60vh";
-        document.getElementById("previewsNav").style.nav = "-60vh"
-        
-      }
-
-      if(this.scrollY<this.oldScroll){
-        document.getElementById("previewsNav").style.top = "-6vh";
-      }
-      this.oldScroll = this.scrollY;
-      
-    }
-  }  
-    
   function linkHover(link){
     let updatedNavLinkStyle = {...navLinkStyle}
     updatedNavLinkStyle[link] = "white"
@@ -119,16 +56,21 @@ export default function Portfolio(){
    function buttonHover(image, shade){
     image.current.style.opacity="0.5"
     shade.current.style.background="black"
+    image.current.style.animation="none"
+    shade.current.style.animation="none"
+    
    }
 
    function buttonNotHover(image, shade){
     image.current.style.opacity="1"
     shade.current.style.backgroundColor="transparent"
+    image.current.style.animation="none"
+    shade.current.style.animation="none"
    }
 
    return(
           <>
-      <div id="previewsNav" ref={nav} style={{transition:"top 0.5s"}}>
+      <div id="previewsNav">
                 <Link to="/" id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
