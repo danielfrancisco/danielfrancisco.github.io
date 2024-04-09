@@ -15,7 +15,7 @@ return(
       
           <div id="dropcon">
            <Link to={location.state}>
-           <FontAwesomeIcon icon={faX} id="barspres" />
+           <FontAwesomeIcon icon={faX} id="close" />
            </Link>
           
             <Link id="link" to={{pathname:"/"}} state="/"><p>Home</p></Link> 
