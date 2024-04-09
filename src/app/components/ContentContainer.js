@@ -10,7 +10,10 @@ export default function ContentContainer({content}){
           <div id='modeIcon'>
           </div>
           <Mobilenav current="/"/>  
+          <div id='content'>
           {content}
+          </div>
+          
         </div>
         </>
     )

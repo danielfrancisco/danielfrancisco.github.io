@@ -1,3 +1,5 @@
+@import '../abstracts/variables.scss';
+
 #daniel{
     display: none;
     
@@ -8,8 +10,8 @@
   }
 
 #nav{
-    top: 16vh;
-    position: fixed;
+    top: 10vh;
+    position: relative;
     z-index: 5;
     background-color:  var(--navColor);
     width: 89.99vw;
@@ -39,7 +41,7 @@
   }
   
   .links{
-    font-family: Roboto, Arial,system-ui;
+    font-family: $fontFamily;
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
@@ -67,7 +69,7 @@
   }
 
   #home{
-    font-family: Roboto, Arial;
+    font-family: $fontFamily;
     font-weight: bold;
     margin-left: 6vw;
     text-decoration: none;
@@ -86,17 +88,16 @@
   @media screen and (max-width: 1100px) {
 
   #danielpa{
-    display: block;
+   display: inline-block;
+   
    background-color: var(--fondoColor);
-   position: fixed;
    z-index: 5;
    padding-top: 10vh;
    padding-left: 50px;
    top: -3vh;
-   top: -30px;
    left: -10px;
    width: 100vw;
-   transition: top 0.5s;
+   
   #daniel{
     display: inline-block;
     font-size: 18px;
@@ -122,6 +123,7 @@
 
   #nav{
     display: none;
+    
   }
 
 
@@ -133,6 +135,7 @@ body{
 #fondo{
   
   #nav{
+    
     p{
       font-size: 12px;
     }

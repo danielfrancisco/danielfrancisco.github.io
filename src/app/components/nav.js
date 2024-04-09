@@ -6,9 +6,7 @@ import "../../styless/components/nav.scss"
 
 
 export default function Nav(){
-  useEffect(()=>{
-        document.getElementById("nav").style.top = "16vh";
-       },[])
+ 
 
     return(
         <>

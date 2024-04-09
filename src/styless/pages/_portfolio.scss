@@ -4,8 +4,15 @@ $width: 68.4288vw;
 $borderRadius: 11px;
 
 @keyframes moveImage {
-    from{left: -4vw; opacity: 0;}
-    to{left: 15vw; opacity: 1;}
+    from { transform: translateX(-30%);  opacity: 0;}
+    to { transform: translateX(0); opacity: 1;}
+    
+    
+}
+
+@keyframes buttonAnimation{
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
 
 
@@ -13,9 +20,10 @@ $borderRadius: 11px;
     top: 10vh;
     height: $height;
     opacity: 1;
-    left: 15vw;
     width: $width;
     border-radius: $borderRadius;
+    margin-left: auto;
+    margin-right: auto;
     animation: moveImage 0.6s ease-in forwards;
     margin-bottom: 14vh;
     &:hover{
@@ -36,13 +44,15 @@ $borderRadius: 11px;
     background-color: black;
     width:"110vw";
     padding-top: "10vh"; 
+    font-size: 16.188px;
     left : "0vh";
-    animation: moveNavUp 0.4s ease-in forwards;
+    animation: moveNavUp 0.3s ease-in forwards;
     line-height: 10vh;
 }
 
 
 #previewsContent{
+    
     .previewsImages{
      @include images();
 
@@ -51,6 +61,7 @@ $borderRadius: 11px;
 
     #coloroverRe{
         @include images();
+        
     }
 
     #coloroverMa{
@@ -70,7 +81,16 @@ $borderRadius: 11px;
         top: 54vh;
         width: 140px;
         background-color: #E0E0E0;
+        color: black;
+        animation: buttonAnimation 0.6s ease-in forwards;
     }
+}
+
+@mixin mobileImages(){
+    position: relative;
+    top: -10vh;
+    left: 0vw;
+    animation: none;
 }
 
 @media screen and (max-width: 1100px) {
@@ -80,28 +100,22 @@ $borderRadius: 11px;
 
     #previewsContent{
         top: 20vh;
+        
         .previewsImages{
-            
-            @include images();
-             width: 100vw;  
-             height: 40vh;
-             animation: 'none'
-           }
+            @include mobileImages()
+        }
        
-           #coloroverRe{
-            @include images();
-            animation: 'none'
-           }
+        #coloroverRe{
+            @include mobileImages()
+        }
        
-           #coloroverMa{
-            @include images();
-            animation: 'none'
-           }
+        #coloroverMa{
+            @include mobileImages()
+        }
        
-           #coloroverFr{
-            @include images();
-            animation: 'none'
-           }
+        #coloroverFr{
+            @include mobileImages()
+        }
        
            
 

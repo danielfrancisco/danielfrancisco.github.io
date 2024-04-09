@@ -1,9 +1,16 @@
 #fondo {
   background-color: var(--fondoColor);
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
   height: 85vh;
   width: 90vw;
   border-radius: 10px;
   top: 3.3vh;
+}
+
+#content {
+  position: relative;
+  top: -15vh;
 }/*# sourceMappingURL=contentContainer.css.map */
