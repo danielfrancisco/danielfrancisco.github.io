@@ -8,14 +8,16 @@ import { useLocation } from "react-router-dom";
 export default function Drop(){
  const location = useLocation()
  
+ 
 return(
         <>
         
-       <Link to={location.state}>
-         <FontAwesomeIcon icon={faX} id="barspres"/>
-       </Link>
-          
+      
           <div id="dropcon">
+           <Link to={location.state}>
+           <FontAwesomeIcon icon={faX} id="barspres" />
+           </Link>
+          
             <Link id="link" to={{pathname:"/"}} state="/"><p>Home</p></Link> 
 
             <Link id="link" to={"/skills"}><p>Services</p> </Link>

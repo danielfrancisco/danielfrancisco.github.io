@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
+import { useLocation } from 'react-router-dom'
 
 export default function Mobilenav({current}){
+  const path = useLocation().pathname
+  
    return(
         <>
         <div id="danielpa">
@@ -12,7 +15,7 @@ export default function Mobilenav({current}){
                 Home
               </div></Link>
 
-              <Link to={"/drop"} state={current}>
+              <Link to={"/drop"} state={path}>
                 <FontAwesomeIcon icon={faBars} id="bars" />
               </Link>
 
