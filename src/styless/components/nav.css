@@ -83,10 +83,15 @@
 }
 
 @media screen and (max-width: 1100px) {
+  #modeIcon {
+    display: none;
+  }
   #danielpa {
     display: inline-block;
+    position: relative;
     background-color: var(--fondoColor);
     z-index: 5;
+    position: fixed;
     padding-top: 10vh;
     padding-left: 50px;
     top: -3vh;

@@ -13,4 +13,11 @@
 #content {
   position: relative;
   top: -15vh;
+}
+
+@media screen and (max-width: 1100px) {
+  #content {
+    position: relative;
+    top: 0vh;
+  }
 }/*# sourceMappingURL=contentContainer.css.map */
