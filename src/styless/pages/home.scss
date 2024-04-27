@@ -80,13 +80,14 @@ body{
       animation: var(--fillbutton) 0.3s linear; 
       animation-fill-mode: forwards ;
       color: var(--ContactButtonHoverFontColor);
+      
       &::before{
         
         width: 100%;
       }
     }
   }
-
+  
   @keyframes fillbuttonDark{
     0%   {background-color: #81E6D9;}
     99.99% {background-color: #81E6D9;}
