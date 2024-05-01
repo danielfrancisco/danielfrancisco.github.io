@@ -22,7 +22,7 @@ export default function Home() {
       }
       
   },[viewCounter])*/
-
+ 
  return (
       <>
       <ContentContainer content={
@@ -31,7 +31,7 @@ export default function Home() {
             <div id="nombre">Daniel Campoverde</div>
             <div id="titulo">Full stack developer</div>
             <div id="titulo">Ux Designer</div>
-            <Link to={"/contact"} id='contactLink'><button>Contact</button></Link>
+            <Link to={"/contact"} id='contactLink' ><button >Contact</button></Link>
           </div>
         </>
       }/> 
