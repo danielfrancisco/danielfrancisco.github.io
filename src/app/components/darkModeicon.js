@@ -33,7 +33,7 @@ export default function DarkModeIcon({size}){
                  tituloColor:  'gray',
                  ContactButtonColor: 'black',
                   ContactButtonFontColor: '#E0E0E0',
-                  ContactButtonHoverColor: '#30b069',
+                  ContactButtonHoverColor: '#81E6D9',
                   ContactButtonHoverFontColor: 'black',
                   linkHoverColor: 'gray',
                   resColor: '#1A202C',
