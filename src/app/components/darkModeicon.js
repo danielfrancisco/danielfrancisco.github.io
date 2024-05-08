@@ -22,6 +22,7 @@ export default function DarkModeIcon({size}){
           resFontColor: 'black',
           condataName: 'black',
           fillbutton : 'fillbuttonLight',
+          previewsButtonFontColor: 'white',
         },
          
         dark: { fondoColor: '#1A202C', 
@@ -40,6 +41,7 @@ export default function DarkModeIcon({size}){
                   resFontColor: ' #E0E0E0',
                   condataName: ' #E0E0E0',
                   fillbutton : 'fillbuttonDark',
+                  previewsButtonFontColor: '#E0E0E0',
                 },
         }})
        
