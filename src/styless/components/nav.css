@@ -67,8 +67,8 @@
 
 #home {
   font-family: Arial, system-ui;
-  font-weight: bold;
   margin-left: 6vw;
+  font-weight: bold;
   text-decoration: none;
   color: var(--homeColor);
   position: relative;
@@ -105,7 +105,7 @@
     z-index: 5;
   }
   #danielpa #icon {
-    left: 43vw;
+    left: 40vw;
     top: 0px;
   }
   #danielpa #bars {

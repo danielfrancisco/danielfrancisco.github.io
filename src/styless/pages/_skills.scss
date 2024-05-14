@@ -22,17 +22,17 @@ $con-height: 229.95px;
     }
 
     @keyframes moveui {
-      from{left: -8vw; opacity: 0; }
+      from{left: -10vw; opacity: 0; }
       to{left: 6vw; opacity: 1;}
     }
 
     @keyframes moveres {
-      from{top: 0vh; opacity: 0;}
+      from{top: -2vh; opacity: 0;}
       to{top: 11vh; opacity: 1;}
     }
 
     @keyframes movefront {
-      from{top: 40vh; opacity: 0;}
+      from{top: 42vh; opacity: 0;}
       to{top: 27vh; opacity: 1;}
     }
 
@@ -42,13 +42,13 @@ $con-height: 229.95px;
      font-family: $fontFamily;
      height: $con-height;
      width: $width;
-     font-size: 18px;
+     font-size: 17px;
      background-color: transparent;
      border-radius: 5px;
      text-align: left;
      
      line-height: 24px;
-     font-weight: lighter;
+     font-weight: normal;
      
     }
     
@@ -86,7 +86,35 @@ $con-height: 229.95px;
 }
 
 
-//big desktop
+//big screen
+@media screen and(min-width: 1400px), 
+screen and (min-height: 1190px){
+  #ui{
+    top: 18vh;
+  }
+
+  @keyframes moveres {
+    from{top: 4vh; opacity: 0;}
+    to{top: 17vh; opacity: 1;}
+  }
+
+ 
+}
+
+@media screen and(min-width: 2000px){
+  #ui{
+    top: 20vh;
+  }
+
+  @keyframes moveres {
+    from{top: 0px; opacity: 0;}
+    to{top: 17vh; opacity: 1;}
+  }
+
+ 
+}
+
+
 @media screen and(min-width: 1700px){
   #ui{
     height: 35vh;
@@ -101,9 +129,25 @@ $con-height: 229.95px;
   }
 }
 
+//small screen
+@media screen and (max-height: 660px){
+  $servicesHeight: 280px;
+  #ui{
+    height: $servicesHeight;
+  }
+  
+  #front{
+    height: $servicesHeight;
+  }
+
+  #res{
+    height: $servicesHeight;
+  }
+}
+
 
 //mobile or tablet
-@media screen and (max-width: 1005px) {
+@media screen and (max-width: 1005px){
   #ui{
    display: block;
    position: relative;

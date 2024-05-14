@@ -19,10 +19,10 @@
   color: var(--linksColor);
 }
 
-#barspres {
+#close {
   position: relative;
-  left: 80vw;
-  top: 6vh;
+  left: 87vw;
+  top: 5vh;
   font-weight: bold;
   font-size: 22px;
   color: var(--linksColor);
