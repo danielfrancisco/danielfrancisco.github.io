@@ -58,7 +58,6 @@ Button {
   border-radius: 30px;
   z-index: 1;
   cursor: pointer;
-  transition: color 0.3s;
 }
 Button:before {
   content: "";
