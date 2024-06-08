@@ -2,8 +2,13 @@
 //average desktop
 $animationDuration: 0.5s;
 $width: 20vw;
+$servicesMobileheight: 300px;
+$uiMobileTop: 90px;
 $skill-height: 302.22px;
 $con-height: 229.95px;
+$margin-bottom: 0px;
+$mobileMarginBotton: 0px;
+$mobileAnimation: mobile 0.3s ease-in forwards;
 
 @mixin skillsq($bcolor, $fcolor,){
     background-color: $bcolor;
@@ -148,16 +153,26 @@ screen and (min-height: 1190px){
 
 //mobile or tablet
 @media screen and (max-width: 1005px){
+  @keyframes mobile {
+    from{opacity: 0; left: -50vw;}
+    to{opacity: 1; left: -7vw;}   
+  }
+
+ 
   #ui{
    display: block;
    position: relative;
    left: -7vw;
    width: 97vw;
-   
-   animation: none;
+   top: 100px;
+   height: $servicesMobileheight;
+   animation:  mobile 0.4s ease-in forwards;
+   margin-bottom: 0;
+   font-size: 25px;
     #uicon{
         width: 97vw;
         animation: none;
+        font-size: 17px;
     }
    
   }
@@ -165,23 +180,31 @@ screen and (min-height: 1190px){
   #front{
     animation: none;
     display: block;
-    top: 40vh;
+    top: 135px;
+    animation:  mobile 0.5s ease-in forwards;
     position: relative;
     left: -7vw;
-    margin-top: -19vh;
+    margin-top: 0vh;
     width: 97vw;
+    margin-bottom: 0;
+    height: $servicesMobileheight;
+    
     #frontcon{
         width: 97vw;
     }
   }
 
   #res{
+    top: 170px;
     display: block;
-    margin-top: 34vh;
+    margin-top: 0vh;
     margin-right: 4vw;
+    animation:  mobile 0.6s ease-in forwards;
     position: relative;
     left: -7vw;
     width: 97vw;
+    
+    height: $servicesMobileheight;
     #rescon{
       width: 97vw;
       

@@ -59,7 +59,9 @@ body{
     border-radius: 30px;
     z-index: 1;
     cursor: pointer;
+    transition: color var(--ContactButtonFontColorTransition);
     
+
     &:before {
       content: '';
       position: absolute;
