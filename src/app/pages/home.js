@@ -20,13 +20,13 @@ export default function Home() {
     if(location.state===null){
       navigation((localStorage.getItem('path')))
     }
-
+    
   },[])
 
   useEffect(() => {
     
     const timer = setTimeout(() => {
-      localStorage.clear();
+      localStorage.clear();  
       console.log('localStorage has been cleared.');
     }, 600000); 
 
@@ -64,12 +64,26 @@ export default function Home() {
       }/> 
       </>
     );
-  }else{
+  }else if(localStorage.state===undefined){
     return (
       <>
-      
+      <ContentContainer content={
+        <>
+        <div id="con">
+            <div id="nombre">Daniel Campoverde</div>
+            <div id="titulo">Full stack developer</div>
+            <div id="titulo">Ux Designer</div>
+            <Link to={"/contact"} id='contactLink' ><button >Contact</button></Link>
+          </div>
+        </>
+      }/> 
       </>
     );
+  }else{
+    return(
+      <>
+      </>
+    )
   }
  
 }
