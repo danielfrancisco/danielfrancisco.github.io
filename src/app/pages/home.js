@@ -6,6 +6,7 @@ import ContentContainer from "../components/ContentContainer";
 import { useLocation } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
+
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
   
@@ -16,7 +17,7 @@ export default function Home() {
     /*chech if the user comes from another route
     or if it was redirected to the home page
     */
-    console.log(location.state)
+    
     if(location.state===null){
       navigation((localStorage.getItem('path')))
     }
@@ -82,6 +83,7 @@ export default function Home() {
   }else{
     return(
       <>
+      
       </>
     )
   }

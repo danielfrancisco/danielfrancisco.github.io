@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
-import { useLocation } from 'react-router-dom'
+import { getPagePath } from "../functions/getPath";
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -19,8 +19,6 @@ export default function Portfolio(){
       aboutLinkColor:"gray",
     })
     
-    const path = useLocation().pathname
-
     let resortIma = useRef()
     let shadere = useRef()
     let shadema = useRef()
@@ -29,7 +27,8 @@ export default function Portfolio(){
     let frankIma = useRef()
 
     useEffect(()=>{
-      localStorage.setItem('path', path)
+    
+      localStorage.setItem('path', getPagePath())
     },[])
     
     useEffect(()=>{
@@ -81,7 +80,7 @@ export default function Portfolio(){
    return(
           <>
       <div id="previewsNav">
-                <Link to="/" state={path} id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
+                <Link to="/" state={getPagePath()} id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
                 >Home</Link>

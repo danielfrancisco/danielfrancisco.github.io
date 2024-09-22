@@ -3,19 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
-import { useLocation } from 'react-router-dom'
+import { getPagePath } from "../functions/getPath";
 
 export default function Mobilenav({current}){
-  const path = useLocation().pathname
+  
   
    return(
         <>
         <div id="danielpa">
-              <Link to={"/"} state={path}><div id="daniel" >
+              <Link to={"/"} state={getPagePath()}><div id="daniel" >
                 Home
               </div></Link>
 
-              <Link to={"/drop"} state={path}>
+              <Link to={"/drop"} state={getPagePath()}>
                 <FontAwesomeIcon icon={faBars} id="bars" />
               </Link>
 

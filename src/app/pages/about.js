@@ -1,13 +1,11 @@
 import "../../styless/pages/about.scss"
 import ContentContainer from "../components/ContentContainer";
 import { useEffect } from "react";
-import { useLocation } from 'react-router-dom'
+import { getPagePath } from "../functions/getPath";
 
 export default function About(){
-  const path = useLocation().pathname
-
   useEffect(()=>{
-    localStorage.setItem('path', path)
+    localStorage.setItem('path', getPagePath())
   },[])
 
     return(
