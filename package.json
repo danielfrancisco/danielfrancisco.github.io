@@ -1,5 +1,5 @@
 {
-  "homepage": "https://danielfrancisco.github.io/danielcampoverde",
+  "homepage": "https://danielfrancisco.github.io/",
   "name": "danielc",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +19,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-lazyload": "^3.2.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "save-dev": "^0.0.1-security",

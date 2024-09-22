@@ -4,6 +4,7 @@ import martysi from "../../images/martysi.png";
 import franks from "../../images/franks.png";
 import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
+import LazyLoad from 'react-lazyload';
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
@@ -39,6 +40,8 @@ export default function Portfolio(){
        
 
       },[])
+
+      
 
    
   function linkHover(link){
@@ -96,11 +99,11 @@ export default function Portfolio(){
               </div>
               
             <Mobilenav current={"/portfolio"}/> 
-
+          
              <div id="previewsContent">
-               
+             <LazyLoad>
+                <div id="coloroverRe" ref={shadere}>
                   
-                   <div id="coloroverRe" ref={shadere}>
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
                       <img className='previewsImages' ref={resortIma} src={resorti} onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
                        onMouseOut={()=>{buttonNotHover(resortIma, shadere)}}/>
@@ -112,7 +115,9 @@ export default function Portfolio(){
                         Get a Demo </button>
                     </a>
                    </div>
-
+                </LazyLoad>
+                  
+                <LazyLoad  >
                     <div id="coloroverMa" ref={shadema}>
                       <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
                         <img className='previewsImages' src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
@@ -124,8 +129,11 @@ export default function Portfolio(){
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}>
                         Get a demo </button></a>
                      </div>
+                  </LazyLoad>
 
+                  <LazyLoad>
                    <div id="coloroverFr" ref={shadefr}>
+
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                       <img className='previewsImages' src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}/>
@@ -139,6 +147,8 @@ export default function Portfolio(){
                       </button></a>
 
                   </div>
+
+                  </LazyLoad>
                </div>
               
             </>
