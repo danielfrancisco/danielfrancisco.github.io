@@ -11,7 +11,7 @@ export default function Mobilenav({current}){
    return(
         <>
         <div id="danielpa">
-              <Link to={"/"}><div id="daniel" state={path}>
+              <Link to={"/"} state={path}><div id="daniel" >
                 Home
               </div></Link>
 

@@ -12,8 +12,7 @@ export default function Drop(){
 return(
         <>
         
-      
-          <div id="dropcon">
+      <div id="dropcon">
            <Link to={location.state}>
            <FontAwesomeIcon icon={faX} id="close" />
            </Link>

@@ -16,7 +16,7 @@ export default function Home() {
     /*chech if the user comes from another route
     or if it was redirected to the home page
     */
-    
+    console.log(location.state)
     if(location.state===null){
       navigation((localStorage.getItem('path')))
     }
