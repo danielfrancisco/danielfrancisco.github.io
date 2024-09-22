@@ -1,8 +1,15 @@
 import "../../styless/pages/about.scss"
 import ContentContainer from "../components/ContentContainer";
+import { useEffect } from "react";
+import { useLocation } from 'react-router-dom'
 
 export default function About(){
-    
+  const path = useLocation().pathname
+
+  useEffect(()=>{
+    localStorage.setItem('path', path)
+  },[])
+
     return(
         <>
          <ContentContainer content={

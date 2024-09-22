@@ -3,16 +3,16 @@ import { useEffect} from "react";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
-
+import { useLocation } from 'react-router-dom'
 
 export default function Nav(){
- 
+  const path = useLocation().pathname
 
     return(
         <>
          <div id="nav">
          
-              <Link to="/" id="home">
+              <Link to="/" id="home" state={path}>
                  
                 Home</Link>
 

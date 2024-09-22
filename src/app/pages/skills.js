@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import "../../styless/pages/_skills.scss"
 import ContentContainer from "../components/ContentContainer";
+import { useLocation } from 'react-router-dom'
+
 export default function Skills(){
-    
+  const path = useLocation().pathname
+
+  useEffect(()=>{
+    localStorage.setItem('path', path)
+  },[])
+
 return (
     <>
           

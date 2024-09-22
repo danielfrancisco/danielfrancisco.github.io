@@ -1,11 +1,37 @@
 import "../../styless/pages/home.scss"
 import { Link } from "react-router-dom";
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import axios from "axios";
 import ContentContainer from "../components/ContentContainer";
+import { useLocation } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
+  
+  const navigation = useNavigate()
+  const location = useLocation()
+
+  useEffect(()=>{
+    /*chech if the user comes from another route
+    or if it was redirected to the home page
+    */
+    
+    if(location.state===null){
+      navigation((localStorage.getItem('path')))
+    }
+
+  },[])
+
+  useEffect(() => {
+    
+    const timer = setTimeout(() => {
+      localStorage.clear();
+      console.log('localStorage has been cleared.');
+    }, 600000); 
+
+    return () => clearTimeout(timer);
+  }, []);
   
   /*useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
@@ -23,7 +49,8 @@ export default function Home() {
       
   },[viewCounter])*/
  
- return (
+  if(location.state!==null){
+    return (
       <>
       <ContentContainer content={
         <>
@@ -37,8 +64,15 @@ export default function Home() {
       }/> 
       </>
     );
-
+  }else{
+    return (
+      <>
+      
+      </>
+    );
   }
+ 
+}
 
   
 

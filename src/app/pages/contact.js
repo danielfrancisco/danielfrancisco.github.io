@@ -3,9 +3,16 @@ import Mobilenav from "../components/mobilenav";
 import Nav from "../components/nav";
 import ContentContainer from "../components/ContentContainer";
 import "../../styless/pages/_contact.scss"
+import { useLocation } from 'react-router-dom'
+import { useEffect } from "react";
 
 export default function Contact(){
-    
+  const path = useLocation().pathname
+
+  useEffect(()=>{
+    localStorage.setItem('path', path)
+  },[])
+
   return(
         <>
 
