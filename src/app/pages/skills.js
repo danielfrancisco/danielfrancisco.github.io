@@ -5,9 +5,7 @@ import { getPagePath } from "../functions/getPath";
 
 export default function Skills(){
   
-  useEffect(()=>{
-    localStorage.setItem('path', getPagePath())
-  },[])
+  
 
 return (
     <>

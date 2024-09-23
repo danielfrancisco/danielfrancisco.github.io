@@ -77,27 +77,34 @@ export default function Portfolio(){
     shade.current.style.animation="none"
    }
 
+   function setCurrentPage(e){
+    let route = "/"+e.target.innerHTML.toLowerCase()
+    if(route==="/home"){
+      route="/"
+    }
+    sessionStorage.setItem('path', route)
+  }
    return(
           <>
       <div id="previewsNav">
-                <Link to="/" state={getPagePath()} id="home"  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
+                <Link to="/" state={getPagePath()} id="home" onClick={setCurrentPage}  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
                 >Home</Link>
 
-                <Link to={"/skills"} id="skills" style={{color:navLinkStyle.servicesLinkColor }} 
+                <Link to={"/services"} id="skills"  onClick={setCurrentPage} style={{color:navLinkStyle.servicesLinkColor }} 
                 onMouseOver={()=>{linkHover("servicesLinkColor")}}
                 
                 onMouseOut={()=>{linkNotHover("servicesLinkColor")}}
                 className="links" >Services</Link>
 
-               <Link to={"/portfolio"} id="work" style={{color:navLinkStyle.previewLinkColor}} 
+               <Link to={"/portfolio"} id="work"  onClick={setCurrentPage} style={{color:navLinkStyle.previewLinkColor}} 
                
                onMouseOver={()=>{linkHover("previewLinkColor")}} 
               onMouseOut={()=>{linkNotHover("previewLinkColor")}}
                className="links">Previews</Link>
 
-                <Link to="/about" id="about" className="links" 
+                <Link to="/about" id="about"  onClick={setCurrentPage} className="links" 
                 onMouseOver={()=>{linkHover("aboutLinkColor")}} 
                 onMouseOut={()=>{linkNotHover("aboutLinkColor")}}
                 style={{color:navLinkStyle.aboutLinkColor}} >About</Link>

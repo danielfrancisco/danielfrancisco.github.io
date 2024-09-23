@@ -7,14 +7,15 @@ import About from "./app/pages/about";
 import Drop from "./app/components/drop";
 import Skills from "./app/pages/skills";
 
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <>
     <BrowserRouter>
      <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/skills" element={<Skills/>}></Route>
-        <Route path="/portfolio" element={<Portfolio/>}></Route>
+        <Route path="/services" element={<Skills/>}></Route>
+        <Route path="/previews" element={<Portfolio/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/drop" element={<Drop/>}></Route>

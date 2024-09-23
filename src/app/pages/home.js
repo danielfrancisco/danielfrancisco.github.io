@@ -18,21 +18,16 @@ export default function Home() {
     or if it was redirected to the home page
     */
     
-    if(location.state===null){
-      navigation((localStorage.getItem('path')))
-    }
+   if(sessionStorage.getItem('drop')!==null){
+    navigation((sessionStorage.getItem('drop'))) 
+    sessionStorage.removeItem('drop')
     
-  },[])
+   }else{
+    navigation((sessionStorage.getItem('path')))
+   }
 
-  useEffect(() => {
-    
-    const timer = setTimeout(() => {
-      localStorage.clear();  
-      console.log('localStorage has been cleared.');
-    }, 600000); 
+   },[])
 
-    return () => clearTimeout(timer);
-  }, []);
   
   /*useEffect(()=>{
     axios.get("https://counterapi-ywst.onrender.com/")
@@ -49,44 +44,30 @@ export default function Home() {
       }
       
   },[viewCounter])*/
- 
-  if(location.state!==null){
-    return (
+  
+
+ if(sessionStorage.getItem('path')!==null && sessionStorage.getItem('path')!=="/"){
+  return(
+    <>
+    </>
+  )
+ }else{
+  return (
+    <>
+    <ContentContainer content={
       <>
-      <ContentContainer content={
-        <>
-        <div id="con">
-            <div id="nombre">Daniel Campoverde</div>
-            <div id="titulo">Full stack developer</div>
-            <div id="titulo">Ux Designer</div>
-            <Link to={"/contact"} id='contactLink' ><button >Contact</button></Link>
-          </div>
-        </>
-      }/> 
+      <div id="con">
+          <div id="nombre">Daniel Campoverde</div>
+          <div id="titulo">Full stack developer</div>
+          <div id="titulo">Ux Designer</div>
+          <Link to={"/contact"} id='contactLink' ><button >Contact</button></Link>
+        </div>
       </>
-    );
-  }else if(localStorage.state===undefined){
-    return (
-      <>
-      <ContentContainer content={
-        <>
-        <div id="con">
-            <div id="nombre">Daniel Campoverde</div>
-            <div id="titulo">Full stack developer</div>
-            <div id="titulo">Ux Designer</div>
-            <Link to={"/contact"} id='contactLink' ><button >Contact</button></Link>
-          </div>
-        </>
-      }/> 
-      </>
-    );
-  }else{
-    return(
-      <>
-      
-      </>
-    )
-  }
+    }/> 
+    </>
+  );
+ }
+  
  
 }
 
