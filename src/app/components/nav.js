@@ -3,7 +3,6 @@ import { useEffect} from "react";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
-import { getPagePath } from "../functions/getPath";
 
 export default function Nav(){
   
@@ -18,7 +17,7 @@ export default function Nav(){
         <>
          <div id="nav">
          
-              <Link to="/" id="home" state={getPagePath()} onClick={setCurrentPage} >
+              <Link to="/" id="home"  onClick={setCurrentPage} >
                  
                 Home</Link>
 

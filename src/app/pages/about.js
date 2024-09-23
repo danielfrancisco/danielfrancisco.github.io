@@ -1,13 +1,8 @@
 import "../../styless/pages/about.scss"
 import ContentContainer from "../components/ContentContainer";
-import { useEffect } from "react";
-import { getPagePath } from "../functions/getPath";
 
 export default function About(){
-  useEffect(()=>{
-    localStorage.setItem('path', getPagePath())
-  },[])
-
+ 
     return(
         <>
          <ContentContainer content={

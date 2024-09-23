@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
-import { getPagePath } from "../functions/getPath";
+
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -27,14 +27,7 @@ export default function Portfolio(){
     let frankIma = useRef()
 
     useEffect(()=>{
-    
-      localStorage.setItem('path', getPagePath())
-    },[])
-    
-    useEffect(()=>{
-        
         if(cookies.get('darktheme')==='on'){
-            
           document.body.style.setProperty('--bodyColor' ,"#0f131a")
           document.body.style.setProperty('--fondoColor' ,"#0f131a")
           
@@ -43,14 +36,9 @@ export default function Portfolio(){
           document.body.style.setProperty('--bodyColor' ,"white")
           document.body.style.setProperty('--fondoColor' ,"white")
         }
-       
+    },[])
 
-      },[])
-
-      
-
-   
-  function linkHover(link){
+    function linkHover(link){
     let updatedNavLinkStyle = {...navLinkStyle}
     updatedNavLinkStyle[link] = "white"
     setNavLinkStyle(updatedNavLinkStyle)
@@ -87,7 +75,7 @@ export default function Portfolio(){
    return(
           <>
       <div id="previewsNav">
-                <Link to="/" state={getPagePath()} id="home" onClick={setCurrentPage}  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
+                <Link to="/"  id="home" onClick={setCurrentPage}  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
                 >Home</Link>

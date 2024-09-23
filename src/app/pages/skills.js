@@ -1,16 +1,12 @@
 import { useEffect } from "react";
 import "../../styless/pages/_skills.scss"
 import ContentContainer from "../components/ContentContainer";
-import { getPagePath } from "../functions/getPath";
 
 export default function Skills(){
   
-  
-
 return (
     <>
-          
-          <ContentContainer content={
+        <ContentContainer content={
         <>
          <div id="ui"><br/>Ui/Ux<br/>Designing
                 <div id="uicon"><br/> 

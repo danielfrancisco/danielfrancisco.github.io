@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
-import { getPagePath } from "../functions/getPath";
 
 export default function Mobilenav({current}){
   function setCurrentPage(e){
@@ -24,7 +23,7 @@ export default function Mobilenav({current}){
    return(
         <>
         <div id="danielpa">
-              <Link to={"/"} state={getPagePath()} onClick={setCurrentPage}><div id="daniel" >
+              <Link to={"/"}  onClick={setCurrentPage}><div id="daniel" >
                 Home
               </div></Link>
 

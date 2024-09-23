@@ -4,15 +4,10 @@ import Nav from "../components/nav";
 import ContentContainer from "../components/ContentContainer";
 import "../../styless/pages/_contact.scss"
 import { useEffect } from "react";
-import { getPagePath } from "../functions/getPath";
 
 export default function Contact(){
 
-  useEffect(()=>{
-    localStorage.setItem('path', getPagePath())
-  },[])  
-  
-  return(
+ return(
         <>
 
 <ContentContainer content={
