@@ -7,37 +7,23 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
   
-  const navigation = useNavigate()
+  const navigate = useNavigate()
   
   useEffect(()=>{
-    /*chech if the user comes from another route
-    or if it was redirected to the home page
-    */
-    if(sessionStorage.getItem('drop')!==null){
-    navigation((sessionStorage.getItem('drop'))) 
-    sessionStorage.removeItem('drop')
-    
-   }else{
-    navigation((sessionStorage.getItem('path')))
-   }
-
-   },[])
-
-  /*useEffect(()=>{
-    axios.get("https://counterapi-ywst.onrender.com/")
-    .then(res=>{
-      setViewCounter(res.data.counter+1)
-    })
-  },[])
-
-  useEffect(()=>{
-      if(viewCounter!==0){
-        axios.post("https://counterapi-ywst.onrender.com/",{
-          viewCounter
-        })
-      }
+    if(sessionStorage.getItem('noRedirect')===null){
+      if(sessionStorage.getItem('drop')!==null){
+        navigate((sessionStorage.getItem('drop'))) 
+        sessionStorage.removeItem('drop')
+        
+       }else{
+        navigate((sessionStorage.getItem('path')))
+       }
+    }else{
+      navigate('/')
       
-  },[viewCounter])*/
+    }
+    
+  },[])
 
   function setCurrentPage(e){
     let route = "/"+e.target.innerHTML.toLowerCase()
@@ -47,7 +33,8 @@ export default function Home() {
     sessionStorage.setItem('path', route)
   }
   
-if(sessionStorage.getItem('path')!==null && sessionStorage.getItem('path')!=="/"){
+if(sessionStorage.getItem('path')!==null && sessionStorage.getItem('path')!=="/" 
+&& sessionStorage.getItem('noRedirect')===null){
   return(
     <>
     </>
@@ -69,8 +56,7 @@ if(sessionStorage.getItem('path')!==null && sessionStorage.getItem('path')!=="/"
   );
  }
   
- 
-}
+ }
 
   
 

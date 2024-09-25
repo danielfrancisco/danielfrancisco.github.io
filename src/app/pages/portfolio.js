@@ -4,14 +4,14 @@ import martysi from "../../images/martysi.png";
 import franks from "../../images/franks.png";
 import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
-import LazyLoad from 'react-lazyload';
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
-
+import { useLocation } from "react-router-dom";
 
 const cookies = new Cookies()
 export default function Portfolio(){
+  const path = useLocation().pathname
     const [navLinkStyle, setNavLinkStyle] = useState(
       {homeLinkColor:"gray",
       servicesLinkColor:"gray",
@@ -37,6 +37,27 @@ export default function Portfolio(){
           document.body.style.setProperty('--fondoColor' ,"white")
         }
     },[])
+
+    useEffect(() => {
+      if(path!=="/"){
+        sessionStorage.setItem('path', path)
+        console.log(sessionStorage.getItem('path'))
+        if(sessionStorage.getItem('noRedirect')!==null){
+          sessionStorage.removeItem('noRedirect')
+        }
+      }
+      
+      const handlePopState = (event) => {
+        sessionStorage.setItem("noRedirect","")
+      };
+  
+      window.addEventListener('popstate', handlePopState);
+  
+      return () => {
+        window.removeEventListener('popstate', handlePopState);
+      };
+  
+    }, []);
 
     function linkHover(link){
     let updatedNavLinkStyle = {...navLinkStyle}
@@ -72,7 +93,8 @@ export default function Portfolio(){
     }
     sessionStorage.setItem('path', route)
   }
-   return(
+
+  return(
           <>
       <div id="previewsNav">
                 <Link to="/"  id="home" onClick={setCurrentPage}  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
@@ -86,7 +108,7 @@ export default function Portfolio(){
                 onMouseOut={()=>{linkNotHover("servicesLinkColor")}}
                 className="links" >Services</Link>
 
-               <Link to={"/portfolio"} id="work"  onClick={setCurrentPage} style={{color:navLinkStyle.previewLinkColor}} 
+               <Link to={"/previews"} id="work"  onClick={setCurrentPage} style={{color:navLinkStyle.previewLinkColor}} 
                
                onMouseOver={()=>{linkHover("previewLinkColor")}} 
               onMouseOut={()=>{linkNotHover("previewLinkColor")}}
@@ -102,7 +124,7 @@ export default function Portfolio(){
             <Mobilenav current={"/portfolio"}/> 
           
              <div id="previewsContent">
-             <LazyLoad>
+             
                 <div id="coloroverRe" ref={shadere}>
                   
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
@@ -116,10 +138,8 @@ export default function Portfolio(){
                         Get a Demo </button>
                     </a>
                    </div>
-                </LazyLoad>
-                  
-                <LazyLoad  >
-                    <div id="coloroverMa" ref={shadema}>
+
+                <div id="coloroverMa" ref={shadema}>
                       <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
                         <img className='previewsImages' src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}/>
@@ -130,10 +150,8 @@ export default function Portfolio(){
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}>
                         Get a demo </button></a>
                      </div>
-                  </LazyLoad>
-
-                  <LazyLoad>
-                   <div id="coloroverFr" ref={shadefr}>
+                  
+                 <div id="coloroverFr" ref={shadefr}>
 
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                       <img className='previewsImages' src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
@@ -149,8 +167,7 @@ export default function Portfolio(){
 
                   </div>
 
-                  </LazyLoad>
-               </div>
+                  </div>
               
             </>
       )

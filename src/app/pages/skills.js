@@ -3,8 +3,8 @@ import "../../styless/pages/_skills.scss"
 import ContentContainer from "../components/ContentContainer";
 
 export default function Skills(){
-  
-return (
+
+ return (
     <>
         <ContentContainer content={
         <>
