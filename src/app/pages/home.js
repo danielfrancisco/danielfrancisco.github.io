@@ -12,14 +12,14 @@ export default function Home() {
   useEffect(()=>{
     if(sessionStorage.getItem('noRedirect')===null){
       if(sessionStorage.getItem('drop')!==null){
-        navigate((sessionStorage.getItem('drop'))) 
+        navigate(sessionStorage.getItem('drop')) 
         sessionStorage.removeItem('drop')
         
        }else{
-        navigate((sessionStorage.getItem('path')))
+        navigate(sessionStorage.getItem('path'))
        }
     }else{
-      navigate('/')
+      navigate('/', { replace: true})
       
     }
     
