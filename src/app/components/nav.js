@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
 import { useLocation } from "react-router-dom";
+import {addToHistory, handlePopState} from "../functions/pagesHistory"
 
 export default function Nav(){
   const path = useLocation().pathname  
@@ -17,25 +18,28 @@ export default function Nav(){
   }
 
   useEffect(() => {
+    if(!sessionStorage.getItem('history')){
+      sessionStorage.setItem('history', JSON.stringify({history:[], currentPage:path}))
+    }
+    
+    addToHistory(path)
+
     if(path!=="/"){
       sessionStorage.setItem('path', path)
-      console.log(sessionStorage.getItem('path'))
-      if(sessionStorage.getItem('noRedirect')!==null){
+      
+      if(sessionStorage.getItem('noRedirect')){
         sessionStorage.removeItem('noRedirect')
+        
       }
     }
     
-    const handlePopState = (event) => {
-      sessionStorage.setItem("noRedirect","")
-    };
-
-    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('popstate',handlePopState);
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
 
-  }, []);
+}, []);
 
   return(
         <>

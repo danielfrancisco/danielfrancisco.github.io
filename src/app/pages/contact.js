@@ -6,7 +6,7 @@ import "../../styless/pages/_contact.scss"
 import { useEffect } from "react";
 
 export default function Contact(){
-
+  
  return(
         <>
 

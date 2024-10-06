@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import "../../styless/pages/about.scss"
 import ContentContainer from "../components/ContentContainer";
 
 export default function About(){
- 
+  
     return(
         <>
          <ContentContainer content={

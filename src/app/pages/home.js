@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState} from "react";
 import ContentContainer from "../components/ContentContainer";
 import { useNavigate } from "react-router-dom";
+import {addToHistory} from "../functions/pagesHistory"
 
 export default function Home() {
   const [viewCounter, setViewCounter] = useState(0)
@@ -10,16 +11,34 @@ export default function Home() {
   const navigate = useNavigate()
   
   useEffect(()=>{
-    if(sessionStorage.getItem('noRedirect')===null){
-      if(sessionStorage.getItem('drop')!==null){
+    let history = JSON.parse(sessionStorage.getItem('history')).history
+    let browserIndex = window.history.state.idx
+
+   
+   
+    if(!sessionStorage.getItem('noRedirect')){
+      if(sessionStorage.getItem('drop')){
         navigate(sessionStorage.getItem('drop')) 
         sessionStorage.removeItem('drop')
         
        }else{
-        navigate(sessionStorage.getItem('path'))
+        //navigate(sessionStorage.getItem('path'))
+
+        let myIndex = JSON.parse(sessionStorage.getItem('history')).index
+        let browserIndex = window.history.state.idx
+        let history = JSON.parse(sessionStorage.getItem('history')).history
+        let current =  history[myIndex-1]
+        
+        navigate(current)  
+        
+           
+           
        }
+       
+       
     }else{
-      navigate('/', { replace: true})
+      const lastPage = JSON.parse(sessionStorage.getItem('history')).last
+      navigate(lastPage)
       
     }
     
@@ -33,8 +52,8 @@ export default function Home() {
     sessionStorage.setItem('path', route)
   }
   
-if(sessionStorage.getItem('path')!==null && sessionStorage.getItem('path')!=="/" 
-&& sessionStorage.getItem('noRedirect')===null){
+if(sessionStorage.getItem('path') && sessionStorage.getItem('path')!=="/" 
+&& !sessionStorage.getItem('noRedirect')){
   return(
     <>
     </>

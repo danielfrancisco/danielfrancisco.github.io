@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Drop(){
   let prevPage = ''
 
-  if(sessionStorage.getItem('path')===null){
+  if(!sessionStorage.getItem('path')){
     prevPage =  "/"
    }else{
     prevPage = sessionStorage.getItem('path')
@@ -21,7 +21,7 @@ export default function Drop(){
  function setCurrentPage(e){
   sessionStorage.removeItem('drop')
   if(e==="x"){
-   if(sessionStorage.getItem('path')===null){
+   if(!sessionStorage.getItem('path')){
     sessionStorage.setItem('drop', "/")
    }else{
     sessionStorage.setItem('drop', sessionStorage.getItem('path'))

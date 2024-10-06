@@ -8,6 +8,7 @@ import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
 import { useLocation } from "react-router-dom";
+import {addToHistory, handlePopState} from "../functions/pagesHistory"
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -39,23 +40,25 @@ export default function Portfolio(){
     },[])
 
     useEffect(() => {
+      if(!sessionStorage.getItem('history')){
+        sessionStorage.setItem('history', JSON.stringify({history:[], currentPage:path}))
+      }
+      
+      addToHistory(path)
+
       if(path!=="/"){
         sessionStorage.setItem('path', path)
-        console.log(sessionStorage.getItem('path'))
-        if(sessionStorage.getItem('noRedirect')!==null){
+        if(sessionStorage.getItem('noRedirect')){
           sessionStorage.removeItem('noRedirect')
         }
       }
+     
       
-      const handlePopState = (event) => {
-        sessionStorage.setItem("noRedirect","")
-      };
-  
-      window.addEventListener('popstate', handlePopState);
-  
-      return () => {
-        window.removeEventListener('popstate', handlePopState);
-      };
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
   
     }, []);
 
