@@ -6,8 +6,8 @@
     
     <title>Page Not Found</title>
     <script>
-         var pathname = window.location.pathname;
-         window.location.replace("https://danielfrancisco.github.io/");
+         window.history.replaceState({ key: 'value' }, '', '/');
+         window.dispatchEvent(new PopStateEvent('popstate'));
     </script>
 </head>
 <body>
