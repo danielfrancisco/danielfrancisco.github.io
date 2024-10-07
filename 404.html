@@ -6,8 +6,14 @@
     
     <title>Page Not Found</title>
     <script>
-         var pathname = window.location.pathname;
-         window.location.replace("https://danielfrancisco.github.io/");
+         var baseURL = "https://danielfrancisco.github.io/";
+  var currentURL = window.location.href;
+
+  
+  if (!currentURL.startsWith(baseURL)) {
+      var pathname = window.location.pathname;
+      window.location.replace(baseURL + pathname);
+  }
     </script>
 </head>
 <body>
