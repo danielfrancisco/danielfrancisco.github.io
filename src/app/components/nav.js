@@ -16,6 +16,7 @@ export default function Nav(){
       route="/"
     }
     sessionStorage.setItem('path', route)
+    sessionStorage.removeItem('pathName')
   }
 
 

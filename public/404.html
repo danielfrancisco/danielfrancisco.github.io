@@ -7,8 +7,8 @@
     <title>Page Not Found</title>
     <script>
          var pathname = window.location.pathname;
-         window.history.replaceState({ key: 'value' }, '', pathname);
-         window.dispatchEvent(new PopStateEvent('popstate'));
+         sessionStorage.setItem('pathName', pathname)
+         window.location.replace("https://danielfrancisco.github.io/");
     </script>
 </head>
 <body>

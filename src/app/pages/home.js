@@ -5,7 +5,15 @@ import { useEffect } from "react";
 
 export default function Home() {
 
-  
+  useEffect(()=>{
+    if(!sessionStorage){
+      let pathName = sessionStorage.getItem('pathName')
+      window.history.replaceState({ key: 'value' }, '', pathName);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    }
+    
+  },[])
+
 return (
     <>
     <ContentContainer content={
