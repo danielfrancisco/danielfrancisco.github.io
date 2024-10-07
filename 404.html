@@ -6,7 +6,8 @@
     
     <title>Page Not Found</title>
     <script>
-         window.history.replaceState({ key: 'value' }, '', '/');
+         var pathname = window.location.pathname;
+         window.history.replaceState({ key: 'value' }, '', pathname);
          window.dispatchEvent(new PopStateEvent('popstate'));
     </script>
 </head>
