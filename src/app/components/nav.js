@@ -5,6 +5,10 @@ import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
 
 export default function Nav(){
+
+  useEffect(()=>{
+   console.log(window.history.state)
+  },[])
   
   function setCurrentPage(e){
     let route = "/"+e.target.innerHTML.toLowerCase()
@@ -13,6 +17,8 @@ export default function Nav(){
     }
     sessionStorage.setItem('path', route)
   }
+
+
     return(
         <>
          <div id="nav">
