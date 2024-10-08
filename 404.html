@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Page Not Found</title>
-    <script>
+    <script type="module">
+        import Cookies from 'universal-cookie';
+        
         const cookies = new Cookies()
         console.log('hello world')
         console.log(cookies.get('darktheme'))
