@@ -6,15 +6,7 @@
     
     <title>Page Not Found</title>
     <script>
-        if(cookies.get('darktheme')==='on'){
-          document.body.style.setProperty('--bodyColor' ,"#0f131a")
-          document.body.style.setProperty('--fondoColor' ,"#0f131a")
-          
-        }else{
-          
-          document.body.style.setProperty('--bodyColor' ,"white")
-          document.body.style.setProperty('--fondoColor' ,"white")
-        }
+        
           var pathname = window.location.pathname;
          sessionStorage.setItem('pathName', pathname)
          window.location.replace("https://danielfrancisco.github.io/");
