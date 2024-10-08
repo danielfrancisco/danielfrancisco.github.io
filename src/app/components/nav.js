@@ -4,20 +4,22 @@ import { Link } from "react-router-dom";
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
 
+export function removePathName(){
+  if(sessionStorage.getItem('pathName')){
+    sessionStorage.removeItem('pathName')
+  }
+}
+
 export default function Nav(){
-  
   function setCurrentPage(e){
     let route = "/"+e.target.innerHTML.toLowerCase()
     if(route==="/home"){
       route="/"
     }
     sessionStorage.setItem('path', route)
+   removePathName()
    
-    if(sessionStorage.getItem('pathName')){
-      sessionStorage.removeItem('pathName')
-    }
-    
-  }
+}
 
   return(
         <>

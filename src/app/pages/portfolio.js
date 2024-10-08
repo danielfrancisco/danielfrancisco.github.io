@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 import { useRef } from "react";
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
-
+import { removePathName } from "../components/nav";
 
 const cookies = new Cookies()
 export default function Portfolio(){
@@ -27,6 +27,7 @@ export default function Portfolio(){
     let frankIma = useRef()
 
     useEffect(()=>{
+      removePathName()
         if(cookies.get('darktheme')==='on'){
           document.body.style.setProperty('--bodyColor' ,"#0f131a")
           document.body.style.setProperty('--fondoColor' ,"#0f131a")

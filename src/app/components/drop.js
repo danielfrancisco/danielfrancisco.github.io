@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState} from "react";
 import { faX,} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
+import { removePathName } from "./nav";
 
 export default function Drop(){
   let prevPage = ''
@@ -33,6 +34,7 @@ export default function Drop(){
   }
   sessionStorage.setItem('path', route)
  }
+ removePathName()
   
 }
  

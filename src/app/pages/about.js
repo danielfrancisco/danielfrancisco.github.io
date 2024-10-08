@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import "../../styless/pages/about.scss"
 import ContentContainer from "../components/ContentContainer";
+import { removePathName } from "../components/nav";
 
 export default function About(){
+
+  useEffect(()=>{
+     removePathName()
+  },[])
  
     return(
         <>
