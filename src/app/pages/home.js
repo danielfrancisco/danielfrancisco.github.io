@@ -6,7 +6,8 @@ import { useEffect } from "react";
 export default function Home() {
 
   useEffect(()=>{
-    if(sessionStorage!==null){
+    console.log('happy hacking ;)')
+    if(sessionStorage.getItem('pathName')){
       let pathName = sessionStorage.getItem('pathName')
       window.history.replaceState({ key: 'value' }, '', pathName);
       window.dispatchEvent(new PopStateEvent('popstate'));
@@ -14,6 +15,13 @@ export default function Home() {
     
   },[])
 
+  if(sessionStorage.getItem('pathName')){
+    return(
+    <>
+     <ContentContainer/>
+    </>
+    )
+  }
 return (
     <>
     <ContentContainer content={

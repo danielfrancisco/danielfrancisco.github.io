@@ -3,7 +3,7 @@ import Nav from "./nav"
 import Mobilenav from "./mobilenav"
 
 export default function ContentContainer({content}){
-    return(
+  return(
         <>
         <Mobilenav current="/"/>  
         <div id="fondo">
