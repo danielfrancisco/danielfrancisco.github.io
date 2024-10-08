@@ -71,7 +71,10 @@ export default function Portfolio(){
       route="/"
     }
     sessionStorage.setItem('path', route)
-    sessionStorage.removeItem('pathName')
+    
+    if(sessionStorage!==null){
+      sessionStorage.removeItem('pathName')
+    }
   }
    return(
           <>

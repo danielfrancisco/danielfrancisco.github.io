@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
 
   useEffect(()=>{
-    if(!sessionStorage){
+    if(sessionStorage!==null){
       let pathName = sessionStorage.getItem('pathName')
       window.history.replaceState({ key: 'value' }, '', pathName);
       window.dispatchEvent(new PopStateEvent('popstate'));
