@@ -17,6 +17,7 @@ export default function Drop(){
    
  useEffect(()=>{
   console.log(sessionStorage.getItem('path'))
+  removePathName()
  },[])
 
  function setCurrentPage(e){
