@@ -3,10 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Page Not Found</title>
+   <title>Daniel Campoverde</title>
 
     <script >
-          console.log(document.cookie)
+          document.addEventListener('DOMContentLoaded', function() {
+            console.log('hello world')
+            console.log(document.cookie)
+        });
+          
           var pathname = window.location.pathname;
          sessionStorage.setItem('pathName', pathname)
          window.location.replace("https://danielfrancisco.github.io/");
