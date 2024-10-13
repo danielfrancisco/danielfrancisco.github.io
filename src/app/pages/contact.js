@@ -9,6 +9,7 @@ export default function Contact(){
    useEffect(()=>{
      removePathName()
    })
+   
  return(
         <>
 

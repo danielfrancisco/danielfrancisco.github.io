@@ -11,30 +11,27 @@ export function removePathName(){
 }
 
 export default function Nav(){
-  function setCurrentPage(e){
-    let route = "/"+e.target.innerHTML.toLowerCase()
-    if(route==="/home"){
-      route="/"
-    }
-    sessionStorage.setItem('path', route)
-   removePathName()
-   
-}
 
-  return(
+  function navLinkAction(){
+   //code that is executed after a nav link is pressed
+    
+   }
+
+return(
         <>
          <div id="nav">
          
-              <Link to="/" id="home"  onClick={setCurrentPage} >
+              <Link to="/" id="home"  onClick={navLinkAction} >
                  
                 Home</Link>
 
-                <Link to={"/services"} className="links" onClick={setCurrentPage}>Services</Link>
+              <Link to={"/services"} className="links" onClick={navLinkAction}>Services</Link>
 
-               <Link to={"/previews"} className="links" onClick={setCurrentPage}>Previews</Link>
+              <Link to={"/previews"} className="links" onClick={navLinkAction}>Previews</Link>
                
-                <Link to="/about" className="links" onClick={setCurrentPage}>About</Link>
-             <DarkModeIcon size='22px'/>
+              <Link to="/about" className="links" onClick={navLinkAction}>About</Link>
+
+              <DarkModeIcon size='22px'/>
             
             </div>
         </>

@@ -47,8 +47,7 @@ export default function DarkModeIcon({size}){
                 },
         }})
        
-        
-       useEffect(()=>{
+        useEffect(()=>{
         if(cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off'){
           if(window.matchMedia("(prefers-color-scheme: dark)").matches){
             cookies.set('darktheme', 'on', { path: '/',expires: new Date(Date.now() + 3600000)});
