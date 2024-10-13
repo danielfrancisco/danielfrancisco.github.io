@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Daniel Campoverde</title>
 
-</head>
-<body style="background-color: black; ">
     <script >
+    var pathname = window.location.pathname;
+    sessionStorage.setItem('pathName', pathname)
+    window.location.replace("https://danielfrancisco.github.io/");
     
-        var pathname = window.location.pathname;
-        sessionStorage.setItem('pathName', pathname)
-        window.location.replace("https://danielfrancisco.github.io/");
-        
-        </script>
+    </script>
     
+    <style>
+    
+    body {
+        background-color: black; 
+    }
+    </style>
+
+</head>
+<body >
 </body>
 </html>
