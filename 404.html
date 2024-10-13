@@ -6,6 +6,9 @@
     
     <title>Page Not Found</title>
     <script>
+        window.onload = (event) => {
+  console.log("page is fully loaded");
+};
           var pathname = window.location.pathname;
          sessionStorage.setItem('pathName', pathname)
          window.location.replace("https://danielfrancisco.github.io/");
