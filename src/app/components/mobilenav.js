@@ -4,7 +4,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
 
-
 export default function Mobilenav({current}){
   function setCurrentPage(e){
     if(e==="/drop"){

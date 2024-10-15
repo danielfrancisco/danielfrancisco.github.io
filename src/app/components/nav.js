@@ -3,6 +3,7 @@ import { useEffect} from "react";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "./darkModeicon";
 import "../../styless/components/nav.scss"
+import LazyLoad from "react-lazyload";
 
 export function removePathName(){
   if(sessionStorage.getItem('pathName')){
@@ -12,13 +13,14 @@ export function removePathName(){
 
 export default function Nav(){
 
-  function navLinkAction(){
+function navLinkAction(){
    //code that is executed after a nav link is pressed
     
    }
 
 return(
         <>
+         <LazyLoad>
          <div id="nav">
          
               <Link to="/" id="home"  onClick={navLinkAction} >
@@ -31,9 +33,12 @@ return(
                
               <Link to="/about" className="links" onClick={navLinkAction}>About</Link>
 
+             
               <DarkModeIcon size='22px'/>
+              
             
             </div>
+          </LazyLoad>
         </>
     )
 }
