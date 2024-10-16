@@ -85,7 +85,7 @@ export default function DarkModeIcon({size}){
           setDark({...dark,isActive:false})
         }
         }
-        console.log('theme applied')
+        
        },[])
   
        function setDarkTheme(){
@@ -111,6 +111,7 @@ export default function DarkModeIcon({size}){
 
     return(
       <>
+      
         <div id='icon' onClick={setDarkTheme}>
             {cookies.get('darktheme')!=='on' && cookies.get('darktheme')!=='off' ?
             <>
@@ -121,6 +122,7 @@ export default function DarkModeIcon({size}){
             </>
             } 
         </div>
+               
    </>
   )
 }

@@ -3,25 +3,21 @@ import { Link } from "react-router-dom";
 import ContentContainer from "../components/ContentContainer";
 import { useEffect } from "react";
 import { removePathName } from "../components/nav";
-import Cookies from 'universal-cookie';
 import LazyLoad from 'react-lazyload';
 
-const cookies = new Cookies()
 export default function Home() {
 
   useEffect(()=>{
     console.log('happy hacking :)')
     
     if(sessionStorage.getItem('pathName')){
-      
       let pathName = sessionStorage.getItem('pathName')
       window.history.replaceState({ key: 'value' }, '', pathName);
       window.dispatchEvent(new PopStateEvent('popstate'));
       removePathName()
     }
     
-
-  },[])
+},[])
 
   if(sessionStorage.getItem('pathName')){
     return(

@@ -4,8 +4,16 @@ import { useEffect, useState} from "react";
 import { faX,} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import { removePathName } from "./nav";
+import LazyLoad from "react-lazyload";
+import DarkModeIcon from "./darkModeicon";
+import Cookies from 'universal-cookie';
+import { useNavigate } from "react-router-dom";
+
+const cookies = new Cookies()
 
 export default function Drop(){
+  const navigate = useNavigate()
+
   let prevPage = ''
 
   if(sessionStorage.getItem('path')===null){
@@ -16,9 +24,21 @@ export default function Drop(){
  
    
  useEffect(()=>{
-  console.log(sessionStorage.getItem('path'))
-  removePathName()
- },[])
+  if(cookies.get('darktheme')==='on'){
+    
+    document.body.style.setProperty('--fondoColor' ,"#1A202C")
+    document.body.style.setProperty('--linksColor' ,"#E0E0E0")
+    
+  }else{
+    
+    document.body.style.setProperty('--bodyColor' ,"white")
+    document.body.style.setProperty('--linksColor' ,"black")
+    document.body.style.setProperty('--fondoColor' ,"white")
+  }
+  
+   removePathName()
+
+},[])
 
  function setCurrentPage(e){
   sessionStorage.removeItem('drop')
@@ -41,12 +61,14 @@ export default function Drop(){
  
 return(
         <>
-        
+      <LazyLoad>
       <div id="dropcon">
+      
            <Link to={prevPage} onClick={()=>setCurrentPage("x")}>
            <FontAwesomeIcon icon={faX} id="close" />
            </Link>
-          
+
+           
             <Link id="link" to={{pathname:"/"}} state="/" onClick={setCurrentPage}><p>Home</p></Link> 
 
             <Link id="link" to={"/services"} onClick={setCurrentPage}><p>Services</p> </Link>
@@ -54,7 +76,10 @@ return(
             <Link id="link" to={"/previews"} onClick={setCurrentPage}><p>Previews</p></Link>
 
             <Link id="link" to={"/about"}><p onClick={setCurrentPage}>About</p></Link>
+            
           </div>
+          </LazyLoad>
+        
         </>
     )
 }
