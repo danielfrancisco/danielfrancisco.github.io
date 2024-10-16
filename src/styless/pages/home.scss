@@ -115,6 +115,13 @@ body{
 }
 
 @media screen and (max-width: 1100px) {
+  #con{
+    
+    top: 12vh;
+    
+    
+  }
+
   button{
     &:hover{
       &::before{
