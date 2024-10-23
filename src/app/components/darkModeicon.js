@@ -11,7 +11,7 @@ export default function DarkModeIcon({size}){
           linksColor: 'black',
           nombreColor: 'black',
           homeColor: 'black',
-          bodyColor: '#E7E7E7',
+          bodyColor: '#DFDFDF',
           tituloColor:  '#484848',
           ContactButtonColor: 'black',
           ContactButtonFontColor: 'white',
