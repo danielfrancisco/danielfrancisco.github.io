@@ -29,15 +29,13 @@ return(
 
               <Link to={"/services"} className="links" onClick={navLinkAction}>Services</Link>
 
-              <Link to={"/previews"} className="links" onClick={navLinkAction}>Previews</Link>
+              <Link to={"/demos"} className="links" onClick={navLinkAction}>Demos</Link>
                
               <Link to="/about" className="links" onClick={navLinkAction}>About</Link>
 
-             
               <DarkModeIcon size='22px'/>
               
-            
-            </div>
+          </div>
           </LazyLoad>
         </>
     )

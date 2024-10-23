@@ -88,7 +88,7 @@ export default function Portfolio(){
                
                onMouseOver={()=>{linkHover("previewLinkColor")}} 
               onMouseOut={()=>{linkNotHover("previewLinkColor")}}
-               className="links">Previews</Link>
+               className="links">Demos</Link>
 
                 <Link to="/about" id="about"  onClick={navLinkAction} className="links" 
                 onMouseOver={()=>{linkHover("aboutLinkColor")}} 

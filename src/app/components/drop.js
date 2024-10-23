@@ -73,7 +73,7 @@ return(
 
             <Link id="link" to={"/services"} onClick={setCurrentPage}><p>Services</p> </Link>
 
-            <Link id="link" to={"/previews"} onClick={setCurrentPage}><p>Previews</p></Link>
+            <Link id="link" to={"/demos"} onClick={setCurrentPage}><p>Demos</p></Link>
 
             <Link id="link" to={"/about"}><p onClick={setCurrentPage}>About</p></Link>
             
