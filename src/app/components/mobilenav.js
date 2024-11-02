@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import DarkModeIcon from "./darkModeicon";
+import DarkModeIcon from "./darkModeButton";
 import "../../styless/components/nav.scss"
+import DarkModeButton from "./darkModeButton";
 
 export default function Mobilenav({current}){
   function setCurrentPage(e){
@@ -31,7 +32,7 @@ export default function Mobilenav({current}){
                 <FontAwesomeIcon icon={faBars} id="bars" />
               </Link>
 
-              <DarkModeIcon size='22px'/>
+              <DarkModeButton size='22px'/>
             </div>
         </>
     )

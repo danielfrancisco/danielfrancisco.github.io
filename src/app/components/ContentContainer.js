@@ -2,10 +2,22 @@ import "../../styless/components/contentContainer.scss"
 import Nav from "./nav"
 import Mobilenav from "./mobilenav"
 import LazyLoad from 'react-lazyload';
+import {useContext, useEffect } from 'react';
+import {AppContext} from './currentTheme'
 
 export default function ContentContainer({content}){
-  
-  
+  const { theme } = useContext(AppContext);
+
+  useEffect(()=>{
+    if (theme === 'light') {
+      document.body.classList.add('light');
+      document.body.classList.remove('dark');
+    } else {
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+    }
+  },[theme])
+
   if(sessionStorage.getItem('pathName')){
     return(
       <>
@@ -17,28 +29,18 @@ export default function ContentContainer({content}){
   }else{
     return(
       <>
-      <LazyLoad>
       <Mobilenav current="/"/>  
-      </LazyLoad>
-
-      <div id="fondo">
-
-      <LazyLoad>
+      
+      <div id="fondo" className={theme}>
         <Nav/>
-      </LazyLoad>
-
-        <div id='modeIcon'>
-        </div>
-        
-      <LazyLoad>
-        <div id='content'>
-        
+       <div id='modeIcon'>
+       </div>
+       
+       <div id='content' >
         {content}
-        
+       </div>
+      
         </div>
-      </LazyLoad>
-        
-      </div>
       </>
   )
   }

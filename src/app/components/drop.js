@@ -1,18 +1,20 @@
 import "../../styless/pages/drop.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useEffect, useState} from "react";
+import { useEffect, useState, useContext} from "react";
 import { faX,} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import { removePathName } from "./nav";
 import LazyLoad from "react-lazyload";
-import DarkModeIcon from "./darkModeicon";
+import DarkModeButton from "./darkModeButton";
 import Cookies from 'universal-cookie';
 import { useNavigate } from "react-router-dom";
+import {AppContext} from './currentTheme'
 
 const cookies = new Cookies()
 
 export default function Drop(){
   const navigate = useNavigate()
+  const { theme } = useContext(AppContext);
 
   let prevPage = ''
 
@@ -24,21 +26,17 @@ export default function Drop(){
  
    
  useEffect(()=>{
-  if(cookies.get('darktheme')==='on'){
-    
-    document.body.style.setProperty('--fondoColor' ,"#1A202C")
-    document.body.style.setProperty('--linksColor' ,"#E0E0E0")
-    
-  }else{
-    
-    document.body.style.setProperty('--bodyColor' ,"white")
-    document.body.style.setProperty('--linksColor' ,"black")
-    document.body.style.setProperty('--fondoColor' ,"white")
-  }
-  
    removePathName()
-
-},[])
+   
+    if (theme === 'light') {
+      document.body.classList.add('light');
+      document.body.classList.remove('dark');
+    } else {
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+    }
+  
+},[theme])
 
  function setCurrentPage(e){
   sessionStorage.removeItem('drop')

@@ -5,13 +5,15 @@ import franks from "../../images/franks.png";
 import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
 import LazyLoad from 'react-lazyload';
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import {AppContext} from '../components/currentTheme'
 import Cookies from 'universal-cookie';
 import "../../styless/pages/_portfolio.scss"
 import { removePathName } from "../components/nav";
 
 const cookies = new Cookies()
 export default function Portfolio(){
+    const { theme } = useContext(AppContext);
     const [navLinkStyle, setNavLinkStyle] = useState(
       {homeLinkColor:"gray",
       servicesLinkColor:"gray",
@@ -28,16 +30,15 @@ export default function Portfolio(){
 
     useEffect(()=>{
       removePathName()
-        if(cookies.get('darktheme')==='on'){
-          document.body.style.setProperty('--bodyColor' ,"#0f131a")
-          document.body.style.setProperty('--fondoColor' ,"#0f131a")
-          
-        }else{
-          
-          document.body.style.setProperty('--bodyColor' ,"white")
-          document.body.style.setProperty('--fondoColor' ,"white")
+      if (theme === 'light') {
+          document.body.classList.add('light');
+          document.body.classList.remove('dark');
+        } else {
+          document.body.classList.add('dark');
+          document.body.classList.remove('light');
+        
         }
-    },[])
+    },[theme])
 
     function linkHover(link){
     let updatedNavLinkStyle = {...navLinkStyle}

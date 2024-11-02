@@ -6,11 +6,12 @@ import Contact from "./app/pages/contact"
 import About from "./app/pages/about";
 import Drop from "./app/components/drop";
 import Skills from "./app/pages/skills";
-
+import { CurrentTheme } from "./app/components/currentTheme";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <>
+  <CurrentTheme>
     <BrowserRouter>
      <Routes>
         <Route path="/" element={<Home/>}></Route>
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route path="/drop" element={<Drop/>}></Route>
       </Routes>
     </BrowserRouter>
+    </CurrentTheme>
   </>,
   rootElement
 );

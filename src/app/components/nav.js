@@ -1,7 +1,7 @@
 import "../../styless/pages/home.scss"
 import { useEffect} from "react";
 import { Link } from "react-router-dom";
-import DarkModeIcon from "./darkModeicon";
+import DarkModeButton from "./darkModeButton";
 import "../../styless/components/nav.scss"
 import LazyLoad from "react-lazyload";
 
@@ -33,7 +33,7 @@ return(
                
               <Link to="/about" className="links" onClick={navLinkAction}>About</Link>
 
-              <DarkModeIcon size='22px'/>
+              <DarkModeButton size='22px'/>
               
           </div>
           </LazyLoad>

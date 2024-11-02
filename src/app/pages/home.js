@@ -1,16 +1,17 @@
 import "../../styless/pages/home.scss"
 import { Link } from "react-router-dom";
 import ContentContainer from "../components/ContentContainer";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { removePathName } from "../components/nav";
 import LazyLoad from 'react-lazyload';
+import {AppContext} from '../components/currentTheme'
 
 export default function Home() {
+  const { theme, setTheme } = useContext(AppContext);
 
   useEffect(()=>{
     console.log('happy hacking :)')
-    
-    if(sessionStorage.getItem('pathName')){
+      if(sessionStorage.getItem('pathName')){
       let pathName = sessionStorage.getItem('pathName')
       window.history.replaceState({ key: 'value' }, '', pathName);
       window.dispatchEvent(new PopStateEvent('popstate'));
@@ -19,7 +20,8 @@ export default function Home() {
     
 },[])
 
-  if(sessionStorage.getItem('pathName')){
+
+if(sessionStorage.getItem('pathName')){
     return(
     <>
      <ContentContainer content={
