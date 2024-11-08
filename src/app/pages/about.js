@@ -16,14 +16,14 @@ export default function About(){
         <div id="abcon">
              <h2 id="heading">Cutting edge is my comfort zone</h2>
              <p id="aboutmede">
-              I'm a full stack developer with over 6 years of experience<br/>
-              and with a lot passion for designing, innovation and problem solving. <br/>
-              I like to deliver seamless and intuitive user experiences.
+             I'm a full stack developer with over 7 years of experience.<br/>
+              I'm exceedingly passionate about designing, innovation and <br/>problem solving. 
+              I love to deliver seamless and intuitive <br/> user experiences.
               </p>
               <p id="aboutmemo">
-              I'm a full stack developer with over 6 years of experience.
-              I have a lot passion for designing, innovation and problem solving. I like to deliver  
-              seamless and intuitive user experiences.
+              I'm a full stack developer with over 7 years of experience.
+              I'm exceedingly passionate about designing, innovation and problem solving. 
+              I love to deliver seamless and intuitive user experiences.
               </p>
             </div> 
 
