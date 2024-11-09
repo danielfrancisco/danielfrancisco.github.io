@@ -24,7 +24,6 @@ $borderRadius: 11px;
     border-radius: $borderRadius;
     margin-left: auto;
     margin-right: auto;
-    animation: moveImage 0.6s ease-out forwards;
     margin-bottom: 14vh;
     &:hover{
         animation: none;
@@ -82,8 +81,8 @@ $borderRadius: 11px;
         width: 140px;
         background-color: #E0E0E0;
         color: black;
-        animation: buttonAnimation 0.6s ease-in forwards;
-        &:before{
+        
+&:before{
             background-color: #30b069;
         }
 
@@ -114,6 +113,19 @@ $borderRadius: 11px;
 }
 
 @media screen and (max-width: 1100px) {
+
+    @keyframes moveImage {
+        from { transform: translateX(0%);  opacity: 0;}
+        to { transform: translateX(0); opacity: 1;}
+        
+        
+    }
+
+    @keyframes buttonAnimation{
+        from { opacity: 0; transform: translateY(40%);}
+        to { opacity: 1; transform: translateY(0%);}
+    }
+
     #previewsNav{
         display: none;
     }
