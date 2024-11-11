@@ -29,9 +29,20 @@ export default function Portfolio(){
     let shadefr = useRef()
     let frankIma = useRef()
 
-    useEffect(()=>{
-      setLoaded(true)
-    },[])
+    function animateImage (){
+      if(resortIma.current){
+        const buttons = document.getElementsByClassName('previewsButton')
+        const images = document.getElementsByClassName('previewsImages')
+        for(let image of images){
+          image.style.animation = 'moveImage 0.6s ease-out forwards'  
+        }
+
+        for(let button of buttons){
+          button.style.animation = 'buttonAnimation 0.6s ease-out forwards'
+        }
+      }
+      
+    }
 
     useEffect(()=>{
       removePathName()
@@ -114,13 +125,15 @@ export default function Portfolio(){
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
                       <img className='previewsImages' ref={resortIma} src={resorti} onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
                        onMouseOut={()=>{buttonNotHover(resortIma, shadere)}} 
-                       style={loaded?{display:'inline-block', animation:'moveImage 0.6s ease-out forwards'}:{display:'none'}}/>
+                       style={{animation:'defaultState 0s ease-out forwards'}}
+                       onLoad={animateImage}/>
                     </a>
                     
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
                       <button className='previewsButton' onMouseOver={()=>{buttonHover(resortIma, shadere)}} 
                        onMouseOut={()=>{buttonNotHover(resortIma, shadere)}} 
-                       style={loaded?{display:'inline-block', animation:' buttonAnimation 0.6s ease-out forwards'}:{display:'none'}}>
+                       style={{animation:'defaultState 0s ease-out forwards'}}
+                       >
                         Get a Demo </button>
                     </a>
                    </div>
@@ -131,13 +144,14 @@ export default function Portfolio(){
                       <a  target="_blank" href="https://danielfrancisco.github.io/martyswebapp/#/">
                         <img className='previewsImages' src={martysi} ref={martysIma}  onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}} 
-                       style={loaded?{display:'inline-block', animation:'moveImage 0.6s ease-out forwards'}:{display:'none'}}/>
+                       style={{animation:'defaultState 0s ease-out forwards'}}
+                       />
                       </a>
                   
                         <a href="https://danielfrancisco.github.io/martyswebapp/#/" target="_blank">
                           <button className='previewsButton' onMouseOver={()=>{buttonHover(martysIma, shadema)}} 
                        onMouseOut={()=>{buttonNotHover(martysIma, shadema)}}
-                       style={loaded?{display:'inline-block', animation:' buttonAnimation 0.6s ease-out forwards'}:{display:'none'}}>
+                       style={{animation:'defaultState 0s ease-out forwards'}}>
                         Get a demo </button></a>
                      </div>
                   </LazyLoad>
@@ -148,14 +162,14 @@ export default function Portfolio(){
                     <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                       <img className='previewsImages' src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}
-                       style={loaded?{display:'inline-block', animation:'moveImage 0.6s ease-out forwards'}:{display:'none'}}/>
+                       style={{animation:'defaultState 0s ease-out forwards'}}/>
                     </a>
                   
 
                   <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
                     <button className='previewsButton' onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}
-                       style={loaded?{display:'inline-block', animation:' buttonAnimation 0.6s ease-out forwards'}:{display:'none'}}>
+                       style={{animation:'defaultState 0s ease-out forwards'}}>
                       Get a Demo 
                       </button></a>
 
