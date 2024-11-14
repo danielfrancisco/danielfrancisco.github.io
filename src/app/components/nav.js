@@ -12,7 +12,7 @@ export function removePathName(){
 }
 
 export default function Nav(){
-
+  
 function navLinkAction(){
    //code that is executed after a nav link is pressed
     

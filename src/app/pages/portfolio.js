@@ -13,8 +13,14 @@ import { removePathName } from "../components/nav";
 
 const cookies = new Cookies()
 export default function Portfolio(){
+  let resortIma = useRef()
+  let shadere = useRef()
+  let shadema = useRef()
+  let martysIma = useRef()
+  let shadefr = useRef()
+  let frankIma = useRef()
+
     const { theme } = useContext(AppContext);
-    const[loaded,setLoaded] = useState(false)
     const [navLinkStyle, setNavLinkStyle] = useState(
       {homeLinkColor:"gray",
       servicesLinkColor:"gray",
@@ -22,13 +28,6 @@ export default function Portfolio(){
       aboutLinkColor:"gray",
     })
     
-    let resortIma = useRef()
-    let shadere = useRef()
-    let shadema = useRef()
-    let martysIma = useRef()
-    let shadefr = useRef()
-    let frankIma = useRef()
-
     function animateImage (){
       if(resortIma.current){
         const buttons = document.getElementsByClassName('previewsButton')
@@ -91,12 +90,14 @@ export default function Portfolio(){
    return(
           <>
       <div id="previewsNav">
-                <Link to="/"  id="home" onClick={navLinkAction}  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
+                <Link to="/"  id="home" onClick={navLinkAction} 
+                 style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
                 >Home</Link>
 
-                <Link to={"/services"} id="skills"  onClick={navLinkAction} style={{color:navLinkStyle.servicesLinkColor }} 
+                <Link to={"/services"} id="skills"  onClick={navLinkAction} 
+                style={{color:navLinkStyle.servicesLinkColor }} 
                 onMouseOver={()=>{linkHover("servicesLinkColor")}}
                 
                 onMouseOut={()=>{linkNotHover("servicesLinkColor")}}

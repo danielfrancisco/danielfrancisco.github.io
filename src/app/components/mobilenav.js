@@ -4,8 +4,25 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import DarkModeIcon from "./darkModeButton";
 import "../../styless/components/nav.scss"
 import DarkModeButton from "./darkModeButton";
+import { useState, useEffect } from "react";
 
 export default function Mobilenav({current}){
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const[navBottonBorder, setnavBottonBorder] = useState('0px 0px 4px var(--mobileNavBorder)')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY || document.documentElement.scrollTop;
+      setScrollPosition(position);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+   
   function setCurrentPage(e){
     if(e==="/drop"){
       sessionStorage.setItem('drop', "/drop")
@@ -23,7 +40,7 @@ export default function Mobilenav({current}){
   
    return(
         <>
-        <div id="danielpa">
+        <div id="danielpa" style={{boxShadow:scrollPosition>0?navBottonBorder:""}}>
               <Link to={"/"}  onClick={setCurrentPage}><div id="daniel" >
                 Home
               </div></Link>

@@ -3,7 +3,7 @@
 $fontColor: dimgray;
 
 #condata{
-    top: 25vh;
+    top: 26vh;
     left: 20vw;
     font-weight: bold;
     font-size: large;
@@ -35,4 +35,10 @@ $fontColor: dimgray;
     font-size: 16.5px;
     color: $fontColor;
     font-family: $fontFamily;
+}
+
+@media screen and (max-width: 1024px)  {
+    #condata{
+        top: 17vh;
+    }
 }
