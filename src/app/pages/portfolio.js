@@ -29,19 +29,17 @@ export default function Portfolio(){
     })
     
     function animateImage (){
-      
       if(resortIma.current){
         const buttons = document.getElementsByClassName('previewsButton')
         const images = document.getElementsByClassName('previewsImages')
+
         for(let image of images){
-          image.style.animation = 'moveImage 0.6s ease-out forwards'  
+          image.style.animation = 'moveImage 0.5s ease-out forwards'  
           image.addEventListener('animationend', function resetAnimation() {
-            image.style.animation = 'none'; // Remove the animation after it ends
-            image.removeEventListener('animationend', resetAnimation); 
+          image.style.animation = 'none'
+          image.removeEventListener('animationend', resetAnimation); 
         });
         }
-
-        
 
         for(let button of buttons){
           button.style.animation = 'buttonAnimation 0.6s ease-out forwards'
@@ -127,7 +125,7 @@ export default function Portfolio(){
           
              <div id="previewsContent">
               
-             <LazyLoad>
+             
                 <div id="coloroverRe" ref={shadere}>
                   
                     <a href="https://danielfrancisco.github.io/Resort/" target="_blank">
@@ -145,7 +143,7 @@ export default function Portfolio(){
                         Get a Demo </button>
                     </a>
                    </div>
-                </LazyLoad>
+                
                   
                 <LazyLoad  >
                     <div id="coloroverMa" ref={shadema}>
