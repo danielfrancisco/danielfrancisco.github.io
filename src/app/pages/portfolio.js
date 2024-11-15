@@ -29,12 +29,19 @@ export default function Portfolio(){
     })
     
     function animateImage (){
+      
       if(resortIma.current){
         const buttons = document.getElementsByClassName('previewsButton')
         const images = document.getElementsByClassName('previewsImages')
         for(let image of images){
           image.style.animation = 'moveImage 0.6s ease-out forwards'  
+          image.addEventListener('animationend', function resetAnimation() {
+            image.style.animation = 'none'; // Remove the animation after it ends
+            image.removeEventListener('animationend', resetAnimation); 
+        });
         }
+
+        
 
         for(let button of buttons){
           button.style.animation = 'buttonAnimation 0.6s ease-out forwards'
