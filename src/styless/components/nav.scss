@@ -84,58 +84,7 @@ $mobileNavButtonsTop: 60px;
 
   #mobileNav{
     display: none;
-    position: relative;
-    background-color: black;
-    z-index: 5;
-    position: fixed;
-    overflow-y: hidden;
-    transition: height 0.5s;
-    padding-left: 50px;
-    left: -10px;
-    height: 14vh;
-    top: -4vh;
-    width: 100vw;
-    
-    
-   #mobileHomeButton{
-     display: inline-block;
-     font-size: 18px;
-     font-weight: bold;
-     color: #E0E0E0;
-     z-index: 5;
-     position: absolute;
-     top: $mobileNavButtonsTop;
- 
-   }
- 
-   #icon{
-     left: 45vw;
-     position: absolute;
-     top: $mobileNavButtonsTop;
-   }
- 
-   #dropDownIconContainer{
-     position: absolute;
-     height: 37px;
-     width: 37px;
-     display: inline-block;
-     top: 55px;
-     left: 75vw;
-     z-index: 5;
-     
-     }
- 
-   #bars{
-     left: 50%;
-     transform: translate(-50%);
-     position: absolute;
-     display: inline-block;
-     z-index: 5;
-     top: 5px;
-     font-size: 23.2px;
-     color: #E0E0E0;
-   }
- }
+  }
 
   
 @media screen and (max-width: 1024px)  {
