@@ -24,7 +24,7 @@ export default function DarkModeButton({size}){
             < FiMoon color={'#E0E0E0'} size={size}/> 
             </>:
             <>
-            < FiSun color={'black'} size={size}/>
+            < FiSun color={'#E0E0E0'} size={size}/>
             </>
             } 
         </div>

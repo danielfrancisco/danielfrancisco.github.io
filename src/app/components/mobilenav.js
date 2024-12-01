@@ -5,13 +5,16 @@ import DarkModeIcon from "./darkModeButton";
 import "../../styless/components/nav.scss"
 import DarkModeButton from "./darkModeButton";
 import { useState, useEffect } from "react";
+import Drop from "./drop"
+import { faX,} from '@fortawesome/free-solid-svg-icons'
 
 export default function Mobilenav({current}){
   const [scrollPosition, setScrollPosition] = useState(0);
-  const[navBottonBorder, setnavBottonBorder] = useState('0px 0px 4px var(--mobileNavBorder)')
+  const[navBottonBorder, setnavBottonBorder] = useState('solid 1.5px var(--mobileNavBorder)')
+  const[dropDown, setDropDown] = useState({icon: faBars, height:'14vh'})
 
   useEffect(() => {
-    const handleScroll = () => {
+    /*const handleScroll = () => {
       const position = window.scrollY || document.documentElement.scrollTop;
       setScrollPosition(position);
     };
@@ -20,7 +23,7 @@ export default function Mobilenav({current}){
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
+    };*/
   }, []);
    
   function setCurrentPage(e){
@@ -37,19 +40,32 @@ export default function Mobilenav({current}){
     }
    
   }
-  
+
+  function toggleDropDown(){
+        if(dropDown.icon.iconName==='bars'){
+          setDropDown({...dropDown, icon:faX, height:'104vh'})
+          
+        }else{
+          setDropDown({...dropDown, icon:faBars, height:'14vh'})
+        }
+  }
+
    return(
         <>
-        <div id="danielpa" style={{boxShadow:scrollPosition>0?navBottonBorder:""}}>
-              <Link to={"/"}  onClick={setCurrentPage}><div id="daniel" >
+        <div id="mobileNav" style={{borderBottom:scrollPosition>0?navBottonBorder:"", 
+        height:dropDown.height}}>
+
+              <Link to={"/"}  onClick={setCurrentPage}><div id="mobileHomeButton" >
                 Home
               </div></Link>
-
-              <Link to={"/drop"} onClickCapture={()=>setCurrentPage("/drop")} >
-                <FontAwesomeIcon icon={faBars} id="bars" />
-              </Link>
+              
+              <div id='dropDownIconContainer' onClick={toggleDropDown}>
+              <FontAwesomeIcon icon={dropDown.icon} id="bars"/>
+              </div>
+              
 
               <DarkModeButton size='22px'/>
+              <Drop/>
             </div>
         </>
     )

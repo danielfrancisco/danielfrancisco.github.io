@@ -1,7 +1,6 @@
 import "../../styless/pages/drop.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState, useContext} from "react";
-import { faX,} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import { removePathName } from "./nav";
 import LazyLoad from "react-lazyload";
@@ -60,14 +59,9 @@ export default function Drop(){
 return(
         <>
       <LazyLoad>
-      <div id="dropcon">
+      <div id="dropcon" >
       
-           <Link to={prevPage} onClick={()=>setCurrentPage("x")}>
-           <FontAwesomeIcon icon={faX} id="close" />
-           </Link>
-
-           
-            <Link id="link" to={{pathname:"/"}} state="/" onClick={setCurrentPage}><p>Home</p></Link> 
+           <Link id="link" to={{pathname:"/"}} state="/" onClick={setCurrentPage}><p>Home</p></Link> 
 
             <Link id="link" to={"/services"} onClick={setCurrentPage}><p>Services</p> </Link>
 
