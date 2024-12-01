@@ -10,11 +10,11 @@ import { faX,} from '@fortawesome/free-solid-svg-icons'
 
 export default function Mobilenav({current}){
   const [scrollPosition, setScrollPosition] = useState(0);
-  const[navBottonBorder, setnavBottonBorder] = useState('solid 1.5px var(--mobileNavBorder)')
+  const[navBottonBorder, setnavBottonBorder] = useState('solid 1px var(--mobileNavBorder)')
   const[dropDown, setDropDown] = useState({icon: faBars, height:'14vh'})
 
   useEffect(() => {
-    /*const handleScroll = () => {
+    const handleScroll = () => {
       const position = window.scrollY || document.documentElement.scrollTop;
       setScrollPosition(position);
     };
@@ -23,7 +23,7 @@ export default function Mobilenav({current}){
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    };*/
+    }
   }, []);
    
   function setCurrentPage(e){

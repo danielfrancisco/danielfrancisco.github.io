@@ -18,13 +18,13 @@ export default function DarkModeButton({size}){
 
     return(
       <>
-        <div id='icon' onClick={apllyTheme}>
+        <div id='iconContainer' onClick={apllyTheme}>
             {theme!=='light'?
             <>
-            < FiMoon color={'#E0E0E0'} size={size}/> 
+            < FiMoon color={'#E0E0E0'} size={size} id='icon'/> 
             </>:
             <>
-            < FiSun color={'#E0E0E0'} size={size}/>
+            < FiSun color={'black'} size={size} id='icon'/>
             </>
             } 
         </div>

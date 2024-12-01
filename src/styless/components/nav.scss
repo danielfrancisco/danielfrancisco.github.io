@@ -55,7 +55,7 @@ $mobileNavButtonsTop: 60px;
     }
   }
 
-  #icon{
+  #iconContainer{
     left: 33vw;
     margin-left: 6vw;
     display: inline-block;
@@ -65,8 +65,14 @@ $mobileNavButtonsTop: 60px;
     border-radius: 4px;
     &:hover{
       cursor: pointer;
-      background-color: #282828;
+      background-color: var(--iconContainer);
     }
+  }
+
+  #icon{
+   
+   position: relative;
+   top: 5px;
   }
 
   #home{
@@ -129,10 +135,11 @@ $mobileNavButtonsTop: 60px;
 
   }
 
-  #icon{
+  #iconContainer{
     left: 45vw;
     position: absolute;
     top: $mobileNavButtonsTop;
+    z-index: 5;
   }
 
   #dropDownIconContainer{
