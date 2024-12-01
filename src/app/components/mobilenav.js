@@ -63,7 +63,6 @@ export default function Mobilenav({current}){
               <FontAwesomeIcon icon={dropDown.icon} id="bars"/>
               </div>
               
-
               <DarkModeButton size='22px'/>
               <Drop/>
             </div>
