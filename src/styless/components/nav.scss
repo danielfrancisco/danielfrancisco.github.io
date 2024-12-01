@@ -84,10 +84,11 @@ $mobileNavButtonsTop: 60px;
 
   #mobileNav{
     display: none;
-    
+    height: 14vh;    
   }
+
   
-  @media screen and (max-width: 1024px)  {
+@media screen and (max-width: 1024px)  {
    #modeIcon{
     display: none;
     
