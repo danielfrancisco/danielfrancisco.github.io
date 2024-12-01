@@ -140,6 +140,9 @@ $mobileNavButtonsTop: 60px;
     position: absolute;
     top: $mobileNavButtonsTop;
     z-index: 5;
+    &:hover{
+      background-color: #282828;
+    }
   }
 
   #dropDownIconContainer{

@@ -10,6 +10,7 @@ export default function DarkModeButton({size}){
   const { theme, setTheme } = useContext(AppContext);
   
       function apllyTheme(){
+        
          const newTheme = theme !== 'light'? 'light' : 'dark'
          setTheme(newTheme)
          
@@ -24,7 +25,7 @@ export default function DarkModeButton({size}){
             < FiMoon color={'#E0E0E0'} size={size} id='icon'/> 
             </>:
             <>
-            < FiSun color={'black'} size={size} id='icon'/>
+            < FiSun color={window.innerWidth>1024?'black':'#E0E0E0'} size={size} id='icon'/>
             </>
             } 
         </div>
