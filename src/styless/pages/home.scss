@@ -5,7 +5,36 @@
 body{
   margin: 0;
   
-}  
+} 
+
+@media screen and (max-width: 1024px) {
+ 
+  #con{
+    
+    top: 12vh;
+    
+    width: 80vw;
+    
+}
+
+  button{
+    &:hover{
+      &::before{
+        width: 0%;
+      }
+    }
+  }
+}
+
+::-moz-selection { 
+  color: black;
+  background: #30b069;
+}
+
+::selection {
+  color: black;
+  background: dimgray;
+}
 
 #con{
     position: relative;
@@ -110,35 +139,5 @@ body{
     
   }
 
-
-  
 }
 
-@media screen and (max-width: 1024px) {
- 
-  #con{
-    
-    top: 12vh;
-    
-    width: 80vw;
-    
-}
-
-  button{
-    &:hover{
-      &::before{
-        width: 0%;
-      }
-    }
-  }
-}
-
-::-moz-selection { 
-  color: black;
-  background: #30b069;
-}
-
-::selection {
-  color: black;
-  background: dimgray;
-}
