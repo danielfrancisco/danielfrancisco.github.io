@@ -3,125 +3,125 @@
 $mobileNavButtonsTop: 60px;
 
 @media screen and (max-width: 1024px)  {
-  #modeIcon{
-   display: none;
-   
-  }
+   #modeIcon{
+    display: none;
+    
+   }
 
-  
-  
-  #dropDownIcon{
-   background-color: #E0E0E0;
-   height: 8vh;
-   width: 10vw;
+   
+   
+   #dropDownIcon{
+    background-color: #E0E0E0;
+    height: 8vh;
+    width: 10vw;
+    position: relative;
+    
+   }
+
+  #mobileNav{
+   display: inline-block;
    position: relative;
+   background-color: black;
+   z-index: 5;
+   position: fixed;
+   overflow-y: hidden;
+   transition: height 0.5s;
+   padding-left: 50px;
+   left: -10px;
+   height: 14vh;
+   top: -4vh;
+   width: 100vw;
    
+   
+  #mobileHomeButton{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #E0E0E0;
+    z-index: 5;
+    position: absolute;
+    top: $mobileNavButtonsTop;
+    margin-bottom: 0px;
   }
 
- #mobileNav{
-  display: inline-block;
-  position: relative;
-  background-color: black;
-  z-index: 5;
-  position: fixed;
-  overflow-y: hidden;
-  transition: height 0.5s;
-  padding-left: 50px;
-  left: -10px;
-  height: 14vh;
-  top: -4vh;
-  width: 100vw;
-  
-  
- #mobileHomeButton{
-   display: inline-block;
-   font-size: 18px;
-   font-weight: bold;
-   color: #E0E0E0;
-   z-index: 5;
-   position: absolute;
-   top: $mobileNavButtonsTop;
+  #iconContainer{
+    left: 45vw;
+    position: absolute;
+    top: $mobileNavButtonsTop;
+    z-index: 5;
+    &:hover{
+      background-color: #282828;
+    }
+  }
 
- }
+  #dropDownIconContainer{
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    display: inline-block;
+    top: 55px;
+    left: 75vw;
+    z-index: 5;
+    margin-bottom: 0px;
+    
+    }
 
- #iconContainer{
-   left: 45vw;
-   position: absolute;
-   top: $mobileNavButtonsTop;
-   z-index: 5;
-   &:hover{
-     background-color: #282828;
-   }
- }
-
- #dropDownIconContainer{
-   position: absolute;
-   height: 37px;
-   width: 37px;
-   display: inline-block;
-   top: 55px;
-   left: 75vw;
-   z-index: 5;
-   
-   }
-
- #bars{
-   left: 50%;
-   transform: translate(-50%);
-   position: absolute;
-   display: inline-block;
-   z-index: 5;
-   top: 5px;
-   font-size: 23.2px;
-   color: #E0E0E0;
- }
+  #bars{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    display: inline-block;
+    z-index: 5;
+    top: 5px;
+    font-size: 23.2px;
+    color: #E0E0E0;
+  }
 }
 
- #nav{
-   display: none;
-   
- }
+  #nav{
+    display: none;
+    
+  }
 
 
 
 body{
- background-color: var(--fondoColor);
+  background-color: var(--fondoColor);
 }
 
 #fondo{
- 
- #nav{
-   
-   p{
-     font-size: 12px;
-   }
- }
- #titulo{
-   font-size: 20px;
-   margin-left: 0vw;
-   
- }
-
- #nombre{
-   position: relative;
-   margin-left: 0vw;
- }
-
- button{
-   width: 100px;
-   margin-left: 0vw;
-   background-color:  var(--ContactButtonColor);
-   color: var(--ContactButtonFontColor);
- }
-
- 
-}
-
-}
-
-#mobileHomeButton{
-    display: none;
+  
+  #nav{
     
+    p{
+      font-size: 12px;
+    }
+  }
+  #titulo{
+    font-size: 20px;
+    margin-left: 0vw;
+    
+  }
+
+  #nombre{
+    position: relative;
+    margin-left: 0vw;
+  }
+
+  button{
+    width: 100px;
+    margin-left: 0vw;
+    background-color:  var(--ContactButtonColor);
+    color: var(--ContactButtonFontColor);
+  }
+
+  
+}
+}
+
+@media  screen and (min-width: 1024px) {
+  #mobileHomeButton{
+    display: none;
     
 }
 
@@ -208,5 +208,6 @@ body{
   #mobileNav{
     display: none;
   }
+}
 
   
