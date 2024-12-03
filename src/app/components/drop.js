@@ -8,13 +8,17 @@ import DarkModeButton from "./darkModeButton";
 import Cookies from 'universal-cookie';
 import { useNavigate } from "react-router-dom";
 import {AppContext} from './currentTheme'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom';
+
 
 const cookies = new Cookies()
 
-export default function Drop(){
+export default function Drop({setDropDown, dropDown}){
   const navigate = useNavigate()
   const { theme } = useContext(AppContext);
-
+  const location = useLocation().pathname;
+   
   let prevPage = ''
 
   if(sessionStorage.getItem('path')===null){
@@ -53,7 +57,7 @@ export default function Drop(){
   sessionStorage.setItem('path', route)
  }
  removePathName()
-  
+  setDropDown({...dropDown, icon:faBars, height:'14vh'})
 }
  
 return(

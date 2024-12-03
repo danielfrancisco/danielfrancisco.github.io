@@ -64,7 +64,7 @@ export default function Mobilenav({current}){
               </div>
               
               <DarkModeButton size='22px'/>
-              <Drop/>
+              <Drop setDropDown={setDropDown} dropDown={dropDown}/>
             </div>
         </>
     )

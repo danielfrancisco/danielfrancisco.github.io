@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import resorti from "../../images/resorti.png";
 import martysi from "../../images/martysi.png";
-import franks from "../../images/franks.png";
+import cleaningServices from "../../images/cleaningServices.png";
 import Mobilenav from "../components/mobilenav";
 import { Link } from "react-router-dom";
 import LazyLoad from 'react-lazyload';
@@ -165,14 +165,14 @@ export default function Portfolio(){
                   <LazyLoad>
                    <div id="coloroverFr" ref={shadefr}>
 
-                    <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
-                      <img className='previewsImages' src={franks} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
+                    <a href="https://danielfrancisco.github.io/cleaningServices/" target="_blank">
+                      <img className='previewsImages' src={cleaningServices} ref={frankIma} onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}
                        style={{animation:'defaultState 0s ease-out forwards'}}/>
                     </a>
                   
 
-                  <a href="https://danielfrancisco.github.io/Franks/" target="_blank">
+                  <a href="https://danielfrancisco.github.io/cleaningServices/" target="_blank">
                     <button className='previewsButton' onMouseOver={()=>{buttonHover(frankIma, shadefr)}} 
                        onMouseOut={()=>{buttonNotHover(frankIma, shadefr)}}
                        style={{animation:'defaultState 0s ease-out forwards'}}>
