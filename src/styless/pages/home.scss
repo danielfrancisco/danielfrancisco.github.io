@@ -10,11 +10,30 @@ body{
   
 } 
 
+@media screen and (min-height: 880px) {
+  
+    #con{
+      position: relative;
+      left: 13vw;
+    top: 180px;
+    
+  }
+
+  }
+
 @media screen and (max-width: 1024px) {
  
   #con{
+    
     width: 80vw;
     
+}
+
+div{
+  font-family: $fontFamily;
+  position: relative;
+  cursor: default;
+  margin-bottom: 30px;
 }
 
   button{
@@ -36,19 +55,27 @@ body{
   background: dimgray;
 }
 
-#con{
+@media screen and (max-height: 879px) {
+  #con{
     position: relative;
     top: $containerTop;
     left: 13vw;
     
+    
+  }  
+
   }
- 
-  div{
-    font-family: $fontFamily;
-    position: relative;
-    cursor: default;
-    margin-bottom: 4vh;
-  }
+
+  @media screen and (min-width: 1025px) {
+    div{
+      font-family: $fontFamily;
+      position: relative;
+      cursor: default;
+      margin-bottom: 28px;
+    }  
+    }
+
+  
   
   #nombre{
       top: $textAndButtonTop;
