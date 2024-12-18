@@ -11,7 +11,7 @@ import { faX,} from '@fortawesome/free-solid-svg-icons'
 export default function Mobilenav({current}){
   const [scrollPosition, setScrollPosition] = useState(0);
   const[navBottonBorder, setnavBottonBorder] = useState('solid 1px var(--mobileNavBorder)')
-  const[dropDown, setDropDown] = useState({icon: faBars, height:'14vh'})
+  const[dropDown, setDropDown] = useState({icon: faBars, height:'115px'})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +46,7 @@ export default function Mobilenav({current}){
           setDropDown({...dropDown, icon:faX, height:'104vh'})
           
         }else{
-          setDropDown({...dropDown, icon:faBars, height:'14vh'})
+          setDropDown({...dropDown, icon:faBars, height:'115px'})
         }
   }
 

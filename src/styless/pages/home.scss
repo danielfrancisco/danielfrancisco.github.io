@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import '../abstracts/variables.scss';
 
+$textAndButtonTop: 88px;
+$containerTop: 100px;
+
 body{
   margin: 0;
   
@@ -10,9 +13,6 @@ body{
 @media screen and (max-width: 1024px) {
  
   #con{
-    
-    top: 12vh;
-    
     width: 80vw;
     
 }
@@ -38,7 +38,7 @@ body{
 
 #con{
     position: relative;
-    top: 17vh;
+    top: $containerTop;
     left: 13vw;
     
   }
@@ -51,14 +51,14 @@ body{
   }
   
   #nombre{
-    top: 12vh;
+      top: $textAndButtonTop;
       margin-left: 10vw;
       font-weight: bold;
       font-size: 30px;
       color: var(--nombreColor);
   }
   #titulo{
-    top: 12vh;
+    top: $textAndButtonTop;
     margin-left: 10vw;
     font-size: 18px;
     color: var(--tituloColor);
@@ -76,7 +76,7 @@ body{
     color:  var(--ContactButtonFontColor);
     font-weight: bold;
     position: relative;
-    top: 12vh;
+    top: $textAndButtonTop;
     margin-left: 10vw;
     height: 48px;
     letter-spacing: 0.0625rem;
