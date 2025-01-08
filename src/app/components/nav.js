@@ -21,7 +21,7 @@ function navLinkAction(){
 return(
         <>
          <LazyLoad>
-         <div id="nav">
+         <div id="nav" >
          
               <Link to="/" id="home"  onClick={navLinkAction} >
                  

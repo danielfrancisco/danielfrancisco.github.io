@@ -49,6 +49,13 @@ export default function Portfolio(){
     }
 
     useEffect(()=>{
+      document.body.style.overflowY = 'visible';
+      return ()=>{
+        document.body.style.overflowY = 'hidden';
+      }
+    },[])
+
+    useEffect(()=>{
       removePathName()
       if (theme === 'light') {
           document.body.classList.add('light');
@@ -95,7 +102,7 @@ export default function Portfolio(){
    return(
           <>
       <div id="previewsNav">
-                <Link to="/"  id="home" onClick={navLinkAction} 
+                <Link to="/"  id="Porthome" onClick={navLinkAction} 
                  style={{color:navLinkStyle.homeLinkColor, marginLeft:"20vh"}} 
                 onMouseOver={()=>{linkHover("homeLinkColor")}}
                 onMouseOut={()=>{linkNotHover("homeLinkColor")}}
@@ -106,15 +113,15 @@ export default function Portfolio(){
                 onMouseOver={()=>{linkHover("servicesLinkColor")}}
                 
                 onMouseOut={()=>{linkNotHover("servicesLinkColor")}}
-                className="links" >Services</Link>
+                className="Portlinks" >Services</Link>
 
                <Link to={"/previews"} id="work"  style={{color:navLinkStyle.previewLinkColor}} 
                
                onMouseOver={()=>{linkHover("previewLinkColor")}} 
               onMouseOut={()=>{linkNotHover("previewLinkColor")}}
-               className="links">Demos</Link>
+               className="Portlinks">Demos</Link>
 
-                <Link to="/about" id="about"  onClick={navLinkAction} className="links" 
+                <Link to="/about" id="about"  onClick={navLinkAction} className="Portlinks"
                 onMouseOver={()=>{linkHover("aboutLinkColor")}} 
                 onMouseOut={()=>{linkNotHover("aboutLinkColor")}}
                 style={{color:navLinkStyle.aboutLinkColor}} >About</Link>

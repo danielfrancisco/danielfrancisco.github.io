@@ -3,28 +3,36 @@
 @import '../abstracts/variables.scss';
 
 $textAndButtonTop: 88px;
-$containerTop: 100px;
+$containerTop: 80px;
 
 body{
   margin: 0;
   
 } 
 
-@media screen and (min-height: 880px) {
+
+#con{
+  position: absolute;
+  top: 5vh;
+  left: 13vw;
   
-    #con{
-      position: relative;
-      left: 13vw;
-    top: 180px;
-    
-  }
+  
+}  
 
-  }
-
-@media screen and (max-width: 1024px) {
+@media screen and (min-height: 1024px) {
  
   #con{
+    top: 26vh;
+    width: 80vw;
+  }
     
+}
+ 
+
+@media screen and (max-width: 1024px) {
+  
+  #con{
+    top: 22vh;
     width: 80vw;
     
 }
@@ -55,28 +63,18 @@ div{
   background: dimgray;
 }
 
-@media screen and (max-height: 879px) {
-  #con{
-    position: relative;
-    top: $containerTop;
-    left: 13vw;
-    
-    
-  }  
 
-  }
-
-  @media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     div{
       font-family: $fontFamily;
       position: relative;
       cursor: default;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }  
     }
 
   
-  
+    
   #nombre{
       top: $textAndButtonTop;
       margin-left: 10vw;

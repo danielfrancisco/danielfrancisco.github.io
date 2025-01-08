@@ -17,7 +17,7 @@
     #aboutmede{
         font-family: $fontFamily;
         position: relative;
-        top: 30vh;
+        top: 15vh;
         font-size: 18px;
         color: dimgray;
         text-align: center;
@@ -34,7 +34,7 @@
     left: -1vw;
     color: var(--linksColor);
     position: relative;
-    top: 30vh;
+    top: 15vh;
     text-align: center;
 }
 
@@ -43,6 +43,8 @@
         top: 18vh;
         
     }
+
+    
    #abcon{
        #aboutmemo{
          display: inline-block;
@@ -55,4 +57,20 @@
         display: none;
     }
    }
+}
+
+
+@media screen and(min-width: 1400px){
+    #heading{
+        top: 25vh;
+        
+    }
+
+    #abcon{
+        
+ 
+        #aboutmede{
+         top: 25vh;
+     }
+    }
 }

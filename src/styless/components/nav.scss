@@ -2,11 +2,22 @@
 
 $mobileNavButtonsTop: 60px;
 
+@media screen and (min-width: 1025px)  {
+  
+     body{
+      overflow-y: hidden;
+     }
+     
+}
+
 @media screen and (max-width: 1024px)  {
+ 
    #modeIcon{
     display: none;
     
    }
+
+   
 
    #dropDownIcon{
     background-color: #E0E0E0;
@@ -128,13 +139,13 @@ body{
   }
 
 #nav{
-    top: 10vh;
+    top: 1vh;
     position: relative;
     z-index: 5;
     background-color:  var(--navColor);
     width: 89.99vw;
-    padding-bottom: 1.7vh;
-
+    padding-bottom: 100px;
+    
     p{
       color:  white;
       position: relative;
@@ -161,6 +172,7 @@ body{
     font-family: $fontFamily;
     font-weight: bold;
     margin-left: 6vw;
+    top: 65px;
     text-decoration: none;
     color:  var(--linksColor);
     position: relative;
@@ -177,17 +189,19 @@ body{
     height: 33px;
     text-align: center;
     width: 33px;
+    top: 66px;
     border-radius: 4px;
     &:hover{
       cursor: pointer;
       background-color: var(--iconContainer);
+      
     }
   }
 
   #icon{
-   
+   top: 4px;
    position: relative;
-   top: 5px;
+   
   }
 
   #home{
@@ -198,6 +212,7 @@ body{
     color: var(--homeColor);
     position: relative;
     left: 15vh;
+    top: 65px;
     &:hover{
       color: gray;
     }
