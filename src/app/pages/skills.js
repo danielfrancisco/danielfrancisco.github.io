@@ -1,14 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../../styless/pages/_skills.scss"
 import ContentContainer from "../components/ContentContainer";
 import { removePathName } from "../components/nav";
 
 export default function Skills(){
-  useEffect(()=>{
-    removePathName()
-  },[])  
   
-return (
+  useEffect(()=>{
+
+   removePathName()
+
+    if(window.innerWidth<1006){
+      document.body.style.overflowY = 'visible';
+    return ()=>{
+      document.body.style.overflowY = 'hidden';
+    }
+    }
+    
+  },[])  
+
+  return (
     <>
         <ContentContainer content={
         <>
