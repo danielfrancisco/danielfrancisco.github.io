@@ -65,13 +65,13 @@ return(
       <LazyLoad>
       <div id="dropcon" >
       
-           <Link id="link" to={{pathname:"/"}} state="/" onClick={setCurrentPage}><p>Home</p></Link> 
+           <Link className="links" to={{pathname:"/"}} state="/" onClick={setCurrentPage}><p>Home</p></Link> 
 
-            <Link id="link" to={"/services"} onClick={setCurrentPage}><p>Services</p> </Link>
+            <Link className="links" to={"/services"} onClick={setCurrentPage}><p>Services</p> </Link>
 
-            <Link id="link" to={"/demos"} onClick={setCurrentPage}><p>Demos</p></Link>
+            <Link className="links" to={"/demos"} onClick={setCurrentPage}><p>Demos</p></Link>
 
-            <Link id="link" to={"/about"}><p onClick={setCurrentPage}>About</p></Link>
+            <Link className="links" to={"/about"}><p onClick={setCurrentPage}>About</p></Link>
             
           </div>
           </LazyLoad>
