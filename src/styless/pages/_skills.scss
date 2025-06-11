@@ -10,7 +10,7 @@ $margin-bottom: 0px;
 $mobileMarginBotton: 0px;
 $mobileAnimation: mobile 0.3s ease-in forwards;
 
-@mixin skillsq($bcolor, $fcolor,){
+@mixin skillsq ($bcolor, $fcolor,){
     background-color: $bcolor;
     color: $fcolor;
     height: $skill-height;
@@ -95,7 +95,7 @@ $mobileAnimation: mobile 0.3s ease-in forwards;
 
 
 //big screen
-@media screen and(min-width: 1400px){
+@media screen and (min-width: 1400px){
   #ui{
     top: 20vh;
   }
@@ -113,7 +113,7 @@ $mobileAnimation: mobile 0.3s ease-in forwards;
   }
 }
 
-@media screen and(min-width: 1700px){
+@media screen and (min-width: 1700px){
   #ui{
     height: 35vh;
   }

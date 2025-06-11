@@ -19,21 +19,25 @@
 --resFontColor:  #E0E0E0;
 --condataName:  #E0E0E0;
 --fillbutton: fillbuttonDark;
---previewsButtonFontColor: #E0E0E0;
+--previewsButtonFontColor: black;
 --ContactButtonFontColorTransition: 0.3s;
 --mobileNavBorder: white;
 --iconContainer: black;
+--boxShadowColor: none;
+--borderColor: none;
 
 }
 
 .light{
+    --boxShadowColor: #DCDCDC;
+    --borderColor: #DCDCDC;
     --iconContainer: gray;
-    --fondoColor: white;
-    --navColor: white;
+    --fondoColor: #ffffff;
+    --navColor: #ffffff;
     --linksColor: black;
     --nombreColor: black;
     --homeColor: black;
-    --bodyColor: #DFDFDF;
+    --bodyColor: #ffffff;
     --tituloColor: #484848;
     --ContactButtonColor: black;
     --ContactButtonFontColor: white;
@@ -44,12 +48,11 @@
     --resFontColor: black;
     --condataName: black;
     --fillbutton: fillbuttonLight;
-    --previewsButtonFontColor: white;
+    --previewsButtonFontColor: black;
     --ContactButtonFontColorTransition: 0s;
     --mobileNavBorder:  #787878;;
+    
 }
-
-
 
 
 $fontFamily: Arial,system-ui;

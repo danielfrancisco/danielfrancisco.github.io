@@ -8,8 +8,11 @@
   width: 90vw;
   border-radius: 10px;
   top: 3.3vh;
+  box-shadow: 0px 2px 7px var(--boxShadowColor);
+  border: solid 1px var(--borderColor);
 }
 
+//#DCDCDC;
 
 #content{
   position: relative;
