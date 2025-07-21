@@ -8,7 +8,7 @@ $skill-height: 302.22px;
 $con-height: 229.95px;
 $margin-bottom: 0px;
 $mobileMarginBotton: 0px;
-$mobileAnimation: mobile 0.3s ease-in forwards;
+$mobileAnimation: mobile 0.3s ease-in-out;
 
 @mixin skillsq ($bcolor, $fcolor,){
     background-color: $bcolor;
@@ -28,7 +28,7 @@ $mobileAnimation: mobile 0.3s ease-in forwards;
     }
 
     @keyframes moveui {
-      from{left: -10vw; opacity: 0; }
+      from{left: -3vw; opacity: 0; }
       to{left: 6vw; opacity: 1;}
     }
 
@@ -150,12 +150,12 @@ $mobileAnimation: mobile 0.3s ease-in forwards;
   }
 
    @keyframes movefront {
-    from{top: 40vh; opacity: 0;}
+    from{top: 28vh; opacity: 0;}
     to{top: 14vh; opacity: 1;}
   }
 
   @keyframes moveres {
-    from{top: -20vh; opacity: 0;}
+    from{top: -11vh; opacity: 0;}
     to{top: 1vh; opacity: 1;}
   }
 }

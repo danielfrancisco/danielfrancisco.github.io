@@ -34,7 +34,7 @@ export default function Portfolio(){
         const images = document.getElementsByClassName('previewsImages')
 
         for(let image of images){
-          image.style.animation = 'moveImage 0.5s ease-out forwards'  
+          image.style.animation = 'moveImage 0.5s ease-in-out'  
           image.addEventListener('animationend', function resetAnimation() {
           image.style.animation = 'none'
           image.removeEventListener('animationend', resetAnimation); 
