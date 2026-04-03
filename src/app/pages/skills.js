@@ -22,7 +22,7 @@ export default function Skills(){
     <>
         <ContentContainer content={
         <>
-         <div id="ui"><br/>Ui/Ux<br/>Designing
+         <div id="ui"><br/>Ui/Ux<br/>Design
                 <div id="uicon"><br/> 
                     <div style={{marginLeft:"1vw" , marginRight: "1vw"}}>Ux and Ui design combines
                      research, product development and strategy  to create
@@ -45,7 +45,7 @@ export default function Skills(){
               <div id="res"><br/>Responsive<br/> Web design
                 <div id="rescon"><br/>
                  <div style={{marginLeft:"1vw", marginRight: "1vw"}}> 
-                 Your website adapts  intelligently  to every device
+                 Your web app adapts  intelligently  to any device
                  </div>
                 </div>
               </div>
